@@ -2,9 +2,6 @@
 
 TypeScript SDK for [Mimir](https://mimirfeeds.io/docs/), a Solana oracle that computes token and index prices on chain from liquidity pools.
 
-> [!NOTE]
-> **Beta.** The Mimir program and this SDK have had internal reviews only, no external audit yet. Size what you put at risk accordingly.
-
 ## How it works
 
 ![Liquidity pools feed the Mimir program, which computes the price on chain. Your app reads it with the SDK or the API; your program refreshes and reads it in the same transaction.](docs/assets/how-it-works.svg)
