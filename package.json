@@ -1,6 +1,6 @@
 {
   "name": "@quantulabs/mimir-sdk",
-  "version": "0.9.0",
+  "version": "0.9.1",
   "description": "TypeScript SDK for Mimir, a Solana oracle: onchain token and index price feeds computed from DEX liquidity pools (Raydium, Orca, Meteora, PumpSwap).",
   "type": "module",
   "main": "dist/cjs/src/root.js",
