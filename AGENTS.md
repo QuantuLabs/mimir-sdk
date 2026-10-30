@@ -4,7 +4,7 @@ For coding agents adding Mimir prices to an application or a Solana program.
 
 ## Facts
 
-- Mainnet program id: `hBYrGHXVCQsnduDERkVnViCXNYawpHCvN5y3GsMiMiR`. Do not use any other id for mainnet.
+- Mainnet program id: `hBYrGHXVCQsnduDERkVnViCXNYawpHCvN5y3GsMiMiR`. This is the only mainnet program id.
 - Package: `@quantulabs/mimir-sdk`, Node.js 20.18+, ESM and CJS. The root exports one client, `Mimir`, and `MimirError`; it also runs in a browser. Everything else is in `@quantulabs/mimir-sdk/advanced` and may change.
 - `new Mimir()` reads from the free keyless Mimir API (no RPC, no key). `new Mimir({ rpc })` reads on chain from your RPC only. Transactions always go to your `rpc`, else Solana's public RPC (rate-limited, refuses browsers): pass your own `rpc` to send transactions.
 - `mimir.price` returns USDC prices, also for a SOL-quoted feed (converted through Mimir's own SOL/USDC feed). `getPrice` (`/advanced`) returns the feed's own quote: for a SOL-quoted feed, `quote: "SOL"` and `price` in SOL. Mimir uses no external price feed.
@@ -68,7 +68,7 @@ Variants, one line each:
 
 - `mimir.price` returns `price` (USDC, `null` with a `reason` when not priced), `quote`, `slot`, `updatedAt`, `confidenceBps`. The fields below come from `getPrice` in `/advanced`.
 - Check `p.status` before using `p.price`: `"fresh"` use it; `"needs-refresh"` display only, or refresh in the same transaction (`withFreshPrice`); `"degraded"` display only; `"none"` no price.
-- `p.mode === "current-point"`: one pool's price at this slot, no history; cap what you risk on it.
+- `p.mode === "current-point"`: one pool's price at this slot, no history; the standard recipe suits larger amounts.
 - `p.price` is a `number` for display. For math, use `p.priceX64` (exact, Q64.64, in the feed's own quote).
 - `mimir.watch(feeds, onPrice, onError)` polls one batch request every 5 s (minimum 2 s); an error with `retry: "never"` stops it. It returns the unsubscribe function.
 

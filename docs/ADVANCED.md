@@ -4,8 +4,7 @@ The root entry, `@quantulabs/mimir-sdk`, exports the `Mimir` client and `MimirEr
 
 The sub-paths below expose the lower layers the root is built on.
 
-> [!WARNING]
-> Sub-paths are advanced and **may change in any release**, including a minor one. Pin the exact SDK version if you depend on them.
+These sub-paths can change from one release to the next; if you use them, pin the SDK version.
 
 ## `new Mimir()` options
 

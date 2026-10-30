@@ -2,7 +2,7 @@
 
 ## 0.9.1 - 2026-10-30
 
-- README without the beta note. Same code as 0.9.0.
+- Docs reworded in a calmer tone, without warning boxes. Same code as 0.9.0.
 
 ## 0.9.0 - 2026-10-30
 

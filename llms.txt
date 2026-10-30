@@ -1,6 +1,6 @@
 # Mimir SDK
 
-> TypeScript SDK (`@quantulabs/mimir-sdk`) for Mimir, a Solana oracle that calculates token and index prices onchain from liquidity-pool accounts. One client: `new Mimir(opts?)`. Mainnet program id: `hBYrGHXVCQsnduDERkVnViCXNYawpHCvN5y3GsMiMiR`. Status: beta.
+> TypeScript SDK (`@quantulabs/mimir-sdk`) for Mimir, a Solana oracle that calculates token and index prices onchain from liquidity-pool accounts. One client: `new Mimir(opts?)`. Mainnet program id: `hBYrGHXVCQsnduDERkVnViCXNYawpHCvN5y3GsMiMiR`. Status: public beta on mainnet.
 
 Root exports: `Mimir` and `MimirError`. Options: `wallet?` (64-byte secret key, base58, web3.js Keypair, CryptoKeyPair, @solana/kit signer, Wallet Standard wallet, wallet-adapter; Transaction v1 only), `rpc?` (RPC mode: everything on your RPC, zero Mimir API calls; without it reads use the free keyless Mimir API and transactions Solana's public RPC, which refuses browsers: pass your own `rpc` to send transactions). Properties: `address`, `mode` ("api" | "rpc"), `canWrite`.
 

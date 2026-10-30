@@ -80,8 +80,7 @@ Expected output:
 COLA fresh true 0.000001478350516213834 SOL 463266185n 463266335n
 ```
 
-> [!IMPORTANT]
-> `getPrice` returns the price **in the feed's quote**: here in SOL. Only `mimir.price` converts to USDC.
+`getPrice` returns the price in the feed's quote, here SOL. `mimir.price` converts it to USDC.
 
 ### `status`: can I use this price?
 
@@ -111,7 +110,7 @@ Pass `{ live: false }` to read only the stored account. On chain, put the refres
 | `kind` | `"token"` or `"index"` |
 | `quote` | `"USDC"`, `"SOL"`, or the quote mint address |
 | `status` | `"fresh"`, `"needs-refresh"`, `"degraded"` or `"none"` |
-| `mode` | `"standard"`: the feed's recipe. `"current-point"`: one pool's price at this slot, no history; cap what you risk on it. |
+| `mode` | `"standard"`: the feed's recipe. `"current-point"`: one pool's price at this slot, no history; the standard recipe suits larger amounts. |
 | `live` | `true`: simulated now. `false`: stored account. |
 | `price` | `number` for display; `null` when `status` is `"none"` |
 | `priceX64`, `lowerX64`, `upperX64` | Exact price and its bounds, Q64.64 (`bigint`) |
@@ -205,9 +204,8 @@ const instructions = [
 ];
 ```
 
-> [!WARNING]
-> - Refreshes alone above 1,400,000 compute units throw `INVALID_INPUT`: split the feeds over several transactions.
-> - A feed with many pools can be too large for a legacy or v0 transaction. `compileMimirBetaTransactionV1` in `/beta` builds a Transaction v1 ([ADVANCED.md](./ADVANCED.md)).
+- Refreshes above 1,400,000 compute units throw `INVALID_INPUT`: split the feeds over several transactions.
+- A feed with many pools can be too large for a legacy or v0 transaction; `compileMimirBetaTransactionV1` in `/beta` builds a Transaction v1 ([ADVANCED.md](./ADVANCED.md)).
 
 ### What your program checks
 
