@@ -1,6 +1,6 @@
 # Use a price in a program
 
-The client side, `withFreshPrice`, is in the [README](../README.md#use-a-price-in-a-program); lower-level variants are in [QUICKSTART step 5](./QUICKSTART.md#5-use-a-fresh-price-on-chain). This page is the program side.
+The client side, `sendWithFreshPrice`, is in the [README](../README.md#use-a-price-in-a-program); lower-level variants are in [QUICKSTART step 5](./QUICKSTART.md#5-use-a-fresh-price-on-chain). This page is the program side.
 
 ## Read the price onchain
 

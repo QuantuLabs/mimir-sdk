@@ -45,6 +45,8 @@ export type StepReceiptJson = { kind: StepKind; signature: string; slot: string;
 /** The next unsigned step of a server-built creation, JSON-safe: no secret, no RPC URL. */
 export type UnsignedStep = { kind: StepKind; index: number; of: number; payer: string; feed: string; transaction: string; lastValidBlockHeight: string;
   review: { debitSol: string; networkFeeSol: string; colaMinOutRaw?: string; firstPrice: boolean; reviewHash: string } };
+/** The unsigned fresh-price Transaction v1 of `buildWithFreshPrice`, JSON-safe: sign it with `mimir.sign(step)`, then send the wire through your RPC before `lastValidBlockHeight`. */
+export type FreshPriceStep = Omit<UnsignedStep, "kind" | "feed"> & { kind: "fresh-price"; feeds: string[] };
 export type ServerStep = { state: "sign"; step: UnsignedStep; after: StepReceiptJson[] }
   | { state: "ready"; ticker: string; feed: string; price: PriceJson; signatures: StepReceiptJson[]; cost: { sol: string }; after: StepReceiptJson[] };
 export type PriceJson = Record<string, string | number | boolean | null | object>;
@@ -85,7 +87,7 @@ export class Mimir {
   [Symbol.for("nodejs.util.inspect.custom")]() { return `Mimir ${JSON.stringify(this.toJSON())}`; }
 
   get #txRpc() { return this.#rpc ?? DEFAULT_RPC; }
-  #devnet() { if (this.cluster === "devnet") throw new MimirError("NOT_SUPPORTED", "Mimir has no published devnet deployment yet", "never"); }
+  #devnet() { if (this.cluster === "devnet") throw new MimirError("NOT_SUPPORTED", "Mimir has no published devnet deployment yet", "never", { hint: "Use cluster: 'mainnet' (the default)." }); }
 
   /** One price, in USDC. A ticker or a feed address. */
   async price(feedOrTicker: string): Promise<Price> { return (await this.prices([feedOrTicker]))[0]!; }
@@ -140,6 +142,35 @@ export class Mimir {
     const payer = opts.payer ?? this.address ?? this.#noWallet("withFreshPrice needs a payer: a wallet, or { payer }");
     const { withFreshPrice } = await import("./easy/refresh.js");
     return (await withFreshPrice({ feeds, instructions: instructions as never[], payer, rpc: this.#txRpc, ...(opts.simulate ? { simulate: true } : {}) })).instructions as I[];
+  }
+
+  /**
+   * Builds, simulates, signs with the wallet, sends and confirms one Transaction v1: [compute budget, refresh(feeds), ...yours].
+   * Fits every feed, indexes included. Prices that move during the approval rebuild it once. Instructions: kit or web3.js.
+   */
+  async sendWithFreshPrice<I>(feeds: string | readonly string[], instructions: readonly I[], opts: { commitment?: "confirmed" | "finalized" } = {}): Promise<{ signature: string; slot: bigint }> {
+    this.#devnet();
+    const payer = this.#payer(), f = await facade(), rpc = f.facadeRpc(this.#txRpc);
+    for (let attempt = 0; ; attempt++) {
+      const t = await f.freshPriceTransaction(this.#txRpc, feeds, instructions, payer);
+      const signed = await this.#signer!.sign(t, { ...freshStep(t, payer, feeds), transaction: t });
+      const { signature } = await f.admitSigned(t, payer, signed);
+      const err = (await rpc.simulateTransaction((await import("./beta/bytes.js")).base64(signed) as never, { encoding: "base64", sigVerify: true, commitment: "confirmed" } as never).send().catch(() => undefined))?.value?.err;
+      if (err && attempt === 0) continue;
+      if (err) throw new MimirError("PLAN_STALE", `the signed transaction no longer simulates (${JSON.stringify(err, (_k, v) => typeof v === "bigint" ? Number(v) : v)}); nothing was sent`, "now");
+      const { outcome, slot } = await f.submit(rpc, this.#txRpc.replace(/^http/, "ws"), signed, signature, t.lastValidBlockHeight, undefined, this.#rpc ? 1_000 : 2_000, undefined, opts.commitment ?? "confirmed");
+      if (outcome === "confirmed") return { signature, slot };
+      if (outcome === "expired") throw new MimirError("EXPIRED", `${signature} expired before it landed`, "now");
+      if (outcome === "failed") throw new MimirError("UNKNOWN", `${signature} landed and failed`, "never");
+      throw new MimirError("PENDING", `${signature} was sent; its outcome is unknown`, "later");
+    }
+  }
+
+  /** The unsigned `sendWithFreshPrice` transaction for a wallet elsewhere: `mimir.sign(step)` signs it; you send the wire. */
+  async buildWithFreshPrice<I>(feeds: string | readonly string[], instructions: readonly I[], opts: { payer?: string } = {}): Promise<FreshPriceStep> {
+    this.#devnet();
+    const payer = this.#payer(opts.payer);
+    return freshStep(await (await facade()).freshPriceTransaction(this.#txRpc, feeds, instructions, payer), payer, feeds);
   }
 
   #noWallet(message = "this needs a wallet"): never {
@@ -201,6 +232,8 @@ export class Mimir {
   async createFeed(args: CreateFeedArgs & { dryRun?: boolean; skipSend?: boolean; payer?: string; resume?: ServerStep; signed?: string }): Promise<FeedPlan | ServerStep | CreatedFeed> {
     this.#devnet();
     if (!args || typeof args !== "object" || typeof args.mint !== "string" || !/^[1-9A-HJ-NP-Za-km-z]{32,44}$/.test(args.mint)) throw new MimirError("INVALID_INPUT", "createFeed takes { mint }", "never", { hint: "Pass the token's mint address: createFeed({ mint })." });
+    if (!args.dryRun && !args.skipSend) this.#payer();
+    if (!this.#rpc) throw new MimirError("INVALID_INPUT", "createFeed needs rpc", "never", { hint: "Pass your RPC: new Mimir({ wallet, rpc }). The dry run needs it too." });
     const f = await facade();
     try {
       if (args.dryRun) return await this.#plan(args, args.payer ?? this.address ?? await freshPayer());
@@ -225,7 +258,7 @@ export class Mimir {
     const plan = (payer: string) => f.planComposite({ payer, ticker: args.ticker, components, quote: args.quote ?? "USDC", rpc: this.#txRpc,
       ...(this.#buildSwap ? { buildSwap: this.#buildSwap } : {}) }).catch((e) => {
       if (e instanceof MimirError && e.code === "NOT_FOUND" && /no feed with this ticker/.test(e.message)) {
-        throw new MimirError("NOT_FOUND", e.message, "never", { hint: "Create it first: createFeed({ mint })." });
+        throw new MimirError("NOT_FOUND", e.message, "never", { hint: "Create it first: createFeed({ mint, pools: [onePool] })." });
       }
       throw e;
     });
@@ -252,8 +285,9 @@ export class Mimir {
       const e = receipt.error ?? new MimirError("UNPRICEABLE", `${p.ticker} was created but has no fresh price yet`, "later");
       if (e.code === "PLAN_STALE" && attempt === 0 && !signatures.length) continue;
       const sent = signatures.map((s) => ({ ...s, slot: String(s.slot) }));
+      const message = e.code === "UNPRICEABLE" && signatures.length ? e.message.replace(/Nothing was sent\.?/, "The create step was not sent; the COLA bought is kept: pass after: error.signatures to reuse it.") : e.message;
       if (receipt.state === "pending") throw new MimirError("PENDING", e.message, "later", { cause: e, signatures: sent });
-      throw new MimirError(e.code, e.message, e.retry, { hint: e.code === "RPC" && !this.#rpc ? "Pass your own { rpc } to send transactions: Solana's public RPC refuses browsers and rate-limits." : e.hint, cause: e.cause ?? e, signatures: sent });
+      throw new MimirError(e.code, message, e.retry, { hint: e.code === "RPC" && !this.#rpc ? "Pass your own { rpc } to send transactions: Solana's public RPC refuses browsers and rate-limits." : e.hint, cause: e.cause ?? e, signatures: sent });
     }
   }
 
@@ -271,7 +305,7 @@ export class Mimir {
   }
 
   /** The browser half of `skipSend`: checks the payer, signs once with the wallet, admits the result, returns the signed wire as base64. */
-  async sign(step: UnsignedStep): Promise<string> {
+  async sign(step: UnsignedStep | FreshPriceStep): Promise<string> {
     const payer = this.#payer();
     if (step?.payer !== payer) throw new MimirError("INVALID_INPUT", `this step is for ${step?.payer}, not the wallet ${payer}`, "never");
     const tx = await (await facade()).unsignedFromWire(step);
@@ -280,6 +314,12 @@ export class Mimir {
     return (await import("./beta/bytes.js")).base64(signed);
   }
 }
+
+const freshStep = (t: Awaited<ReturnType<typeof Facade.freshPriceTransaction>>, payer: string, feeds: string | readonly string[]): FreshPriceStep => {
+  const fee = SOL(5_000n * BigInt(t.requiredSigners.length) + (t.config.priorityFeeLamports ?? 0n));
+  return { kind: "fresh-price", index: 1, of: 1, payer, feeds: typeof feeds === "string" ? [feeds] : [...feeds], transaction: btoa(String.fromCharCode(...t.serializedTransaction)),
+    lastValidBlockHeight: String(t.lastValidBlockHeight), review: { debitSol: fee, networkFeeSol: fee, firstPrice: false, reviewHash: t.messageHash } };
+};
 
 /** A fresh random planning payer with no SOL, no COLA and no token account: the upper bound of the cost. */
 const freshPayer = async () => (await import("bs58")).default.encode(crypto.getRandomValues(new Uint8Array(32)));

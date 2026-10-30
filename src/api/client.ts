@@ -40,6 +40,8 @@ export type Price = {
   kind: "token" | "index";
   /** The feed account a Solana program reads. */
   address: string | null;
+  /** The feed's categories, e.g. ["rwa", "rwa.stocks"] (API mode). */
+  categories?: string[];
   /** The priced token (token feeds; null for an index; absent in RPC mode). */
   token?: { mint: string; symbol: string | null; name: string | null } | null;
   /** The quote of the feed's pools. `price` is always in USDC. */

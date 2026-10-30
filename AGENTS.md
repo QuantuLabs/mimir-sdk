@@ -53,10 +53,9 @@ console.log(index.ticker, index.price.price);
 
 ```ts
 import { Mimir } from "@quantulabs/mimir-sdk";
-import { Transaction } from "@solana/web3.js";
 const mimir = new Mimir({ wallet, rpc: process.env.RPC });
-const tx = new Transaction().add(...await mimir.withFreshPrice("SOL", [yourInstruction]));
-// your program reads the SOL feed account after the refresh: see "Read the price onchain"
+const { signature } = await mimir.sendWithFreshPrice("SOL", [yourInstruction]);
+// one Transaction V1: your program reads the SOL feed account after the refresh, see "Read the price onchain"
 ```
 
 Variants, one line each:
@@ -75,8 +74,10 @@ Variants, one line each:
 ## Use a price in a transaction (onchain)
 
 ```ts
-const ixs = await mimir.withFreshPrice("COLA", [yourInstruction]); // [compute budget, refresh(COLA), yourInstruction]
+const { signature } = await mimir.sendWithFreshPrice("COLA", [yourInstruction]); // one Transaction V1: [compute budget, refresh(COLA), yourInstruction]
 ```
+
+- `sendWithFreshPrice` fits every feed, indexes included. Wallet elsewhere: `buildWithFreshPrice(feeds, ixs, { payer })`, `mimir.sign(step)`, then send the wire. To compose yourself: `withFreshPrice(feeds, ixs)` returns the instructions for your own Transaction V1.
 
 - Keep the returned order. Do not insert any instruction (compute budget, ATA creation, another refresh) between the last refresh and the consumer instruction.
 - `withFreshPrice` takes SDK or `@solana/web3.js` `TransactionInstruction`s and returns the same type. `simulate: true` sets the compute limit to the simulated units plus the planned refresh units; it needs a payer that exists on chain with SOL.

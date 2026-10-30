@@ -205,7 +205,7 @@ const instructions = [
 ```
 
 - Refreshes above 1,400,000 compute units throw `INVALID_INPUT`: split the feeds over several transactions.
-- A feed with many pools can be too large for a legacy or v0 transaction; `compileMimirBetaTransactionV1` in `/beta` builds a Transaction v1 ([ADVANCED.md](./ADVANCED.md)).
+- Put these instructions in a Transaction V1 (`compileMimirBetaTransactionV1` in `/beta`, [ADVANCED.md](./ADVANCED.md)); an index with a SOL conversion needs its size. `mimir.sendWithFreshPrice` does all of it for you.
 
 ### What your program checks
 

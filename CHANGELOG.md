@@ -1,5 +1,24 @@
 # Changelog
 
+## 0.9.2 - 2026-10-30
+
+### Added
+
+- `mimir.sendWithFreshPrice(feeds, instructions)`: one Transaction V1 with the compute budget, the refreshes and your instructions, simulated, signed by the wallet, sent and confirmed. Returns `{ signature, slot }`. Fits every feed, indexes with a SOL conversion included. Prices that move during the approval rebuild it once.
+- `mimir.buildWithFreshPrice(feeds, instructions, { payer })`: the same transaction unsigned, for `mimir.sign(step)` where the wallet is.
+- `Price.categories` (API mode).
+- `npm run check:live`: simulates the fresh-price transaction of every live feed on mainnet.
+
+### Fixed
+
+- `createFeed` without `rpc`, dry run included, throws `INVALID_INPUT` « createFeed needs rpc » before any network call.
+- `cluster: "devnet"` gives the devnet hint.
+- `UNPRICEABLE` after a landed COLA purchase says the create step was not sent and the COLA is kept for `after: error.signatures`.
+- A custom `{ address, sign }` that returns something other than a `Uint8Array` throws `WALLET_UNSUPPORTED`.
+- `AccountNotFound` in a simulation maps to `INSUFFICIENT_SOL`; « Blockhash not found » to `EXPIRED`; a raw `InstructionError` object keeps its JSON message.
+- A failing `buildSwap` maps to `SWAP_UNAVAILABLE`.
+- Index component hints say `createFeed({ mint, pools: [onePool] })`.
+
 ## 0.9.1 - 2026-10-30
 
 - Docs reworded in a calmer tone, without warning boxes. Same code as 0.9.0.

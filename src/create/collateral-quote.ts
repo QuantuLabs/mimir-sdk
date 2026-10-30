@@ -1,4 +1,5 @@
 import type { MimirBetaAccount } from '../beta/types.js';
+import { MimirError, messageOf } from '../easy/error.js';
 import type { MimirBetaUnsignedTransaction } from '../beta/review.js';
 import { address, getAddressEncoder, getProgramDerivedAddress, type Address } from '@solana/kit';
 import { SOL_QUOTE_MINT } from './helpers.js';
@@ -246,7 +247,8 @@ export async function sizeCollateralPurchaseQuote(args: {
     const quote = async (amount: bigint) => {
       throwIfAborted(args.signal);
       const raw = await args.buildSwap({ taker: args.authority, inputMint: SOL_QUOTE_MINT, outputMint: args.collateralMint,
-        amount, slippageBps: SLIPPAGE_BPS, ...(args.signal ? { signal: args.signal } : {}), ...(args.failFast ? { failFast: true } : {}) });
+        amount, slippageBps: SLIPPAGE_BPS, ...(args.signal ? { signal: args.signal } : {}), ...(args.failFast ? { failFast: true } : {}) })
+        .catch((e: unknown) => { throwIfAborted(args.signal); throw e instanceof MimirError || e instanceof QuoteRateLimitedError ? e : new MimirError('SWAP_UNAVAILABLE', `the COLA swap route could not be built: ${messageOf(e)}`, 'later', { cause: e }); });
       throwIfAborted(args.signal);
       const validated = await validateJupiterCollateralBuild(raw, {
         authority: args.authority, collateralMint: args.collateralMint, collateralTokenAccount: args.collateralTokenAccount,

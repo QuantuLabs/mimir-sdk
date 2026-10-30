@@ -41,9 +41,9 @@ mock.module(new URL('../../src/create/facade.ts', import.meta.url).href, { named
   } } });
 const { Mimir } = await import('../../src/mimir.js');
 const wallet = { address: PAYER, sign: async () => new Uint8Array(0) };
-const mimir = new Mimir({ wallet, api: 'http://127.0.0.1:1' });
+const mimir = new Mimir({ wallet, api: 'http://127.0.0.1:1', rpc: 'http://127.0.0.1:1' });
 
-const plan = await new Mimir({ api: 'http://127.0.0.1:1' }).createFeed({ mint: WIF_MINT, dryRun: true });
+const plan = await new Mimir({ api: 'http://127.0.0.1:1', rpc: 'http://127.0.0.1:1' }).createFeed({ mint: WIF_MINT, dryRun: true });
 assert.deepEqual([plan.ticker, plan.symbol, plan.steps.map((s) => s.kind)], ['WIF', '$WIF', ['buy-cola', 'create+price']], 'dryRun needs no wallet and signs nothing');
 assert.ok(!log.some((l) => l.startsWith('signed')));
 assert.deepEqual(log, ['token true', 'existing', 'pools USDC', 'pools SOL', 'eligible P1', 'recommend', 'ticker $WIF', 'plan WIF USDC P1 native-bounded false']);
@@ -73,6 +73,6 @@ await assert.rejects(mimir.createFeed({ mint: WIF_MINT }), (e: MimirError) => e.
 pending = false;
 await assert.rejects(mimir.createFeed({ mint: 'not-a-mint' }), (e: MimirError) => e.code === 'INVALID_INPUT' || e.code === 'NOT_FOUND');
 noSet = true;
-await assert.rejects(new Mimir({ api: 'http://127.0.0.1:1' }).createFeed({ mint: WIF_MINT, dryRun: true }), (e: MimirError) => e.code === 'NO_POOL' && !/undefined/.test(e.message));
+await assert.rejects(new Mimir({ api: 'http://127.0.0.1:1', rpc: 'http://127.0.0.1:1' }).createFeed({ mint: WIF_MINT, dryRun: true }), (e: MimirError) => e.code === 'NO_POOL' && !/undefined/.test(e.message));
 noSet = false;
 console.log('mimir createFeed auto path: ok');

@@ -1,6 +1,6 @@
 {
   "name": "@quantulabs/mimir-sdk",
-  "version": "0.9.1",
+  "version": "0.9.2",
   "description": "TypeScript SDK for Mimir, a Solana oracle: onchain token and index price feeds computed from DEX liquidity pools (Raydium, Orca, Meteora, PumpSwap).",
   "type": "module",
   "main": "dist/cjs/src/root.js",
@@ -88,8 +88,9 @@
     "prepack": "npm run build",
     "check": "npm run build && npm run test && tsx scripts/package-export-smoke.ts",
     "typecheck": "tsc -p tsconfig.json --noEmit",
-    "test:mimir": "node --import tsx tests/mimir/api-contract.test.ts && node --import tsx tests/mimir/wallet.test.ts && node --import tsx tests/mimir/candidates.test.ts && node --import tsx tests/mimir/token-ticker.test.ts && node --import tsx tests/mimir/recommend.test.ts && node --experimental-test-module-mocks --import tsx tests/mimir/create-auto.test.ts && node --experimental-test-module-mocks --import tsx tests/mimir/create-auto-default.test.ts && node --experimental-test-module-mocks --import tsx tests/mimir/admin-tariff.test.ts && node --experimental-test-module-mocks --import tsx tests/mimir/server-split.test.ts && node --import tsx tests/mimir/no-secrets.test.ts && node --import tsx tests/mimir/no-pool-index.test.ts",
+    "test:mimir": "node --import tsx tests/mimir/api-contract.test.ts && node --import tsx tests/mimir/wallet.test.ts && node --import tsx tests/mimir/candidates.test.ts && node --import tsx tests/mimir/token-ticker.test.ts && node --import tsx tests/mimir/recommend.test.ts && node --experimental-test-module-mocks --import tsx tests/mimir/create-auto.test.ts && node --experimental-test-module-mocks --import tsx tests/mimir/create-auto-default.test.ts && node --experimental-test-module-mocks --import tsx tests/mimir/admin-tariff.test.ts && node --experimental-test-module-mocks --import tsx tests/mimir/server-split.test.ts && node --import tsx tests/mimir/no-secrets.test.ts && node --import tsx tests/mimir/no-pool-index.test.ts && node --import tsx tests/mimir/fresh-send.test.ts",
     "test:readme": "npm run build && node scripts/readme-typecheck.mjs",
+    "check:live": "node scripts/live-feeds-check.mjs",
     "test:mainnet": "node --import tsx tests/mainnet/mimir-mainnet.test.ts"
   },
   "keywords": [

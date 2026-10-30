@@ -361,6 +361,28 @@ async function firstPriceStep(c: { rpc: Rpc; rpcUrl: string }, plan: { feed: str
     simulation: { slot: BigInt(sim.context.slot), unitsConsumed: sim.value.unitsConsumed ?? null, computeUnitLimit: t.config.computeUnitLimit, bytes: t.serializedTransaction.length } } };
 }
 
+/** @internal A fresh-price Transaction v1 for `payer`: [compute budget, refreshes, yours], simulated (sigVerify off) on a confirmed blockhash, signed by the payer only. */
+export async function freshPriceTransaction(rpcUrl: string, feeds: string | readonly string[], instructions: readonly unknown[], payer: string) {
+  const rpc = facadeRpc(rpcUrl);
+  const { withFreshPrice } = await import('../easy/refresh.js');
+  const own = instructions.map((ix) => (ix as { programId?: unknown }).programId ? kitOf(ix as never) : ix) as never[];
+  const ixs = (await withFreshPrice({ feeds, instructions: own, payer, rpc: rpcUrl, simulate: true })).instructions;
+  const block = (await rpc.getLatestBlockhash({ commitment: 'confirmed' }).send()).value;
+  const simulate = async (t: MimirBetaUnsignedTransaction) => {
+    const sim = (await rpc.simulateTransaction(base64(t.serializedTransaction) as never, { encoding: 'base64', sigVerify: false, replaceRecentBlockhash: false, commitment: 'confirmed' } as never)
+      .send()) as unknown as { context: { slot: bigint }; value: { err: unknown; logs?: string[] | null; unitsConsumed?: bigint } };
+    if (sim.value.err) throw MimirError.from({ message: JSON.stringify(sim.value.err, (_k, v) => typeof v === 'bigint' ? Number(v) : v), logs: sim.value.logs ?? [] }, { instructions: ixs });
+    return sim;
+  };
+  const t = await compileMimirBetaTransactionV1({ feePayer: payer as Address, recentBlockhash: block.blockhash, lastValidBlockHeight: block.lastValidBlockHeight, instructions: ixs })
+    .catch((e) => { throw MimirError.from(e); });
+  if (t.requiredSigners.length !== 1) fail('INVALID_INPUT', `your instructions need ${t.requiredSigners.length - 1} signer(s) besides the payer; sendWithFreshPrice signs with the payer only`);
+  await simulate(t);
+  return t;
+}
+const kitOf = (ix: { programId: { toBase58(): string }; keys: { pubkey: { toBase58(): string }; isSigner: boolean; isWritable: boolean }[]; data: Uint8Array }) =>
+  ({ programAddress: ix.programId.toBase58() as Address, data: Uint8Array.from(ix.data), accounts: ix.keys.map((k) => ({ address: k.pubkey.toBase58() as Address, isSigner: k.isSigner, isWritable: k.isWritable })) });
+
 /** The only programs a creation step calls: Mimir, compute budget, system, SPL Token, Token-2022, associated token, Jupiter, Memo. */
 const STEP_PROGRAMS = new Set(["hBYrGHXVCQsnduDERkVnViCXNYawpHCvN5y3GsMiMiR", "ComputeBudget111111111111111111111111111111", "11111111111111111111111111111111",
   "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA", "TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb", "ATokenGPvbdGVxr1b2hvZbsiqW5xWH25efTNsLJA8knL",
@@ -413,13 +435,13 @@ function backoff() {
 
 /** @internal Sends a signed wire (the same bytes rebroadcast until processed or expired) and waits for `finalized`. */
 export async function submit(rpc: Rpc, wsUrl: string, signed: Uint8Array, signature: string, lastValidBlockHeight: bigint, patient = backoff(),
-  rebroadcastMs = 1_000, sent?: () => unknown) {
+  rebroadcastMs = 1_000, sent?: () => unknown, commitment: 'confirmed' | 'finalized' = 'finalized') {
   const wire = base64(signed);
   const send = async () => { await rpc.sendTransaction(wire as never, { encoding: 'base64', skipPreflight: true, maxRetries: 0n } as never).send().catch(() => undefined); };
   await send();
   const hook = await Promise.resolve().then(sent).then(() => undefined, (error: unknown) => ({ error }));
   let slot = 0n, fence = 0n;
-  const outcome = await confirmSignature({ wsUrl, signature, commitment: 'finalized', rebroadcast: send, rebroadcastMs, timeoutMs: 120_000, pollMs: 1_000,
+  const outcome = await confirmSignature({ wsUrl, signature, commitment, rebroadcast: send, rebroadcastMs, timeoutMs: 120_000, pollMs: 1_000,
     getStatus: async (s, history) => {
       const read = await patient(() => rpc.getSignatureStatuses([s as never], { searchTransactionHistory: !!history }).send()).catch(() => undefined);
       if (!read) return undefined;
@@ -648,14 +670,14 @@ export function createComposite(plan: CompositePlan, opts: CreateOptions): Promi
 }
 
 /** @internal The reviewed unsigned transaction behind a JSON step, rebuilt from its wire. */
-export async function unsignedFromWire(step: { transaction: string; payer: string; lastValidBlockHeight: string }): Promise<MimirBetaUnsignedTransaction> {
+export async function unsignedFromWire(step: { kind?: string; transaction: string; payer: string; lastValidBlockHeight: string }): Promise<MimirBetaUnsignedTransaction> {
   const { sha256 } = await import("@noble/hashes/sha256");
   const wire = fromBase64(step.transaction);
   let message: Uint8Array, signers: string[], programs: (string | undefined)[];
   try { ({ message, signers, programs } = await wireFacts(wire)); }
   catch (e) { throw new MimirError("INVALID_INPUT", "the step's transaction is not a Transaction v1 wire", "never", { cause: e }); }
   if (wire[0] !== 0x81 || signers[0] !== step.payer) throw new MimirError("INVALID_INPUT", "the step's transaction is not a Transaction v1 paid by its payer", "never");
-  const foreign = programs.findIndex((p) => !p || !STEP_PROGRAMS.has(p));
+  const foreign = programs.findIndex((p) => !p || (step.kind !== 'fresh-price' && !STEP_PROGRAMS.has(p)));
   if (foreign >= 0) throw new MimirError("INVALID_INPUT", `the step's transaction calls ${programs[foreign] ?? "an out-of-range program"}, not a Mimir creation program`, "never");
   const cu = computeUnitLimitOf(message);
   if (cu === null) throw new MimirError("INVALID_INPUT", "the step's transaction has no compute-unit limit in its config", "never");

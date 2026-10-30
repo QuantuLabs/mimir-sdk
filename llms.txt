@@ -4,7 +4,7 @@
 
 Root exports: `Mimir` and `MimirError`. Options: `wallet?` (64-byte secret key, base58, web3.js Keypair, CryptoKeyPair, @solana/kit signer, Wallet Standard wallet, wallet-adapter; Transaction v1 only), `rpc?` (RPC mode: everything on your RPC, zero Mimir API calls; without it reads use the free keyless Mimir API and transactions Solana's public RPC, which refuses browsers: pass your own `rpc` to send transactions). Properties: `address`, `mode` ("api" | "rpc"), `canWrite`.
 
-Methods: `price(tickerOrFeed)`, `prices(list)` (input order), `watch(list, onPrice, onError?, { intervalMs? })` (polls one batch request, default 5 s, min 2 s; returns unsubscribe), `createFeed({ mint, ticker?, quote?, pools?, require?, variant?, onStep?, dryRun?, skipSend?, payer?, resume?, signed? })` → `{ state: "ready", ticker, feed, price, signatures, cost }`, `createIndex({ ticker, components: { TICKER: quantity }, dryRun? })`, `withFreshPrice(feeds, instructions, { payer?, simulate? })` (same instruction type back), `sign(step)` (browser half of `skipSend`).
+Methods: `price(tickerOrFeed)`, `prices(list)` (input order), `watch(list, onPrice, onError?, { intervalMs? })` (polls one batch request, default 5 s, min 2 s; returns unsubscribe), `createFeed({ mint, ticker?, quote?, pools?, require?, variant?, onStep?, dryRun?, skipSend?, payer?, resume?, signed? })` → `{ state: "ready", ticker, feed, price, signatures, cost }`, `createIndex({ ticker, components: { TICKER: quantity }, dryRun? })`, `sendWithFreshPrice(feeds, instructions)` → `{ signature, slot }` (one Transaction V1: compute budget, refreshes, yours; simulated, signed by the wallet, sent, confirmed; every feed fits, indexes included), `buildWithFreshPrice(feeds, instructions, { payer? })` (the unsigned step for `sign(step)`), `withFreshPrice(feeds, instructions, { payer?, simulate? })` (the instructions only, same type back, for your own Transaction V1), `sign(step)` (browser half of `skipSend` and `buildWithFreshPrice`).
 
 A price: `{ ticker, kind: "token" | "index", address, token?: { mint, symbol, name } | null, quote: { mint, symbol } | null, sources?: [{ pool, venue, liquidityUsdc }], components?: [{ ticker, address, weight }], score?: { value, band: "Excellent" | "Strong" | "Good" | "Fair" | "Thin" } | null, price, confidenceBps, dispersionBps, slot, updatedAt, reason? }`. `price` is in USDC (a SOL-quoted feed too); null when the feed cannot be priced, with `reason`. `slot` is the Solana slot whose pool states produced the price: replay it to check. `updatedAt` is Unix seconds. The API may send null for `ticker`, `address`, `quote`, `token.symbol`/`name`, a source's `venue`/`liquidityUsdc` and a component's `ticker`/`address`/`weight`. `token`, `sources`, `components` and `score` come from the API; RPC mode omits them. Exact onchain math (`priceX64`, status): `getPrice` under `/advanced`.
 
@@ -54,10 +54,9 @@ console.log(index.ticker, index.price.price);
 
 ```ts
 import { Mimir } from "@quantulabs/mimir-sdk";
-import { Transaction } from "@solana/web3.js";
 const mimir = new Mimir({ wallet, rpc: process.env.RPC });
-const tx = new Transaction().add(...await mimir.withFreshPrice("SOL", [yourInstruction]));
-// your program reads the SOL feed account after the refresh: see "Read the price onchain"
+const { signature } = await mimir.sendWithFreshPrice("SOL", [yourInstruction]);
+// one Transaction V1: your program reads the SOL feed account after the refresh, see "Read the price onchain"
 ```
 
 Variants, one line each:

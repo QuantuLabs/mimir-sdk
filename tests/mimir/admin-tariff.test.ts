@@ -30,7 +30,7 @@ mock.module(new URL('../../src/create/facade.ts', import.meta.url).href, { named
     return { state: 'ready', feed: plan.feed, signatures, price: { ticker: plan.ticker, price: 1, quote: 'USDC', status: 'fresh' } as never };
   } } });
 const { Mimir } = await import('../../src/mimir.js');
-const mimir = new Mimir({ wallet: { address: '6Ba7yenKXHuauCn451XN8UotWgKtZyvxPMFwcPZza2Kz', sign: async () => new Uint8Array(0) }, api: 'http://127.0.0.1:1' });
+const mimir = new Mimir({ wallet: { address: '6Ba7yenKXHuauCn451XN8UotWgKtZyvxPMFwcPZza2Kz', sign: async () => new Uint8Array(0) }, api: 'http://127.0.0.1:1', rpc: 'http://127.0.0.1:1' });
 const dry = (): Promise<Facade.FeedPlan> => mimir.createFeed({ mint: WIF_MINT, pools: ['P1'], dryRun: true });
 
 assert.equal((await dry()).tariffCola, '22500');

@@ -114,14 +114,15 @@ This path always reads the chain through an RPC: the [`rpc`](#through-your-rpc) 
 
 ```ts
 import { Mimir } from "@quantulabs/mimir-sdk";
-import { Transaction } from "@solana/web3.js";
 const mimir = new Mimir({ wallet, rpc: process.env.SOLANA_RPC_URL });
-const tx = new Transaction().add(...await mimir.withFreshPrice("SOL", [yourInstruction]));
-// sign and send tx: your program reads the SOL feed account after the refresh
+const { signature, slot } = await mimir.sendWithFreshPrice("SOL", [yourInstruction]);
+// one Transaction V1: compute budget, the SOL refresh, then yourInstruction
 ```
 
-- It returns a compute-budget instruction, the refreshes in the order you gave, then your instructions, nothing in between. Several feeds: `withFreshPrice(["SOL", "WIF"], [ix])`.
-- The fee payer is the wallet, or `withFreshPrice(feeds, ixs, { payer })` without one. A token feed refresh carries no Mimir fee.
+- It builds one Transaction V1, simulates it, has the wallet sign it, sends it and waits for `confirmed`. It fits every feed, indexes included.
+- Several feeds: `sendWithFreshPrice(["SOL", "WIF"], [ix])`. The refreshes come in that order, then your instructions, nothing in between. Instructions can be `@solana/kit` or `@solana/web3.js`. The wallet is the only signer.
+- A wallet elsewhere (browser, server): `const step = await mimir.buildWithFreshPrice(feeds, ixs, { payer })`, then `mimir.sign(step)` where the wallet is, then send the signed wire through your RPC.
+- To compose the transaction yourself, `withFreshPrice(feeds, ixs)` returns the instructions; put them in a Transaction V1. A token feed refresh carries no Mimir fee.
 
 ### Read the price onchain
 

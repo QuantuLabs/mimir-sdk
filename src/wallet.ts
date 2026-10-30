@@ -92,7 +92,10 @@ export function normaliseWallet(w: WalletInput): MimirSigner {
   }
   if (typeof w.address === "string" && typeof w.sign === "function") {
     const address = w.address, sign = w.sign as (step: unknown) => Promise<Uint8Array>;
-    return { address: () => address, prompts: true, sign: (t, step) => guard(() => sign(step ?? { transaction: t })) };
+    return { address: () => address, prompts: true, sign: (t, step) => guard(async () => {
+      const wire = await sign(step ?? { transaction: t });
+      return wire instanceof Uint8Array ? wire : unsupported("sign(step) must return the signed wire as a Uint8Array: step.transaction.serializedTransaction with the 64-byte signature of serializedMessage at offset serializedMessage.length");
+    }) };
   }
   const standard = standardOf(w);
   if (standard) {

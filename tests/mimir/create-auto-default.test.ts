@@ -17,7 +17,7 @@ mock.module(new URL('../../src/create/facade.ts', import.meta.url).href, { named
   prepareFeed: async (args: Facade.FeedArgs) => { recipes.push(args.recipe);
     return { kind: 'feed', args, feed: 'F', feedId: 'F', ticker: args.ticker, pools: [], steps: [], prompts: 0, totalLamports: 0n, warnings: [], tariffColaRaw: 0n, tariffCola: '0' }; } } });
 const { Mimir } = await import('../../src/mimir.js');
-const mimir = new Mimir({ api: 'http://127.0.0.1:1' });
+const mimir = new Mimir({ api: 'http://127.0.0.1:1', rpc: 'http://127.0.0.1:1' });
 await mimir.createFeed({ mint: WIF_MINT, dryRun: true });
 adapterType = 1;
 await mimir.createFeed({ mint: WIF_MINT, dryRun: true });

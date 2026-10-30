@@ -11,7 +11,7 @@ import { MIMIR_V1_NATIVE_MINT } from "../v1/composite.js";
 import { validateCompositePrefix } from "../v1/publication.js";
 import * as C from "../v1/layout/common.js";
 import * as K from "../v1/layout/classic.js";
-import { DEFAULT_RPC, HINTS, MimirError, registerMimirErrorClassifier, retryOfProgramCode, sdkCodeError, type MimirErrorCode, type MimirRetry } from "./error.js";
+import { DEFAULT_RPC, HINTS, MimirError, messageOf, plainError, registerMimirErrorClassifier, retryOfProgramCode, sdkCodeError, type MimirErrorCode, type MimirRetry } from "./error.js";
 
 /** Deployed Mimir programs. Devnet has no live Mimir deployment. */
 export const MIMIR_PROGRAM_IDS = Object.freeze({ mainnet: MIMIR_V1_MAINNET_PROGRAM_ID });
@@ -86,10 +86,10 @@ export { MimirError, DEFAULT_API } from "./error.js";
 export type { MimirErrorCode, MimirRetry } from "./error.js";
 registerMimirErrorClassifier((error: unknown, options: { program?: string; instructions?: readonly { programAddress: string }[] } = {}): MimirError => {
   const program = options.program ?? MIMIR_V1_MAINNET_PROGRAM_ID;
-  const message = String((error as Error)?.message ?? error);
+  const message = messageOf(error);
   const other = (code: MimirErrorCode, retry: MimirRetry) => new MimirError(code, message, retry, { cause: error });
   if ((error as { code?: unknown })?.code === "PLAN_STALE") return other("PLAN_STALE", "now");
-  const typed = sdkCodeError(error); if (typed) return typed;
+  const typed = sdkCodeError(error) ?? plainError(error, message); if (typed) return typed;
   if ((error as Error)?.name === "TransactionExpiredBlockheightExceededError" || /block ?height exceeded/i.test(message)) return other("EXPIRED", "now");
   if (/too many requests/i.test(message)) return other("RPC", "later");
   if (isMimirBetaCohortNotConverged(error)) return other("RPC", "now");
