@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="320" viewBox="0 0 900 320" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" role="img" aria-label="Liquidity pools feed the Mimir program, which computes the price on chain; your app reads it through the API or the SDK, and your program reads it in the same transaction.">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#8b949e"/>
+    </marker>
+  </defs>
+  <g stroke-width="2">
+    <rect x="20" y="105" width="220" height="110" rx="12" fill="#3fa37a" fill-opacity="0.12" stroke="#3fa37a"/>
+    <rect x="330" y="95" width="250" height="130" rx="12" fill="#5b8def" fill-opacity="0.12" stroke="#5b8def"/>
+    <rect x="670" y="30" width="210" height="110" rx="12" fill="#c27c2c" fill-opacity="0.12" stroke="#c27c2c"/>
+    <rect x="670" y="180" width="210" height="110" rx="12" fill="#a66cd6" fill-opacity="0.12" stroke="#a66cd6"/>
+  </g>
+  <g stroke="#8b949e" stroke-width="2" fill="none" marker-end="url(#arrow)">
+    <path d="M240 160 H322"/>
+    <path d="M580 140 C625 140 625 85 662 85"/>
+    <path d="M580 180 C625 180 625 235 662 235"/>
+  </g>
+  <g text-anchor="middle" font-size="18" font-weight="600">
+    <text x="130" y="145" fill="#3fa37a">Liquidity pools</text>
+    <text x="455" y="135" fill="#5b8def">Mimir program</text>
+    <text x="775" y="70" fill="#c27c2c">Your app</text>
+    <text x="775" y="220" fill="#a66cd6">Your program</text>
+  </g>
+  <g text-anchor="middle" font-size="15" fill="#8b949e">
+    <text x="130" y="172">on Solana DEXs</text>
+    <text x="130" y="194">(the price source)</text>
+    <text x="455" y="162">computes the price on chain</text>
+    <text x="455" y="184">from the pool accounts and</text>
+    <text x="455" y="206">stores it in a feed account</text>
+    <text x="775" y="97">reads the price</text>
+    <text x="775" y="119">with the SDK or the API</text>
+    <text x="775" y="247">refreshes, then reads it</text>
+    <text x="775" y="269">in the same transaction</text>
+  </g>
+</svg>

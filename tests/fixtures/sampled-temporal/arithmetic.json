@@ -1,0 +1,1564 @@
+[
+  {
+    "id": "varying_weighted_mean",
+    "records": [
+      {
+        "slot": "5000",
+        "unix": "1000",
+        "price_x64": "18446744073709551616",
+        "observed_depth_input": "1000000",
+        "observation_hash": "613c77fe6b08b0aba256d4fcbef84fc8d0354f72896b7b2e240b06fa50367c91"
+      },
+      {
+        "slot": "5030",
+        "unix": "1010",
+        "price_x64": "18446744073709551633",
+        "observed_depth_input": "999993",
+        "observation_hash": "568cfc69b0228a378f6a32ce1cda1f6c2350805e5b5cd75b5d8891cfdbaca049"
+      },
+      {
+        "slot": "5060",
+        "unix": "1020",
+        "price_x64": "18446744073709551650",
+        "observed_depth_input": "999986",
+        "observation_hash": "8bc5ffdfbf9937cbdec5386c8762b7cc224e023e1936c5e4644ab58bace7f1d1"
+      },
+      {
+        "slot": "5090",
+        "unix": "1030",
+        "price_x64": "18446744073709551616",
+        "observed_depth_input": "999979",
+        "observation_hash": "28589976b4ff5bff3968a543a8e36c951333511532d955a7655ddbf718ef926c"
+      },
+      {
+        "slot": "5120",
+        "unix": "1040",
+        "price_x64": "18446744073709551633",
+        "observed_depth_input": "999972",
+        "observation_hash": "2a207e25b7829ce90eb3e73838bc3585f6e4f1c6e2a13d2d8c449fd1f32988a8"
+      },
+      {
+        "slot": "5150",
+        "unix": "1050",
+        "price_x64": "18446744073709551650",
+        "observed_depth_input": "999965",
+        "observation_hash": "f465a12bef06d976d15496474f97ab3e9eb58169d8cb64b7320fcd7ba565d114"
+      },
+      {
+        "slot": "5180",
+        "unix": "1060",
+        "price_x64": "18446744073709551616",
+        "observed_depth_input": "999958",
+        "observation_hash": "5457f4295fc90fa34ea8d17c545ee82e2fb2778b14c89b3c75e52a70c3b91206"
+      },
+      {
+        "slot": "5210",
+        "unix": "1070",
+        "price_x64": "18446744073709551633",
+        "observed_depth_input": "999951",
+        "observation_hash": "3b7602257b08defc2b541237f734e653a533da1669d0a13b20173798129c8c55"
+      },
+      {
+        "slot": "5240",
+        "unix": "1080",
+        "price_x64": "18446744073709551650",
+        "observed_depth_input": "999944",
+        "observation_hash": "e646d5ec2a8a562593b6db0c56826e00eb63e74ed74495752a9ffddfff2005e2"
+      },
+      {
+        "slot": "5270",
+        "unix": "1090",
+        "price_x64": "18446744073709551616",
+        "observed_depth_input": "999937",
+        "observation_hash": "f925169061f2207a8862e6c4a3e2e098282cd3c85f74176ee8ef23b3e354d9a6"
+      },
+      {
+        "slot": "5300",
+        "unix": "1100",
+        "price_x64": "18446744073709551633",
+        "observed_depth_input": "999930",
+        "observation_hash": "52a43c14f2dd63844506cd9749754518bd6a2cccc6f7876a77f8f690776ace68"
+      },
+      {
+        "slot": "5330",
+        "unix": "1110",
+        "price_x64": "18446744073709551650",
+        "observed_depth_input": "999923",
+        "observation_hash": "8c4f3a9122579043e60e1c5a99e15f387a4b18c4e319a610e56ec70745082e6c"
+      },
+      {
+        "slot": "5360",
+        "unix": "1120",
+        "price_x64": "18446744073709551616",
+        "observed_depth_input": "999916",
+        "observation_hash": "129e55707036d0e974867bd99014921751d9452b82d35c52cc138b48e0690505"
+      }
+    ],
+    "close": {
+      "slot": "5360",
+      "unix": "1120",
+      "price_x64": "18446744073709551616",
+      "observed_depth_input": "999916",
+      "observation_hash": "129e55707036d0e974867bd99014921751d9452b82d35c52cc138b48e0690505"
+    },
+    "expected": {
+      "start_unix": "1000",
+      "end_unix": "1120",
+      "support_seconds": "120",
+      "actual_records": "13",
+      "integral_x64_seconds": "2213609288845146195960",
+      "mean_x64": "18446744073709551633",
+      "lower_x64": "18446744073709551616",
+      "upper_x64": "18446744073709551651",
+      "observed_band_bps": "1",
+      "confidence_bps": "1",
+      "close_deviation_bps": "1",
+      "depth_floor_quote_native": "1",
+      "accepted_count": "13",
+      "sequence": "13",
+      "next_index": "13",
+      "temporal_ready": true,
+      "ready": true,
+      "flags": "3",
+      "last_accepted_bucket": "112",
+      "next_eligible_unix": "1130"
+    }
+  },
+  {
+    "id": "historical_low_depth",
+    "records": [
+      {
+        "slot": "5000",
+        "unix": "1000",
+        "price_x64": "18446744073709551616",
+        "observed_depth_input": "1000000",
+        "observation_hash": "613c77fe6b08b0aba256d4fcbef84fc8d0354f72896b7b2e240b06fa50367c91"
+      },
+      {
+        "slot": "5030",
+        "unix": "1010",
+        "price_x64": "18446744073709551616",
+        "observed_depth_input": "1000000",
+        "observation_hash": "613c77fe6b08b0aba256d4fcbef84fc8d0354f72896b7b2e240b06fa50367c91"
+      },
+      {
+        "slot": "5060",
+        "unix": "1020",
+        "price_x64": "18446744073709551616",
+        "observed_depth_input": "1000000",
+        "observation_hash": "613c77fe6b08b0aba256d4fcbef84fc8d0354f72896b7b2e240b06fa50367c91"
+      },
+      {
+        "slot": "5090",
+        "unix": "1030",
+        "price_x64": "18446744073709551616",
+        "observed_depth_input": "1000000",
+        "observation_hash": "613c77fe6b08b0aba256d4fcbef84fc8d0354f72896b7b2e240b06fa50367c91"
+      },
+      {
+        "slot": "5120",
+        "unix": "1040",
+        "price_x64": "18446744073709551616",
+        "observed_depth_input": "10",
+        "observation_hash": "a8338959213c834d94c4c8476e46e5d6d036353a09be9985bbcba38cbc35b8c7"
+      },
+      {
+        "slot": "5150",
+        "unix": "1050",
+        "price_x64": "18446744073709551616",
+        "observed_depth_input": "10000000",
+        "observation_hash": "a1a84d1f1b0ca41d04f0b21f0c05b69985557a56715947761ca7a66703274815"
+      },
+      {
+        "slot": "5180",
+        "unix": "1060",
+        "price_x64": "18446744073709551616",
+        "observed_depth_input": "10000000",
+        "observation_hash": "a1a84d1f1b0ca41d04f0b21f0c05b69985557a56715947761ca7a66703274815"
+      },
+      {
+        "slot": "5210",
+        "unix": "1070",
+        "price_x64": "18446744073709551616",
+        "observed_depth_input": "10000000",
+        "observation_hash": "a1a84d1f1b0ca41d04f0b21f0c05b69985557a56715947761ca7a66703274815"
+      },
+      {
+        "slot": "5240",
+        "unix": "1080",
+        "price_x64": "18446744073709551616",
+        "observed_depth_input": "10000000",
+        "observation_hash": "a1a84d1f1b0ca41d04f0b21f0c05b69985557a56715947761ca7a66703274815"
+      },
+      {
+        "slot": "5270",
+        "unix": "1090",
+        "price_x64": "18446744073709551616",
+        "observed_depth_input": "10000000",
+        "observation_hash": "a1a84d1f1b0ca41d04f0b21f0c05b69985557a56715947761ca7a66703274815"
+      },
+      {
+        "slot": "5300",
+        "unix": "1100",
+        "price_x64": "18446744073709551616",
+        "observed_depth_input": "10000000",
+        "observation_hash": "a1a84d1f1b0ca41d04f0b21f0c05b69985557a56715947761ca7a66703274815"
+      },
+      {
+        "slot": "5330",
+        "unix": "1110",
+        "price_x64": "18446744073709551616",
+        "observed_depth_input": "10000000",
+        "observation_hash": "a1a84d1f1b0ca41d04f0b21f0c05b69985557a56715947761ca7a66703274815"
+      },
+      {
+        "slot": "5360",
+        "unix": "1120",
+        "price_x64": "18446744073709551616",
+        "observed_depth_input": "10000000",
+        "observation_hash": "a1a84d1f1b0ca41d04f0b21f0c05b69985557a56715947761ca7a66703274815"
+      }
+    ],
+    "close": {
+      "slot": "5360",
+      "unix": "1120",
+      "price_x64": "18446744073709551616",
+      "observed_depth_input": "10000000",
+      "observation_hash": "a1a84d1f1b0ca41d04f0b21f0c05b69985557a56715947761ca7a66703274815"
+    },
+    "expected": {
+      "start_unix": "1000",
+      "end_unix": "1120",
+      "support_seconds": "120",
+      "actual_records": "13",
+      "integral_x64_seconds": "2213609288845146193920",
+      "mean_x64": "18446744073709551616",
+      "lower_x64": "18446744073709551616",
+      "upper_x64": "18446744073709551617",
+      "observed_band_bps": "1",
+      "confidence_bps": "1",
+      "close_deviation_bps": "0",
+      "depth_floor_quote_native": "1",
+      "accepted_count": "13",
+      "sequence": "13",
+      "next_index": "13",
+      "temporal_ready": true,
+      "ready": true,
+      "flags": "3",
+      "last_accepted_bucket": "112",
+      "next_eligible_unix": "1130"
+    }
+  },
+  {
+    "id": "isolated_8percent_spike",
+    "records": [
+      {
+        "slot": "5000",
+        "unix": "1000",
+        "price_x64": "18446744073709551616",
+        "observed_depth_input": "1000000",
+        "observation_hash": "613c77fe6b08b0aba256d4fcbef84fc8d0354f72896b7b2e240b06fa50367c91"
+      },
+      {
+        "slot": "5030",
+        "unix": "1010",
+        "price_x64": "18446744073709551616",
+        "observed_depth_input": "1000000",
+        "observation_hash": "613c77fe6b08b0aba256d4fcbef84fc8d0354f72896b7b2e240b06fa50367c91"
+      },
+      {
+        "slot": "5060",
+        "unix": "1020",
+        "price_x64": "18446744073709551616",
+        "observed_depth_input": "1000000",
+        "observation_hash": "613c77fe6b08b0aba256d4fcbef84fc8d0354f72896b7b2e240b06fa50367c91"
+      },
+      {
+        "slot": "5090",
+        "unix": "1030",
+        "price_x64": "18446744073709551616",
+        "observed_depth_input": "1000000",
+        "observation_hash": "613c77fe6b08b0aba256d4fcbef84fc8d0354f72896b7b2e240b06fa50367c91"
+      },
+      {
+        "slot": "5120",
+        "unix": "1040",
+        "price_x64": "18446744073709551616",
+        "observed_depth_input": "1000000",
+        "observation_hash": "613c77fe6b08b0aba256d4fcbef84fc8d0354f72896b7b2e240b06fa50367c91"
+      },
+      {
+        "slot": "5150",
+        "unix": "1050",
+        "price_x64": "18446744073709551616",
+        "observed_depth_input": "1000000",
+        "observation_hash": "613c77fe6b08b0aba256d4fcbef84fc8d0354f72896b7b2e240b06fa50367c91"
+      },
+      {
+        "slot": "5180",
+        "unix": "1060",
+        "price_x64": "19922483599606315745",
+        "observed_depth_input": "1000000",
+        "observation_hash": "0cd2aa9eb650a9af43fbc744da5ea0f16aec6b99ebbb392894542904b0323dbe"
+      },
+      {
+        "slot": "5210",
+        "unix": "1070",
+        "price_x64": "18446744073709551616",
+        "observed_depth_input": "1000000",
+        "observation_hash": "613c77fe6b08b0aba256d4fcbef84fc8d0354f72896b7b2e240b06fa50367c91"
+      },
+      {
+        "slot": "5240",
+        "unix": "1080",
+        "price_x64": "18446744073709551616",
+        "observed_depth_input": "1000000",
+        "observation_hash": "613c77fe6b08b0aba256d4fcbef84fc8d0354f72896b7b2e240b06fa50367c91"
+      },
+      {
+        "slot": "5270",
+        "unix": "1090",
+        "price_x64": "18446744073709551616",
+        "observed_depth_input": "1000000",
+        "observation_hash": "613c77fe6b08b0aba256d4fcbef84fc8d0354f72896b7b2e240b06fa50367c91"
+      },
+      {
+        "slot": "5300",
+        "unix": "1100",
+        "price_x64": "18446744073709551616",
+        "observed_depth_input": "1000000",
+        "observation_hash": "613c77fe6b08b0aba256d4fcbef84fc8d0354f72896b7b2e240b06fa50367c91"
+      },
+      {
+        "slot": "5330",
+        "unix": "1110",
+        "price_x64": "18446744073709551616",
+        "observed_depth_input": "1000000",
+        "observation_hash": "613c77fe6b08b0aba256d4fcbef84fc8d0354f72896b7b2e240b06fa50367c91"
+      },
+      {
+        "slot": "5360",
+        "unix": "1120",
+        "price_x64": "18446744073709551616",
+        "observed_depth_input": "1000000",
+        "observation_hash": "613c77fe6b08b0aba256d4fcbef84fc8d0354f72896b7b2e240b06fa50367c91"
+      }
+    ],
+    "close": {
+      "slot": "5360",
+      "unix": "1120",
+      "price_x64": "18446744073709551616",
+      "observed_depth_input": "1000000",
+      "observation_hash": "613c77fe6b08b0aba256d4fcbef84fc8d0354f72896b7b2e240b06fa50367c91"
+    },
+    "expected": {
+      "start_unix": "1000",
+      "end_unix": "1120",
+      "support_seconds": "120",
+      "actual_records": "13",
+      "integral_x64_seconds": "2228366684104113835210",
+      "mean_x64": "18569722367534281960",
+      "lower_x64": "18446744073709551616",
+      "upper_x64": "19922483599606315746",
+      "observed_band_bps": "795",
+      "confidence_bps": "729",
+      "close_deviation_bps": "67",
+      "depth_floor_quote_native": "1",
+      "accepted_count": "13",
+      "sequence": "13",
+      "next_index": "13",
+      "temporal_ready": true,
+      "ready": false,
+      "flags": "1",
+      "last_accepted_bucket": "112",
+      "next_eligible_unix": "1130"
+    }
+  },
+  {
+    "id": "fresh_close_zero_weight",
+    "records": [
+      {
+        "slot": "5000",
+        "unix": "1000",
+        "price_x64": "18446744073709551616",
+        "observed_depth_input": "1000000",
+        "observation_hash": "613c77fe6b08b0aba256d4fcbef84fc8d0354f72896b7b2e240b06fa50367c91"
+      },
+      {
+        "slot": "5030",
+        "unix": "1010",
+        "price_x64": "18446744073709551616",
+        "observed_depth_input": "1000000",
+        "observation_hash": "613c77fe6b08b0aba256d4fcbef84fc8d0354f72896b7b2e240b06fa50367c91"
+      },
+      {
+        "slot": "5060",
+        "unix": "1020",
+        "price_x64": "18446744073709551616",
+        "observed_depth_input": "1000000",
+        "observation_hash": "613c77fe6b08b0aba256d4fcbef84fc8d0354f72896b7b2e240b06fa50367c91"
+      },
+      {
+        "slot": "5090",
+        "unix": "1030",
+        "price_x64": "18446744073709551616",
+        "observed_depth_input": "1000000",
+        "observation_hash": "613c77fe6b08b0aba256d4fcbef84fc8d0354f72896b7b2e240b06fa50367c91"
+      },
+      {
+        "slot": "5120",
+        "unix": "1040",
+        "price_x64": "18446744073709551616",
+        "observed_depth_input": "1000000",
+        "observation_hash": "613c77fe6b08b0aba256d4fcbef84fc8d0354f72896b7b2e240b06fa50367c91"
+      },
+      {
+        "slot": "5150",
+        "unix": "1050",
+        "price_x64": "18446744073709551616",
+        "observed_depth_input": "1000000",
+        "observation_hash": "613c77fe6b08b0aba256d4fcbef84fc8d0354f72896b7b2e240b06fa50367c91"
+      },
+      {
+        "slot": "5180",
+        "unix": "1060",
+        "price_x64": "18446744073709551616",
+        "observed_depth_input": "1000000",
+        "observation_hash": "613c77fe6b08b0aba256d4fcbef84fc8d0354f72896b7b2e240b06fa50367c91"
+      },
+      {
+        "slot": "5210",
+        "unix": "1070",
+        "price_x64": "18446744073709551616",
+        "observed_depth_input": "1000000",
+        "observation_hash": "613c77fe6b08b0aba256d4fcbef84fc8d0354f72896b7b2e240b06fa50367c91"
+      },
+      {
+        "slot": "5240",
+        "unix": "1080",
+        "price_x64": "18446744073709551616",
+        "observed_depth_input": "1000000",
+        "observation_hash": "613c77fe6b08b0aba256d4fcbef84fc8d0354f72896b7b2e240b06fa50367c91"
+      },
+      {
+        "slot": "5270",
+        "unix": "1090",
+        "price_x64": "18446744073709551616",
+        "observed_depth_input": "1000000",
+        "observation_hash": "613c77fe6b08b0aba256d4fcbef84fc8d0354f72896b7b2e240b06fa50367c91"
+      },
+      {
+        "slot": "5300",
+        "unix": "1100",
+        "price_x64": "18446744073709551616",
+        "observed_depth_input": "1000000",
+        "observation_hash": "613c77fe6b08b0aba256d4fcbef84fc8d0354f72896b7b2e240b06fa50367c91"
+      },
+      {
+        "slot": "5330",
+        "unix": "1110",
+        "price_x64": "18446744073709551616",
+        "observed_depth_input": "1000000",
+        "observation_hash": "613c77fe6b08b0aba256d4fcbef84fc8d0354f72896b7b2e240b06fa50367c91"
+      },
+      {
+        "slot": "5360",
+        "unix": "1120",
+        "price_x64": "18520531050004389822",
+        "observed_depth_input": "1000000",
+        "observation_hash": "c64d3a8761fbaac1cd4bbe4419e93622d520ed131005184994fe05795d1db796"
+      }
+    ],
+    "close": {
+      "slot": "5360",
+      "unix": "1120",
+      "price_x64": "18520531050004389822",
+      "observed_depth_input": "1000000",
+      "observation_hash": "c64d3a8761fbaac1cd4bbe4419e93622d520ed131005184994fe05795d1db796"
+    },
+    "expected": {
+      "start_unix": "1000",
+      "end_unix": "1120",
+      "support_seconds": "120",
+      "actual_records": "13",
+      "integral_x64_seconds": "2213609288845146193920",
+      "mean_x64": "18446744073709551616",
+      "lower_x64": "18446744073709551616",
+      "upper_x64": "18520531050004389823",
+      "observed_band_bps": "41",
+      "confidence_bps": "41",
+      "close_deviation_bps": "40",
+      "depth_floor_quote_native": "1",
+      "accepted_count": "13",
+      "sequence": "13",
+      "next_index": "13",
+      "temporal_ready": true,
+      "ready": true,
+      "flags": "3",
+      "last_accepted_bucket": "112",
+      "next_eligible_unix": "1130"
+    }
+  },
+  {
+    "id": "clip_1000_1150",
+    "records": [
+      {
+        "slot": "5000",
+        "unix": "1000",
+        "price_x64": "18446744073709551616",
+        "observed_depth_input": "1000000",
+        "observation_hash": "613c77fe6b08b0aba256d4fcbef84fc8d0354f72896b7b2e240b06fa50367c91"
+      },
+      {
+        "slot": "5030",
+        "unix": "1010",
+        "price_x64": "18446744073709551616",
+        "observed_depth_input": "1000000",
+        "observation_hash": "613c77fe6b08b0aba256d4fcbef84fc8d0354f72896b7b2e240b06fa50367c91"
+      },
+      {
+        "slot": "5060",
+        "unix": "1020",
+        "price_x64": "18446744073709551616",
+        "observed_depth_input": "1000000",
+        "observation_hash": "613c77fe6b08b0aba256d4fcbef84fc8d0354f72896b7b2e240b06fa50367c91"
+      },
+      {
+        "slot": "5090",
+        "unix": "1030",
+        "price_x64": "18446744073709551616",
+        "observed_depth_input": "1000000",
+        "observation_hash": "613c77fe6b08b0aba256d4fcbef84fc8d0354f72896b7b2e240b06fa50367c91"
+      },
+      {
+        "slot": "5120",
+        "unix": "1040",
+        "price_x64": "18446744073709551616",
+        "observed_depth_input": "1000000",
+        "observation_hash": "613c77fe6b08b0aba256d4fcbef84fc8d0354f72896b7b2e240b06fa50367c91"
+      },
+      {
+        "slot": "5150",
+        "unix": "1050",
+        "price_x64": "18446744073709551616",
+        "observed_depth_input": "1000000",
+        "observation_hash": "613c77fe6b08b0aba256d4fcbef84fc8d0354f72896b7b2e240b06fa50367c91"
+      },
+      {
+        "slot": "5180",
+        "unix": "1060",
+        "price_x64": "18446744073709551616",
+        "observed_depth_input": "1000000",
+        "observation_hash": "613c77fe6b08b0aba256d4fcbef84fc8d0354f72896b7b2e240b06fa50367c91"
+      },
+      {
+        "slot": "5210",
+        "unix": "1070",
+        "price_x64": "18446744073709551616",
+        "observed_depth_input": "1000000",
+        "observation_hash": "613c77fe6b08b0aba256d4fcbef84fc8d0354f72896b7b2e240b06fa50367c91"
+      },
+      {
+        "slot": "5240",
+        "unix": "1080",
+        "price_x64": "18446744073709551616",
+        "observed_depth_input": "1000000",
+        "observation_hash": "613c77fe6b08b0aba256d4fcbef84fc8d0354f72896b7b2e240b06fa50367c91"
+      },
+      {
+        "slot": "5270",
+        "unix": "1090",
+        "price_x64": "18446744073709551616",
+        "observed_depth_input": "1000000",
+        "observation_hash": "613c77fe6b08b0aba256d4fcbef84fc8d0354f72896b7b2e240b06fa50367c91"
+      },
+      {
+        "slot": "5300",
+        "unix": "1100",
+        "price_x64": "18446744073709551616",
+        "observed_depth_input": "1000000",
+        "observation_hash": "613c77fe6b08b0aba256d4fcbef84fc8d0354f72896b7b2e240b06fa50367c91"
+      },
+      {
+        "slot": "5330",
+        "unix": "1110",
+        "price_x64": "18446744073709551616",
+        "observed_depth_input": "1000000",
+        "observation_hash": "613c77fe6b08b0aba256d4fcbef84fc8d0354f72896b7b2e240b06fa50367c91"
+      },
+      {
+        "slot": "5360",
+        "unix": "1120",
+        "price_x64": "18446744073709551616",
+        "observed_depth_input": "1000000",
+        "observation_hash": "613c77fe6b08b0aba256d4fcbef84fc8d0354f72896b7b2e240b06fa50367c91"
+      },
+      {
+        "slot": "5390",
+        "unix": "1130",
+        "price_x64": "18446744073709551616",
+        "observed_depth_input": "1000000",
+        "observation_hash": "613c77fe6b08b0aba256d4fcbef84fc8d0354f72896b7b2e240b06fa50367c91"
+      },
+      {
+        "slot": "5420",
+        "unix": "1140",
+        "price_x64": "18446744073709551616",
+        "observed_depth_input": "1000000",
+        "observation_hash": "613c77fe6b08b0aba256d4fcbef84fc8d0354f72896b7b2e240b06fa50367c91"
+      },
+      {
+        "slot": "5450",
+        "unix": "1150",
+        "price_x64": "18446744073709551616",
+        "observed_depth_input": "1000000",
+        "observation_hash": "613c77fe6b08b0aba256d4fcbef84fc8d0354f72896b7b2e240b06fa50367c91"
+      }
+    ],
+    "close": {
+      "slot": "5450",
+      "unix": "1150",
+      "price_x64": "18446744073709551616",
+      "observed_depth_input": "1000000",
+      "observation_hash": "613c77fe6b08b0aba256d4fcbef84fc8d0354f72896b7b2e240b06fa50367c91"
+    },
+    "start": "1000",
+    "end": "1150",
+    "expected": {
+      "start_unix": "1000",
+      "end_unix": "1150",
+      "support_seconds": "150",
+      "actual_records": "16",
+      "integral_x64_seconds": "2767011611056432742400",
+      "mean_x64": "18446744073709551616",
+      "lower_x64": "18446744073709551616",
+      "upper_x64": "18446744073709551617",
+      "observed_band_bps": "1",
+      "confidence_bps": "1",
+      "close_deviation_bps": "0",
+      "depth_floor_quote_native": "1",
+      "ready": true
+    }
+  },
+  {
+    "id": "clip_1010_1130",
+    "records": [
+      {
+        "slot": "5000",
+        "unix": "1000",
+        "price_x64": "18446744073709551616",
+        "observed_depth_input": "1000000",
+        "observation_hash": "613c77fe6b08b0aba256d4fcbef84fc8d0354f72896b7b2e240b06fa50367c91"
+      },
+      {
+        "slot": "5030",
+        "unix": "1010",
+        "price_x64": "18446744073709551616",
+        "observed_depth_input": "1000000",
+        "observation_hash": "613c77fe6b08b0aba256d4fcbef84fc8d0354f72896b7b2e240b06fa50367c91"
+      },
+      {
+        "slot": "5060",
+        "unix": "1020",
+        "price_x64": "18446744073709551616",
+        "observed_depth_input": "1000000",
+        "observation_hash": "613c77fe6b08b0aba256d4fcbef84fc8d0354f72896b7b2e240b06fa50367c91"
+      },
+      {
+        "slot": "5090",
+        "unix": "1030",
+        "price_x64": "18446744073709551616",
+        "observed_depth_input": "1000000",
+        "observation_hash": "613c77fe6b08b0aba256d4fcbef84fc8d0354f72896b7b2e240b06fa50367c91"
+      },
+      {
+        "slot": "5120",
+        "unix": "1040",
+        "price_x64": "18446744073709551616",
+        "observed_depth_input": "1000000",
+        "observation_hash": "613c77fe6b08b0aba256d4fcbef84fc8d0354f72896b7b2e240b06fa50367c91"
+      },
+      {
+        "slot": "5150",
+        "unix": "1050",
+        "price_x64": "18446744073709551616",
+        "observed_depth_input": "1000000",
+        "observation_hash": "613c77fe6b08b0aba256d4fcbef84fc8d0354f72896b7b2e240b06fa50367c91"
+      },
+      {
+        "slot": "5180",
+        "unix": "1060",
+        "price_x64": "18446744073709551616",
+        "observed_depth_input": "1000000",
+        "observation_hash": "613c77fe6b08b0aba256d4fcbef84fc8d0354f72896b7b2e240b06fa50367c91"
+      },
+      {
+        "slot": "5210",
+        "unix": "1070",
+        "price_x64": "18446744073709551616",
+        "observed_depth_input": "1000000",
+        "observation_hash": "613c77fe6b08b0aba256d4fcbef84fc8d0354f72896b7b2e240b06fa50367c91"
+      },
+      {
+        "slot": "5240",
+        "unix": "1080",
+        "price_x64": "18446744073709551616",
+        "observed_depth_input": "1000000",
+        "observation_hash": "613c77fe6b08b0aba256d4fcbef84fc8d0354f72896b7b2e240b06fa50367c91"
+      },
+      {
+        "slot": "5270",
+        "unix": "1090",
+        "price_x64": "18446744073709551616",
+        "observed_depth_input": "1000000",
+        "observation_hash": "613c77fe6b08b0aba256d4fcbef84fc8d0354f72896b7b2e240b06fa50367c91"
+      },
+      {
+        "slot": "5300",
+        "unix": "1100",
+        "price_x64": "18446744073709551616",
+        "observed_depth_input": "1000000",
+        "observation_hash": "613c77fe6b08b0aba256d4fcbef84fc8d0354f72896b7b2e240b06fa50367c91"
+      },
+      {
+        "slot": "5330",
+        "unix": "1110",
+        "price_x64": "18446744073709551616",
+        "observed_depth_input": "1000000",
+        "observation_hash": "613c77fe6b08b0aba256d4fcbef84fc8d0354f72896b7b2e240b06fa50367c91"
+      },
+      {
+        "slot": "5360",
+        "unix": "1120",
+        "price_x64": "18446744073709551616",
+        "observed_depth_input": "1000000",
+        "observation_hash": "613c77fe6b08b0aba256d4fcbef84fc8d0354f72896b7b2e240b06fa50367c91"
+      },
+      {
+        "slot": "5390",
+        "unix": "1130",
+        "price_x64": "18446744073709551616",
+        "observed_depth_input": "1000000",
+        "observation_hash": "613c77fe6b08b0aba256d4fcbef84fc8d0354f72896b7b2e240b06fa50367c91"
+      },
+      {
+        "slot": "5420",
+        "unix": "1140",
+        "price_x64": "18446744073709551616",
+        "observed_depth_input": "1000000",
+        "observation_hash": "613c77fe6b08b0aba256d4fcbef84fc8d0354f72896b7b2e240b06fa50367c91"
+      },
+      {
+        "slot": "5450",
+        "unix": "1150",
+        "price_x64": "18446744073709551616",
+        "observed_depth_input": "1000000",
+        "observation_hash": "613c77fe6b08b0aba256d4fcbef84fc8d0354f72896b7b2e240b06fa50367c91"
+      }
+    ],
+    "close": {
+      "slot": "5450",
+      "unix": "1150",
+      "price_x64": "18446744073709551616",
+      "observed_depth_input": "1000000",
+      "observation_hash": "613c77fe6b08b0aba256d4fcbef84fc8d0354f72896b7b2e240b06fa50367c91"
+    },
+    "start": "1010",
+    "end": "1130",
+    "expected": {
+      "start_unix": "1010",
+      "end_unix": "1130",
+      "support_seconds": "120",
+      "actual_records": "13",
+      "integral_x64_seconds": "2213609288845146193920",
+      "mean_x64": "18446744073709551616",
+      "lower_x64": "18446744073709551616",
+      "upper_x64": "18446744073709551617",
+      "observed_band_bps": "1",
+      "confidence_bps": "1",
+      "close_deviation_bps": "0",
+      "depth_floor_quote_native": "1",
+      "ready": true
+    }
+  },
+  {
+    "id": "clip_1011_1131",
+    "records": [
+      {
+        "slot": "5000",
+        "unix": "1000",
+        "price_x64": "18446744073709551616",
+        "observed_depth_input": "1000000",
+        "observation_hash": "613c77fe6b08b0aba256d4fcbef84fc8d0354f72896b7b2e240b06fa50367c91"
+      },
+      {
+        "slot": "5030",
+        "unix": "1010",
+        "price_x64": "18446744073709551616",
+        "observed_depth_input": "1000000",
+        "observation_hash": "613c77fe6b08b0aba256d4fcbef84fc8d0354f72896b7b2e240b06fa50367c91"
+      },
+      {
+        "slot": "5060",
+        "unix": "1020",
+        "price_x64": "18446744073709551616",
+        "observed_depth_input": "1000000",
+        "observation_hash": "613c77fe6b08b0aba256d4fcbef84fc8d0354f72896b7b2e240b06fa50367c91"
+      },
+      {
+        "slot": "5090",
+        "unix": "1030",
+        "price_x64": "18446744073709551616",
+        "observed_depth_input": "1000000",
+        "observation_hash": "613c77fe6b08b0aba256d4fcbef84fc8d0354f72896b7b2e240b06fa50367c91"
+      },
+      {
+        "slot": "5120",
+        "unix": "1040",
+        "price_x64": "18446744073709551616",
+        "observed_depth_input": "1000000",
+        "observation_hash": "613c77fe6b08b0aba256d4fcbef84fc8d0354f72896b7b2e240b06fa50367c91"
+      },
+      {
+        "slot": "5150",
+        "unix": "1050",
+        "price_x64": "18446744073709551616",
+        "observed_depth_input": "1000000",
+        "observation_hash": "613c77fe6b08b0aba256d4fcbef84fc8d0354f72896b7b2e240b06fa50367c91"
+      },
+      {
+        "slot": "5180",
+        "unix": "1060",
+        "price_x64": "18446744073709551616",
+        "observed_depth_input": "1000000",
+        "observation_hash": "613c77fe6b08b0aba256d4fcbef84fc8d0354f72896b7b2e240b06fa50367c91"
+      },
+      {
+        "slot": "5210",
+        "unix": "1070",
+        "price_x64": "18446744073709551616",
+        "observed_depth_input": "1000000",
+        "observation_hash": "613c77fe6b08b0aba256d4fcbef84fc8d0354f72896b7b2e240b06fa50367c91"
+      },
+      {
+        "slot": "5240",
+        "unix": "1080",
+        "price_x64": "18446744073709551616",
+        "observed_depth_input": "1000000",
+        "observation_hash": "613c77fe6b08b0aba256d4fcbef84fc8d0354f72896b7b2e240b06fa50367c91"
+      },
+      {
+        "slot": "5270",
+        "unix": "1090",
+        "price_x64": "18446744073709551616",
+        "observed_depth_input": "1000000",
+        "observation_hash": "613c77fe6b08b0aba256d4fcbef84fc8d0354f72896b7b2e240b06fa50367c91"
+      },
+      {
+        "slot": "5300",
+        "unix": "1100",
+        "price_x64": "18446744073709551616",
+        "observed_depth_input": "1000000",
+        "observation_hash": "613c77fe6b08b0aba256d4fcbef84fc8d0354f72896b7b2e240b06fa50367c91"
+      },
+      {
+        "slot": "5330",
+        "unix": "1110",
+        "price_x64": "18446744073709551616",
+        "observed_depth_input": "1000000",
+        "observation_hash": "613c77fe6b08b0aba256d4fcbef84fc8d0354f72896b7b2e240b06fa50367c91"
+      },
+      {
+        "slot": "5360",
+        "unix": "1120",
+        "price_x64": "18446744073709551616",
+        "observed_depth_input": "1000000",
+        "observation_hash": "613c77fe6b08b0aba256d4fcbef84fc8d0354f72896b7b2e240b06fa50367c91"
+      },
+      {
+        "slot": "5390",
+        "unix": "1130",
+        "price_x64": "18446744073709551616",
+        "observed_depth_input": "1000000",
+        "observation_hash": "613c77fe6b08b0aba256d4fcbef84fc8d0354f72896b7b2e240b06fa50367c91"
+      },
+      {
+        "slot": "5420",
+        "unix": "1140",
+        "price_x64": "18446744073709551616",
+        "observed_depth_input": "1000000",
+        "observation_hash": "613c77fe6b08b0aba256d4fcbef84fc8d0354f72896b7b2e240b06fa50367c91"
+      },
+      {
+        "slot": "5450",
+        "unix": "1150",
+        "price_x64": "18446744073709551616",
+        "observed_depth_input": "1000000",
+        "observation_hash": "613c77fe6b08b0aba256d4fcbef84fc8d0354f72896b7b2e240b06fa50367c91"
+      }
+    ],
+    "close": {
+      "slot": "5450",
+      "unix": "1150",
+      "price_x64": "18446744073709551616",
+      "observed_depth_input": "1000000",
+      "observation_hash": "613c77fe6b08b0aba256d4fcbef84fc8d0354f72896b7b2e240b06fa50367c91"
+    },
+    "start": "1011",
+    "end": "1131",
+    "expected": {
+      "start_unix": "1011",
+      "end_unix": "1131",
+      "support_seconds": "120",
+      "actual_records": "12",
+      "integral_x64_seconds": "2213609288845146193920",
+      "mean_x64": "18446744073709551616",
+      "lower_x64": "18446744073709551616",
+      "upper_x64": "18446744073709551617",
+      "observed_band_bps": "1",
+      "confidence_bps": "1",
+      "close_deviation_bps": "0",
+      "depth_floor_quote_native": "1",
+      "ready": false
+    }
+  },
+  {
+    "id": "clip_1030_1150",
+    "records": [
+      {
+        "slot": "5000",
+        "unix": "1000",
+        "price_x64": "18446744073709551616",
+        "observed_depth_input": "1000000",
+        "observation_hash": "613c77fe6b08b0aba256d4fcbef84fc8d0354f72896b7b2e240b06fa50367c91"
+      },
+      {
+        "slot": "5030",
+        "unix": "1010",
+        "price_x64": "18446744073709551616",
+        "observed_depth_input": "1000000",
+        "observation_hash": "613c77fe6b08b0aba256d4fcbef84fc8d0354f72896b7b2e240b06fa50367c91"
+      },
+      {
+        "slot": "5060",
+        "unix": "1020",
+        "price_x64": "18446744073709551616",
+        "observed_depth_input": "1000000",
+        "observation_hash": "613c77fe6b08b0aba256d4fcbef84fc8d0354f72896b7b2e240b06fa50367c91"
+      },
+      {
+        "slot": "5090",
+        "unix": "1030",
+        "price_x64": "18446744073709551616",
+        "observed_depth_input": "1000000",
+        "observation_hash": "613c77fe6b08b0aba256d4fcbef84fc8d0354f72896b7b2e240b06fa50367c91"
+      },
+      {
+        "slot": "5120",
+        "unix": "1040",
+        "price_x64": "18446744073709551616",
+        "observed_depth_input": "1000000",
+        "observation_hash": "613c77fe6b08b0aba256d4fcbef84fc8d0354f72896b7b2e240b06fa50367c91"
+      },
+      {
+        "slot": "5150",
+        "unix": "1050",
+        "price_x64": "18446744073709551616",
+        "observed_depth_input": "1000000",
+        "observation_hash": "613c77fe6b08b0aba256d4fcbef84fc8d0354f72896b7b2e240b06fa50367c91"
+      },
+      {
+        "slot": "5180",
+        "unix": "1060",
+        "price_x64": "18446744073709551616",
+        "observed_depth_input": "1000000",
+        "observation_hash": "613c77fe6b08b0aba256d4fcbef84fc8d0354f72896b7b2e240b06fa50367c91"
+      },
+      {
+        "slot": "5210",
+        "unix": "1070",
+        "price_x64": "18446744073709551616",
+        "observed_depth_input": "1000000",
+        "observation_hash": "613c77fe6b08b0aba256d4fcbef84fc8d0354f72896b7b2e240b06fa50367c91"
+      },
+      {
+        "slot": "5240",
+        "unix": "1080",
+        "price_x64": "18446744073709551616",
+        "observed_depth_input": "1000000",
+        "observation_hash": "613c77fe6b08b0aba256d4fcbef84fc8d0354f72896b7b2e240b06fa50367c91"
+      },
+      {
+        "slot": "5270",
+        "unix": "1090",
+        "price_x64": "18446744073709551616",
+        "observed_depth_input": "1000000",
+        "observation_hash": "613c77fe6b08b0aba256d4fcbef84fc8d0354f72896b7b2e240b06fa50367c91"
+      },
+      {
+        "slot": "5300",
+        "unix": "1100",
+        "price_x64": "18446744073709551616",
+        "observed_depth_input": "1000000",
+        "observation_hash": "613c77fe6b08b0aba256d4fcbef84fc8d0354f72896b7b2e240b06fa50367c91"
+      },
+      {
+        "slot": "5330",
+        "unix": "1110",
+        "price_x64": "18446744073709551616",
+        "observed_depth_input": "1000000",
+        "observation_hash": "613c77fe6b08b0aba256d4fcbef84fc8d0354f72896b7b2e240b06fa50367c91"
+      },
+      {
+        "slot": "5360",
+        "unix": "1120",
+        "price_x64": "18446744073709551616",
+        "observed_depth_input": "1000000",
+        "observation_hash": "613c77fe6b08b0aba256d4fcbef84fc8d0354f72896b7b2e240b06fa50367c91"
+      },
+      {
+        "slot": "5390",
+        "unix": "1130",
+        "price_x64": "18446744073709551616",
+        "observed_depth_input": "1000000",
+        "observation_hash": "613c77fe6b08b0aba256d4fcbef84fc8d0354f72896b7b2e240b06fa50367c91"
+      },
+      {
+        "slot": "5420",
+        "unix": "1140",
+        "price_x64": "18446744073709551616",
+        "observed_depth_input": "1000000",
+        "observation_hash": "613c77fe6b08b0aba256d4fcbef84fc8d0354f72896b7b2e240b06fa50367c91"
+      },
+      {
+        "slot": "5450",
+        "unix": "1150",
+        "price_x64": "18446744073709551616",
+        "observed_depth_input": "1000000",
+        "observation_hash": "613c77fe6b08b0aba256d4fcbef84fc8d0354f72896b7b2e240b06fa50367c91"
+      }
+    ],
+    "close": {
+      "slot": "5450",
+      "unix": "1150",
+      "price_x64": "18446744073709551616",
+      "observed_depth_input": "1000000",
+      "observation_hash": "613c77fe6b08b0aba256d4fcbef84fc8d0354f72896b7b2e240b06fa50367c91"
+    },
+    "start": "1030",
+    "end": "1150",
+    "expected": {
+      "start_unix": "1030",
+      "end_unix": "1150",
+      "support_seconds": "120",
+      "actual_records": "13",
+      "integral_x64_seconds": "2213609288845146193920",
+      "mean_x64": "18446744073709551616",
+      "lower_x64": "18446744073709551616",
+      "upper_x64": "18446744073709551617",
+      "observed_band_bps": "1",
+      "confidence_bps": "1",
+      "close_deviation_bps": "0",
+      "depth_floor_quote_native": "1",
+      "ready": true
+    }
+  },
+  {
+    "id": "clip_1031_1150",
+    "records": [
+      {
+        "slot": "5000",
+        "unix": "1000",
+        "price_x64": "18446744073709551616",
+        "observed_depth_input": "1000000",
+        "observation_hash": "613c77fe6b08b0aba256d4fcbef84fc8d0354f72896b7b2e240b06fa50367c91"
+      },
+      {
+        "slot": "5030",
+        "unix": "1010",
+        "price_x64": "18446744073709551616",
+        "observed_depth_input": "1000000",
+        "observation_hash": "613c77fe6b08b0aba256d4fcbef84fc8d0354f72896b7b2e240b06fa50367c91"
+      },
+      {
+        "slot": "5060",
+        "unix": "1020",
+        "price_x64": "18446744073709551616",
+        "observed_depth_input": "1000000",
+        "observation_hash": "613c77fe6b08b0aba256d4fcbef84fc8d0354f72896b7b2e240b06fa50367c91"
+      },
+      {
+        "slot": "5090",
+        "unix": "1030",
+        "price_x64": "18446744073709551616",
+        "observed_depth_input": "1000000",
+        "observation_hash": "613c77fe6b08b0aba256d4fcbef84fc8d0354f72896b7b2e240b06fa50367c91"
+      },
+      {
+        "slot": "5120",
+        "unix": "1040",
+        "price_x64": "18446744073709551616",
+        "observed_depth_input": "1000000",
+        "observation_hash": "613c77fe6b08b0aba256d4fcbef84fc8d0354f72896b7b2e240b06fa50367c91"
+      },
+      {
+        "slot": "5150",
+        "unix": "1050",
+        "price_x64": "18446744073709551616",
+        "observed_depth_input": "1000000",
+        "observation_hash": "613c77fe6b08b0aba256d4fcbef84fc8d0354f72896b7b2e240b06fa50367c91"
+      },
+      {
+        "slot": "5180",
+        "unix": "1060",
+        "price_x64": "18446744073709551616",
+        "observed_depth_input": "1000000",
+        "observation_hash": "613c77fe6b08b0aba256d4fcbef84fc8d0354f72896b7b2e240b06fa50367c91"
+      },
+      {
+        "slot": "5210",
+        "unix": "1070",
+        "price_x64": "18446744073709551616",
+        "observed_depth_input": "1000000",
+        "observation_hash": "613c77fe6b08b0aba256d4fcbef84fc8d0354f72896b7b2e240b06fa50367c91"
+      },
+      {
+        "slot": "5240",
+        "unix": "1080",
+        "price_x64": "18446744073709551616",
+        "observed_depth_input": "1000000",
+        "observation_hash": "613c77fe6b08b0aba256d4fcbef84fc8d0354f72896b7b2e240b06fa50367c91"
+      },
+      {
+        "slot": "5270",
+        "unix": "1090",
+        "price_x64": "18446744073709551616",
+        "observed_depth_input": "1000000",
+        "observation_hash": "613c77fe6b08b0aba256d4fcbef84fc8d0354f72896b7b2e240b06fa50367c91"
+      },
+      {
+        "slot": "5300",
+        "unix": "1100",
+        "price_x64": "18446744073709551616",
+        "observed_depth_input": "1000000",
+        "observation_hash": "613c77fe6b08b0aba256d4fcbef84fc8d0354f72896b7b2e240b06fa50367c91"
+      },
+      {
+        "slot": "5330",
+        "unix": "1110",
+        "price_x64": "18446744073709551616",
+        "observed_depth_input": "1000000",
+        "observation_hash": "613c77fe6b08b0aba256d4fcbef84fc8d0354f72896b7b2e240b06fa50367c91"
+      },
+      {
+        "slot": "5360",
+        "unix": "1120",
+        "price_x64": "18446744073709551616",
+        "observed_depth_input": "1000000",
+        "observation_hash": "613c77fe6b08b0aba256d4fcbef84fc8d0354f72896b7b2e240b06fa50367c91"
+      },
+      {
+        "slot": "5390",
+        "unix": "1130",
+        "price_x64": "18446744073709551616",
+        "observed_depth_input": "1000000",
+        "observation_hash": "613c77fe6b08b0aba256d4fcbef84fc8d0354f72896b7b2e240b06fa50367c91"
+      },
+      {
+        "slot": "5420",
+        "unix": "1140",
+        "price_x64": "18446744073709551616",
+        "observed_depth_input": "1000000",
+        "observation_hash": "613c77fe6b08b0aba256d4fcbef84fc8d0354f72896b7b2e240b06fa50367c91"
+      },
+      {
+        "slot": "5450",
+        "unix": "1150",
+        "price_x64": "18446744073709551616",
+        "observed_depth_input": "1000000",
+        "observation_hash": "613c77fe6b08b0aba256d4fcbef84fc8d0354f72896b7b2e240b06fa50367c91"
+      }
+    ],
+    "close": {
+      "slot": "5450",
+      "unix": "1150",
+      "price_x64": "18446744073709551616",
+      "observed_depth_input": "1000000",
+      "observation_hash": "613c77fe6b08b0aba256d4fcbef84fc8d0354f72896b7b2e240b06fa50367c91"
+    },
+    "start": "1031",
+    "end": "1150",
+    "expected": {
+      "start_unix": "1031",
+      "end_unix": "1150",
+      "support_seconds": "119",
+      "actual_records": "12",
+      "integral_x64_seconds": "2195162544771436642304",
+      "mean_x64": "18446744073709551616",
+      "lower_x64": "18446744073709551616",
+      "upper_x64": "18446744073709551617",
+      "observed_band_bps": "1",
+      "confidence_bps": "1",
+      "close_deviation_bps": "0",
+      "depth_floor_quote_native": "1",
+      "ready": false
+    }
+  },
+  {
+    "id": "depth_u128_overflow",
+    "inputs": [
+      "1",
+      "340282366920938463463374607431768211455"
+    ],
+    "expected": {
+      "ok": false,
+      "error": "ARITHMETIC_OVERFLOW"
+    }
+  },
+  {
+    "id": "depth_zero_floor",
+    "inputs": [
+      "1",
+      "1"
+    ],
+    "expected": {
+      "ok": false,
+      "error": "ZERO_DEPTH"
+    }
+  },
+  {
+    "id": "price_U256_to_u128_overflow",
+    "inputs": [
+      "1",
+      "340282366920938463463374607431768211455",
+      "18",
+      "0"
+    ],
+    "expected": {
+      "ok": false,
+      "error": "ARITHMETIC_OVERFLOW"
+    }
+  },
+  {
+    "id": "conversion_overflow",
+    "inputs": [
+      "340282366920938463463374607431768211455",
+      "0",
+      "340282366920938463463374607431768211455"
+    ],
+    "expected": {
+      "ok": false,
+      "error": "ARITHMETIC_OVERFLOW"
+    }
+  },
+  {
+    "id": "integer_depth_rounding",
+    "inputs": [
+      "999",
+      "100000"
+    ],
+    "expected": {
+      "ok": true,
+      "value": {
+        "up_quote": "249",
+        "down_base": "2",
+        "atom_price_x64": "1846520928299254416016",
+        "down_quote": "200",
+        "depth_quote_native": "200",
+        "certified_loss": "0"
+      }
+    }
+  },
+  {
+    "id": "close_exact_50bps",
+    "records": [
+      {
+        "slot": "5000",
+        "unix": "1000",
+        "price_x64": "184467440737095516160000",
+        "observed_depth_input": "1000000",
+        "observation_hash": "ba35b538b977fe7d51e54bc624e02025a59b0f76e28876d085b9cd0e5284e2b0"
+      },
+      {
+        "slot": "5030",
+        "unix": "1010",
+        "price_x64": "184467440737095516160000",
+        "observed_depth_input": "1000000",
+        "observation_hash": "ba35b538b977fe7d51e54bc624e02025a59b0f76e28876d085b9cd0e5284e2b0"
+      },
+      {
+        "slot": "5060",
+        "unix": "1020",
+        "price_x64": "184467440737095516160000",
+        "observed_depth_input": "1000000",
+        "observation_hash": "ba35b538b977fe7d51e54bc624e02025a59b0f76e28876d085b9cd0e5284e2b0"
+      },
+      {
+        "slot": "5090",
+        "unix": "1030",
+        "price_x64": "184467440737095516160000",
+        "observed_depth_input": "1000000",
+        "observation_hash": "ba35b538b977fe7d51e54bc624e02025a59b0f76e28876d085b9cd0e5284e2b0"
+      },
+      {
+        "slot": "5120",
+        "unix": "1040",
+        "price_x64": "184467440737095516160000",
+        "observed_depth_input": "1000000",
+        "observation_hash": "ba35b538b977fe7d51e54bc624e02025a59b0f76e28876d085b9cd0e5284e2b0"
+      },
+      {
+        "slot": "5150",
+        "unix": "1050",
+        "price_x64": "184467440737095516160000",
+        "observed_depth_input": "1000000",
+        "observation_hash": "ba35b538b977fe7d51e54bc624e02025a59b0f76e28876d085b9cd0e5284e2b0"
+      },
+      {
+        "slot": "5180",
+        "unix": "1060",
+        "price_x64": "184467440737095516160000",
+        "observed_depth_input": "1000000",
+        "observation_hash": "ba35b538b977fe7d51e54bc624e02025a59b0f76e28876d085b9cd0e5284e2b0"
+      },
+      {
+        "slot": "5210",
+        "unix": "1070",
+        "price_x64": "184467440737095516160000",
+        "observed_depth_input": "1000000",
+        "observation_hash": "ba35b538b977fe7d51e54bc624e02025a59b0f76e28876d085b9cd0e5284e2b0"
+      },
+      {
+        "slot": "5240",
+        "unix": "1080",
+        "price_x64": "184467440737095516160000",
+        "observed_depth_input": "1000000",
+        "observation_hash": "ba35b538b977fe7d51e54bc624e02025a59b0f76e28876d085b9cd0e5284e2b0"
+      },
+      {
+        "slot": "5270",
+        "unix": "1090",
+        "price_x64": "184467440737095516160000",
+        "observed_depth_input": "1000000",
+        "observation_hash": "ba35b538b977fe7d51e54bc624e02025a59b0f76e28876d085b9cd0e5284e2b0"
+      },
+      {
+        "slot": "5300",
+        "unix": "1100",
+        "price_x64": "184467440737095516160000",
+        "observed_depth_input": "1000000",
+        "observation_hash": "ba35b538b977fe7d51e54bc624e02025a59b0f76e28876d085b9cd0e5284e2b0"
+      },
+      {
+        "slot": "5330",
+        "unix": "1110",
+        "price_x64": "184467440737095516160000",
+        "observed_depth_input": "1000000",
+        "observation_hash": "ba35b538b977fe7d51e54bc624e02025a59b0f76e28876d085b9cd0e5284e2b0"
+      },
+      {
+        "slot": "5360",
+        "unix": "1120",
+        "price_x64": "184467440737095516160000",
+        "observed_depth_input": "1000000",
+        "observation_hash": "ba35b538b977fe7d51e54bc624e02025a59b0f76e28876d085b9cd0e5284e2b0"
+      }
+    ],
+    "close": {
+      "slot": "5363",
+      "unix": "1121",
+      "price_x64": "185389777940780993740800",
+      "observed_depth_input": "1000000",
+      "observation_hash": "f372ac8fe247c934c17d178ce46b668664b11a8712d155c182abd2b2bc09c008"
+    },
+    "expected": {
+      "start_unix": "1000",
+      "end_unix": "1121",
+      "support_seconds": "121",
+      "actual_records": "13",
+      "integral_x64_seconds": "22320560329188557455360000",
+      "mean_x64": "184467440737095516160000",
+      "lower_x64": "184467440737095516160000",
+      "upper_x64": "185389777940780993740801",
+      "observed_band_bps": "51",
+      "confidence_bps": "51",
+      "close_deviation_bps": "50",
+      "depth_floor_quote_native": "1",
+      "accepted_count": "13",
+      "sequence": "14",
+      "next_index": "13",
+      "temporal_ready": true,
+      "ready": true,
+      "flags": "3",
+      "last_accepted_bucket": "112",
+      "next_eligible_unix": "1130"
+    }
+  },
+  {
+    "id": "close_50bps_plus_one_tick",
+    "records": [
+      {
+        "slot": "5000",
+        "unix": "1000",
+        "price_x64": "184467440737095516160000",
+        "observed_depth_input": "1000000",
+        "observation_hash": "ba35b538b977fe7d51e54bc624e02025a59b0f76e28876d085b9cd0e5284e2b0"
+      },
+      {
+        "slot": "5030",
+        "unix": "1010",
+        "price_x64": "184467440737095516160000",
+        "observed_depth_input": "1000000",
+        "observation_hash": "ba35b538b977fe7d51e54bc624e02025a59b0f76e28876d085b9cd0e5284e2b0"
+      },
+      {
+        "slot": "5060",
+        "unix": "1020",
+        "price_x64": "184467440737095516160000",
+        "observed_depth_input": "1000000",
+        "observation_hash": "ba35b538b977fe7d51e54bc624e02025a59b0f76e28876d085b9cd0e5284e2b0"
+      },
+      {
+        "slot": "5090",
+        "unix": "1030",
+        "price_x64": "184467440737095516160000",
+        "observed_depth_input": "1000000",
+        "observation_hash": "ba35b538b977fe7d51e54bc624e02025a59b0f76e28876d085b9cd0e5284e2b0"
+      },
+      {
+        "slot": "5120",
+        "unix": "1040",
+        "price_x64": "184467440737095516160000",
+        "observed_depth_input": "1000000",
+        "observation_hash": "ba35b538b977fe7d51e54bc624e02025a59b0f76e28876d085b9cd0e5284e2b0"
+      },
+      {
+        "slot": "5150",
+        "unix": "1050",
+        "price_x64": "184467440737095516160000",
+        "observed_depth_input": "1000000",
+        "observation_hash": "ba35b538b977fe7d51e54bc624e02025a59b0f76e28876d085b9cd0e5284e2b0"
+      },
+      {
+        "slot": "5180",
+        "unix": "1060",
+        "price_x64": "184467440737095516160000",
+        "observed_depth_input": "1000000",
+        "observation_hash": "ba35b538b977fe7d51e54bc624e02025a59b0f76e28876d085b9cd0e5284e2b0"
+      },
+      {
+        "slot": "5210",
+        "unix": "1070",
+        "price_x64": "184467440737095516160000",
+        "observed_depth_input": "1000000",
+        "observation_hash": "ba35b538b977fe7d51e54bc624e02025a59b0f76e28876d085b9cd0e5284e2b0"
+      },
+      {
+        "slot": "5240",
+        "unix": "1080",
+        "price_x64": "184467440737095516160000",
+        "observed_depth_input": "1000000",
+        "observation_hash": "ba35b538b977fe7d51e54bc624e02025a59b0f76e28876d085b9cd0e5284e2b0"
+      },
+      {
+        "slot": "5270",
+        "unix": "1090",
+        "price_x64": "184467440737095516160000",
+        "observed_depth_input": "1000000",
+        "observation_hash": "ba35b538b977fe7d51e54bc624e02025a59b0f76e28876d085b9cd0e5284e2b0"
+      },
+      {
+        "slot": "5300",
+        "unix": "1100",
+        "price_x64": "184467440737095516160000",
+        "observed_depth_input": "1000000",
+        "observation_hash": "ba35b538b977fe7d51e54bc624e02025a59b0f76e28876d085b9cd0e5284e2b0"
+      },
+      {
+        "slot": "5330",
+        "unix": "1110",
+        "price_x64": "184467440737095516160000",
+        "observed_depth_input": "1000000",
+        "observation_hash": "ba35b538b977fe7d51e54bc624e02025a59b0f76e28876d085b9cd0e5284e2b0"
+      },
+      {
+        "slot": "5360",
+        "unix": "1120",
+        "price_x64": "184467440737095516160000",
+        "observed_depth_input": "1000000",
+        "observation_hash": "ba35b538b977fe7d51e54bc624e02025a59b0f76e28876d085b9cd0e5284e2b0"
+      }
+    ],
+    "close": {
+      "slot": "5363",
+      "unix": "1121",
+      "price_x64": "185389777940780993740801",
+      "observed_depth_input": "1000000",
+      "observation_hash": "572686037bd69fec729993a81ec2f11b6a849182e9ec874846081f5aa8f7adc3"
+    },
+    "expected": {
+      "start_unix": "1000",
+      "end_unix": "1121",
+      "support_seconds": "121",
+      "actual_records": "13",
+      "integral_x64_seconds": "22320560329188557455360000",
+      "mean_x64": "184467440737095516160000",
+      "lower_x64": "184467440737095516160000",
+      "upper_x64": "185389777940780993740802",
+      "observed_band_bps": "51",
+      "confidence_bps": "51",
+      "close_deviation_bps": "51",
+      "depth_floor_quote_native": "1",
+      "accepted_count": "13",
+      "sequence": "14",
+      "next_index": "13",
+      "temporal_ready": true,
+      "ready": false,
+      "flags": "1",
+      "last_accepted_bucket": "112",
+      "next_eligible_unix": "1130"
+    }
+  },
+  {
+    "id": "band_exact_100",
+    "mean": "184467440737095516160000",
+    "lower": "184467440737095516160000",
+    "upper": "186312115144466471321600",
+    "expected_bps": "100"
+  },
+  {
+    "id": "band_100_plus_one_tick",
+    "mean": "184467440737095516160000",
+    "lower": "184467440737095516160000",
+    "upper": "186312115144466471321601",
+    "expected_bps": "101"
+  },
+  {
+    "id": "pump_real_cash_boundary_1020",
+    "inputs": {
+      "base": "1000",
+      "real_quote": "100",
+      "virtual_quote": "100",
+      "sell_base": "1020",
+      "lp_fee_bps": "0"
+    },
+    "expected": {
+      "gross_output": "100",
+      "payable": true
+    }
+  },
+  {
+    "id": "pump_real_cash_boundary_1021",
+    "inputs": {
+      "base": "1000",
+      "real_quote": "100",
+      "virtual_quote": "100",
+      "sell_base": "1021",
+      "lp_fee_bps": "0"
+    },
+    "expected": {
+      "gross_output": "101",
+      "payable": false
+    }
+  }
+]

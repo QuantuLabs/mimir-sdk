@@ -1,0 +1,80 @@
+# Mimir SDK
+
+> TypeScript SDK (`@quantulabs/mimir-sdk`) for Mimir, a Solana oracle that calculates token and index prices onchain from liquidity-pool accounts. One client: `new Mimir(opts?)`. Mainnet program id: `hBYrGHXVCQsnduDERkVnViCXNYawpHCvN5y3GsMiMiR`. Status: beta.
+
+Root exports: `Mimir` and `MimirError`. Options: `wallet?` (64-byte secret key, base58, web3.js Keypair, CryptoKeyPair, @solana/kit signer, Wallet Standard wallet, wallet-adapter; Transaction v1 only), `rpc?` (RPC mode: everything on your RPC, zero Mimir API calls; without it reads use the free keyless Mimir API and transactions Solana's public RPC, which refuses browsers: pass your own `rpc` to send transactions). Properties: `address`, `mode` ("api" | "rpc"), `canWrite`.
+
+Methods: `price(tickerOrFeed)`, `prices(list)` (input order), `watch(list, onPrice, onError?, { intervalMs? })` (polls one batch request, default 5 s, min 2 s; returns unsubscribe), `createFeed({ mint, ticker?, quote?, pools?, require?, variant?, onStep?, dryRun?, skipSend?, payer?, resume?, signed? })` → `{ state: "ready", ticker, feed, price, signatures, cost }`, `createIndex({ ticker, components: { TICKER: quantity }, dryRun? })`, `withFreshPrice(feeds, instructions, { payer?, simulate? })` (same instruction type back), `sign(step)` (browser half of `skipSend`).
+
+A price: `{ ticker, kind: "token" | "index", address, token?: { mint, symbol, name } | null, quote: { mint, symbol } | null, sources?: [{ pool, venue, liquidityUsdc }], components?: [{ ticker, address, weight }], score?: { value, band: "Excellent" | "Strong" | "Good" | "Fair" | "Thin" } | null, price, confidenceBps, dispersionBps, slot, updatedAt, reason? }`. `price` is in USDC (a SOL-quoted feed too); null when the feed cannot be priced, with `reason`. `slot` is the Solana slot whose pool states produced the price: replay it to check. `updatedAt` is Unix seconds. The API may send null for `ticker`, `address`, `quote`, `token.symbol`/`name`, a source's `venue`/`liquidityUsdc` and a component's `ticker`/`address`/`weight`. `token`, `sources`, `components` and `score` come from the API; RPC mode omits them. Exact onchain math (`priceX64`, status): `getPrice` under `/advanced`.
+
+Errors: `MimirError` with `code`, `message`, one `hint`, `retry` ("now" | "later" | "never" | "after-refresh"). Codes: NO_WALLET, WALLET_UNSUPPORTED, WALLET_REJECTED, REVIEW_CHANGED, EXPIRED, NOT_FOUND, FEED_EXISTS (`error.feeds`), NO_POOL, UNPRICEABLE, TICKER_TAKEN, INSUFFICIENT_SOL, PENDING, RATE_LIMITED, CAPACITY, UPSTREAM_UNAVAILABLE, RPC.
+
+## Snippets
+
+**1. First price**
+
+```ts
+import { Mimir } from "@quantulabs/mimir-sdk";
+const mimir = new Mimir();
+const sol = await mimir.price("SOL");
+console.log(sol.price, sol.slot, sol.confidenceBps); // e.g. 182.41 462544186n 12
+```
+
+**2. Live**
+
+```ts
+import { Mimir } from "@quantulabs/mimir-sdk";
+const mimir = new Mimir();
+const stop = mimir.watch(["SOL", "TSLAX"], (p) => console.log(p.ticker, p.price, p.quote?.symbol));
+setTimeout(stop, 60_000);
+```
+
+**3. Create a feed** (Node; in a browser pass the connected wallet and your RPC: `new Mimir({ wallet, rpc })`)
+
+```ts
+import { Mimir } from "@quantulabs/mimir-sdk";
+import { readFileSync } from "node:fs";
+const mimir = new Mimir({ wallet: JSON.parse(readFileSync("wallet.json", "utf8")), rpc: process.env.RPC });
+const feed = await mimir.createFeed({ mint: "EKpQGSJtjMFqKZ9KQanSqYXRcF8fBopzLHYxdM65zcjm" }); // WIF; 2 approvals
+console.log(feed.ticker, feed.price.price, feed.price.address);
+```
+
+**4. Create an index**
+
+```ts
+import { Mimir } from "@quantulabs/mimir-sdk";
+import { readFileSync } from "node:fs";
+const mimir = new Mimir({ wallet: JSON.parse(readFileSync("wallet.json", "utf8")), rpc: process.env.RPC });
+const index = await mimir.createIndex({ ticker: "CHIPS", components: { MRVL: 1, INTC: 1, SKHY: 1 } });
+console.log(index.ticker, index.price.price);
+```
+
+**5. On-chain** (refresh, then your instruction, in one transaction)
+
+```ts
+import { Mimir } from "@quantulabs/mimir-sdk";
+import { Transaction } from "@solana/web3.js";
+const mimir = new Mimir({ wallet, rpc: process.env.RPC });
+const tx = new Transaction().add(...await mimir.withFreshPrice("SOL", [yourInstruction]));
+// your program reads the SOL feed account after the refresh: see "Read the price onchain"
+```
+
+Variants, one line each:
+- **Dry run:** `await mimir.createFeed({ mint, dryRun: true })` returns the steps, the approvals and the full SOL cost; it needs `rpc` but no wallet, and signs nothing.
+- **RPC mode:** `new Mimir({ rpc })` reads and finds pools on your RPC only, with zero Mimir API calls.
+- **Server + browser:** the server calls `createFeed({ mint, skipSend: true, payer })` and returns the next unsigned step; the browser signs it with `mimir.sign(step)` and posts it back with `resume` and `signed` (below).
+
+## Docs
+
+- [README](README.md): the snippets, modes, creation, errors, onchain reading
+- [Quickstart](docs/QUICKSTART.md): the `Price` fields and onchain paths
+- [AGENTS.md](AGENTS.md): rules for coding agents integrating Mimir
+- [Advanced entry points](docs/ADVANCED.md): `./advanced` (every exported name), `./v1` and `./beta`, which may change
+
+## Optional
+
+- [Mimir documentation](https://mimirfeeds.io/docs/)
+- [Fees](https://mimirfeeds.io/docs/guides/fees.html)
+- [Cookbook](https://github.com/QuantuLabs/mimir-cookbook): consumer programs and recipes
+- [Mimir app](https://app.mimirfeeds.io)

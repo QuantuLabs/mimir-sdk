@@ -1,0 +1,67 @@
+{
+  "reviewHash": "ff401bd715373fc107cfe32093b1d5c2537260b4406ac2890a0cc84e5a351970",
+  "canonicalReviewSha256": "ef33be8eb5b23a12e65f24e6d020acbe3165dcbfe8a3361406fe1ccef41e646d",
+  "messageHash": "cfea878377e08eb4c938e7f8dcafc0f855704ba98649f86ad0b3c289c1d2b325",
+  "transactionBase64": "gQIAAw8AAABjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjYwMJiojj3XQJ8ZX9UtstPLpdcspnCb8dlBIb83SIAbQPb1yBOXcOqH0XX1ajVGbDTH7My42KkbTuN6Jd9g9bj8mzlBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFRUVFRUVFRUVFRUVFRUVFRUVFRUVFRUVFRUVFRUVFRUWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFn1XjyYCrexCrv/7C88wnzL+eEHLopfO6MXIjk9SnvgrCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwbd9uHXZaGT2cvhRs7reawctIXtX1s3kTqM9YV+/wCpsDYAAAAAAADAXBUAAAAABAcCAQAHAgEABgcCAAABAQABAgACBQQDCAFQBwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+  "stepIntentHash": "f69d97da938287fa92abede2e9af294ba86dcb68a54ad1a451b9a09520ffdda5",
+  "expectedWritesHash": "5782289de79b749c0ed00056495b4f35a522e077d9ee0fb3e5f818b1afaadac7",
+  "receiptSignature": "4rpwa3ehJry5XjvWYXQ7DvNuu58dQ7xd2x2DqskyoLg9mKgzqS5NouUGD7Rd4qfrZeoaQmkkxMsx66YzcgT6NiAi",
+  "success": {
+    "state": "confirmed",
+    "stepId": "classic:activate",
+    "signature": "4rpwa3ehJry5XjvWYXQ7DvNuu58dQ7xd2x2DqskyoLg9mKgzqS5NouUGD7Rd4qfrZeoaQmkkxMsx66YzcgT6NiAi",
+    "observedSlot": "102",
+    "accountContextSlot": "103",
+    "messageHash": "cfea878377e08eb4c938e7f8dcafc0f855704ba98649f86ad0b3c289c1d2b325",
+    "evidenceHash": "c61e5e51583aed0e5853e95c8574240196c56c83e8a25d75d5b0f24a9eaa1779",
+    "writes": [
+      {
+        "index": 0,
+        "address": "2MNus2KCpxwXnp19iyXNpWSFtBD2UGjQBAL8AbtywfT9",
+        "kind": "account",
+        "evidenceHash": "4450dde2d322418e27d10987436f9245a001f8e0402e131aab8c73d7ebc47ea1"
+      },
+      {
+        "index": 1,
+        "address": "9SHQCbGgdExRPyvWckwihPz37Lu2HanrW6j3oV8D2PNA",
+        "kind": "account",
+        "evidenceHash": "58ed79a1bee05b48fa56227b8a179b5ccbdacd6728b8cfb9abcdf91169130dfc"
+      },
+      {
+        "index": 2,
+        "address": "2VDW9dFE1ZXz4zWAbaBDQFynNVdRpQ73HyfSHMzBSL6Z",
+        "kind": "account",
+        "evidenceHash": "cc14b72d851c8a65ce38246612fda169a0c2646dbfc82e8052e8f4ec65776956"
+      },
+      {
+        "index": 3,
+        "address": "2RJD1KnDRGEkvuFfAGrJ7PD28LRE9LRDjZznDywagzmr",
+        "kind": "account",
+        "evidenceHash": "a52ffa9bf23f8cd92db2ea6a6e64cd2d0b3be45c15e60227c5d230f73e6881ce"
+      },
+      {
+        "index": 4,
+        "address": "2VDW9dFE1ZXz4zWAbaBDQFynNVdRpQ73HyfSHMzBSL6Z",
+        "kind": "spl-token-burn-checked",
+        "evidenceHash": "466d51434e3500e78692e4191c2591bf0157253330e9f0d027a913059faba352"
+      },
+      {
+        "index": 5,
+        "address": "AKnL4NNf3DGWZJS6cPknBuEGnVsV4A4m5tgebLHaRSZ9",
+        "kind": "lamports",
+        "evidenceHash": "38b50c58d317a831155f720974f9a7a90064681892d09b2f600a1d134aac2840"
+      }
+    ]
+  },
+  "failure": {
+    "state": "confirmed-failed",
+    "stepId": "classic:activate",
+    "signature": "4rpwa3ehJry5XjvWYXQ7DvNuu58dQ7xd2x2DqskyoLg9mKgzqS5NouUGD7Rd4qfrZeoaQmkkxMsx66YzcgT6NiAi",
+    "observedSlot": "102",
+    "messageHash": "cfea878377e08eb4c938e7f8dcafc0f855704ba98649f86ad0b3c289c1d2b325",
+    "errorHash": "384344bbe8a72c8937a56c4b426542210425c9468b69c5205bd43c93e1874565",
+    "rollback": "baseline-matched",
+    "evidenceHash": "029ae5b23ac8ebb4dcb3ed710b6229636881c376777067a03182bbcb24c9f58a"
+  },
+  "fused": "ok"
+}

@@ -1,0 +1,13 @@
+{
+  "elf": { "file": "mimir_oracle-devnet-f3d8e5f4.so", "sha256": "f3d8e5f4a26100b2c54800a560c9174426fa56d7196ef713cb4e4f851f76839e", "length": 1503720,
+    "sourceCommit": "1fdb4970eccb27516d3fd6d83b5588d7074dc052", "profile": "devnet", "build": "pinned devnet build", "inPublicTree": false },
+  "bank": { "harness": "LiteSVM bank replay of a fused PHONES creation", "run": "2026-10-08", "slot": 508831055, "unix": 1791465930 },
+  "images": {
+    "phones-execution-post-seal.hex": { "after": "tag-88 BEGIN+SEAL", "sha256": "70222f33fd20f628c9d67c39c1c0d40bee12883012b62404a694297ee9b3b7d2", "migrated": "12-byte ticker layout: embedded FeedConfig images re-encoded (+5 bytes each)" },
+    "phones-execution-post-tag87.hex": { "after": "77,83,87 packet", "sha256": "bf754188752b78d5bea8eeae96137e1970407af11ecfe2f00db6ae1328ea653f", "migrated": "12-byte ticker layout: embedded FeedConfig images re-encoded (+5 bytes each)" }
+  },
+  "cells": {
+    "fused-phones-init": { "packet": "phones-init-packet.json", "cu": 97048, "bankKeys": 26, "bankBytes": 1965, "sdkCensusBytes": 1973, "status": "measured" }
+  },
+  "open": ["AMM-v4/PumpSwap fused cells (no fixture)", "recurring tag-87 producer cells per recipe", "converter (composite5sol) cells", "module-bearing execution images (kinds 1-5)"]
+}

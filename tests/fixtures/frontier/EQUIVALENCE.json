@@ -1,0 +1,31 @@
+{
+ "equivalence": {
+  "publications": 120000,
+  "cases": 480000,
+  "both_accept": 34167,
+  "both_refuse": 445833,
+  "verdict_mismatch": 0,
+  "output_mismatch": 0,
+  "writer_vs_consumer_support_floor_mismatch": 0,
+  "validator_failures": 0,
+  "ineligible_publications": 25570,
+  "ineligible_by_clip_only": 15124,
+  "writer_vs_consumer_eligibility_mismatch": 0,
+  "r2_route_verdict_mismatch": 3757
+ },
+ "first_problem": null,
+ "onlyb_equivalence": {
+  "cases": 80000,
+  "agree": 80000,
+  "mismatch": 0,
+  "accepts": 7348
+ },
+ "seed": [
+  701,
+  7011
+ ],
+ "bind_tag_inputs": {
+  "config_sha256": "a89c7936f844086173ec0c261c5eabbd876c368574289b4aa6f516b113648052",
+  "plan_sha256": "a454d5aa419ede00ba2226fb761f9087a14ef5415a65f23f21a93f8ca281cd01"
+ }
+}

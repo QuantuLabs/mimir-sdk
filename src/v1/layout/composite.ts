@@ -1,0 +1,180 @@
+// LAYOUT_V1 composite account (CORE). Twin of programs/mimir-oracle/src/layout_v1/composite.rs;
+// programs/mimir-oracle/tests/layout_v1_composite.rs fails if a name or value differs.
+// Shared rules (seeds, owner record, notice, generation, descriptor, M0 membership, temporal modules,
+// converter block, status, region_mask) are in ./common.ts. Byte map: docs/LAYOUT_V1_COMPOSITE.md.
+// N = component count, P = COMPOSITE_PREFIX_FIXED_LEN + COMPOSITE_PREFIX_COMPONENT_LEN * N (common.ts).
+// Region starts are *_AT_FIXED + *_AT_PER_COMPONENT * N; field offsets are relative to their region.
+// Byte strings are ASCII ("\0" = one zero byte).
+
+export const COMPOSITE_MIN_COMPONENTS = 1;
+export const COMPOSITE_MAX_COMPONENTS = 5;
+export const COMPOSITE_MAX_CONVERTER_ROWS = 5;
+
+export const CFC_AT_FIXED = 369;
+export const CFC_AT_PER_COMPONENT = 80;
+export const CFC_LEN_FIXED = 229;
+export const CFC_LEN_PER_COMPONENT = 80;
+export const HDR_AT_FIXED = 598;
+export const HDR_AT_PER_COMPONENT = 160;
+export const HDR_LEN = 32;
+export const FEE_AT_FIXED = 630;
+export const FEE_AT_PER_COMPONENT = 160;
+export const FEE_LEN = 40;
+export const ROWS_AT_FIXED = 670;
+export const ROWS_AT_PER_COMPONENT = 160;
+
+export const CSP_MAGIC = "MIMIRCSP";
+export const CSP_VERSION_VALUE = 0;
+export const CSP_HEADER_LEN_VALUE = 720;
+export const CSP_MAGIC_AT = 0;
+export const CSP_VERSION = 8;
+export const CSP_HEADER_LEN = 10;
+export const CSP_FLAGS = 12;
+export const CSP_FEED_ID = 16;
+export const CSP_CONFIG = 48;
+export const CSP_REGISTRY_EPOCH = 80;
+export const CSP_CONFIG_REVISION = 88;
+export const CSP_REVISION = 96;
+export const CSP_STATUS = 104;
+export const CSP_ROUTEABILITY = 105;
+export const CSP_RISK_TIER = 106;
+export const CSP_SNAPSHOT_SOURCE = 107;
+export const CSP_FRESHNESS = 108;
+export const CSP_COUNT = 109;
+export const CSP_QUOTE_STATUS = 110;
+export const CSP_RESERVED0 = 111;
+export const CSP_SNAPSHOT_SLOT = 112;
+export const CSP_VALID_UNTIL_SLOT = 120;
+export const CSP_UNIX_TS = 128;
+export const CSP_OLDEST_COMPONENT_SNAPSHOT_SLOT = 136;
+export const CSP_OLDEST_COMPONENT_ACTIVITY_SLOT = 144;
+export const CSP_PRICE_MANTISSA = 152;
+export const CSP_PRICE_EXPONENT = 160;
+export const CSP_CONFIDENCE_BPS = 164;
+export const CSP_DISPERSION_BPS = 166;
+export const CSP_PRICE_X64 = 168;
+export const CSP_PRICE_LOWER_X64 = 184;
+export const CSP_PRICE_UPPER_X64 = 200;
+export const CSP_MAX_RECOMMENDED_NOTIONAL = 216;
+export const CSP_MANIPULATION_COST_FLOOR = 232;
+export const CSP_COMPONENT_SET_HASH = 248;
+export const CSP_COMPONENT_SNAPSHOT_HASH = 280;
+export const CSP_ANCHOR_PROVIDER = 312;
+export const CSP_ANCHOR_STATUS = 313;
+export const CSP_CONDITIONS = 314;
+export const CSP_POWERS = 316;
+export const CSP_CONDITIONED_ROWS = 318;
+export const CSP_PRICE_STATE = 319;
+export const CSP_COMPONENTS = 320;
+export const CSP_COMPONENT_LEN = 80;
+export const CSP_COMPONENT_FEED_ID = 0;
+export const CSP_COMPONENT_SNAPSHOT_REVISION = 32;
+export const CSP_COMPONENT_SNAPSHOT_SLOT = 40;
+export const CSP_COMPONENT_PRICE_X64 = 48;
+export const CSP_COMPONENT_CONTRIBUTION_X64 = 64;
+
+export const CFC_MAGIC = "MIMIRCFC";
+export const CFC_VERSION_VALUE = 2;
+export const CFC_MAGIC_AT = 0;
+export const CFC_VERSION = 8;
+export const CFC_HEADER_LEN = 10;
+export const CFC_FLAGS = 12;
+export const CFC_FEED_ID = 16;
+export const CFC_CREATOR = 48;
+export const CFC_QUOTE_MINT = 80;
+export const CFC_PRICE_EXPONENT = 112;
+export const CFC_STATUS = 116;
+export const CFC_ROUTEABILITY_CAP = 117;
+export const CFC_RISK_TIER = 118;
+export const CFC_COMPONENT_COUNT = 119;
+export const CFC_MAX_SNAPSHOT_AGE_SLOTS = 120;
+export const CFC_MAX_COMPONENT_SNAPSHOT_AGE_SLOTS = 122;
+export const CFC_MAX_COMPONENT_CONFIDENCE_BPS = 124;
+export const CFC_MAX_COMPONENT_DISPERSION_BPS = 126;
+export const CFC_COMPONENT_SET_HASH = 128;
+export const CFC_REGISTRY_EPOCH = 160;
+export const CFC_CONFIG_REVISION = 168;
+export const CFC_ADMIN_REVISION_AT_CREATION = 176;
+export const CFC_BUMP = 184;
+export const CFC_TICKER = 185;
+export const CFC_TICKER_LEN = 12;
+export const CFC_SOL_CONVERSION_SOURCE_CONFIG = 197;
+export const CFC_COMPONENTS = 229;
+export const CFC_COMPONENT_LEN = 80;
+export const CFC_COMPONENT_FEED_ID = 0;
+export const CFC_COMPONENT_SOURCE_CONFIG = 32;
+export const CFC_COMPONENT_QUANTITY_X64 = 64;
+
+export const HDR_MAGIC = "MIMIRCEF";
+export const HDR_VERSION_VALUE = 3;
+export const HDR_MAGIC_AT = 0;
+export const HDR_VERSION = 8;
+export const HDR_HLEN = 10;
+export const HDR_EXACT_LEN = 12;
+export const HDR_CFC_REVISION = 16;
+export const HDR_COUNT = 24;
+export const HDR_BUMP = 25;
+export const HDR_STATUS = 26;
+export const HDR_CONVERTER_COUNT = 27;
+export const HDR_REGION_MASK = 28;
+export const HDR_ROW_FORMAT = 29;
+export const HDR_RESERVED = 30;
+export const ROW_FORMAT_COMPACT = 0;
+export const ROW_FORMAT_FULL = 1;
+
+export const FEE_OWNER_GENERATED = 0;
+export const FEE_TOTAL_REFRESH_FEES = 8;
+export const FEE_OWNER_CLAIMED = 16;
+export const FEE_TREASURY_PAID = 24;
+export const FEE_LAST_ACCRUAL_CONFIG_REVISION = 32;
+
+export const ROWDEF_LEN = 201;
+export const ROW_ROWDEF = 400;
+export const ROW_COMPACT_RING = 601;
+export const ROW_COMPACT_LEN = 1145;
+export const ROW_FEED = 400;
+export const ROW_PLAN = 725;
+export const ROW_FULL_RING = 1045;
+export const ROW_FULL_LEN = 1589;
+
+export const ROWDEF_FEED_RUN0 = 0;
+export const ROWDEF_FEED_RUN1 = 11;
+export const ROWDEF_FEED_RUN2 = 21;
+export const ROWDEF_FEED_RUN3 = 53;
+export const ROWDEF_FEED_RUN4 = 117;
+export const ROWDEF_PLAN_RUN0 = 134;
+export const ROWDEF_PLAN_RUN1 = 166;
+export const ROWDEF_PLAN_RUN2 = 180;
+export const ROWDEF_BIND_TAG = 193;
+export const ROWDEF_BIND_TAG_LEN = 8;
+export const FEED_RUN0_AT = 112;
+export const FEED_RUN1_AT = 124;
+export const FEED_RUN2_AT = 136;
+export const FEED_RUN3_AT = 232;
+export const FEED_RUN4_AT = 296;
+export const PLAN_RUN0_AT = 196;
+export const PLAN_RUN1_AT = 48;
+export const PLAN_RUN2_AT = 292;
+export const BIND_DOMAIN = "MIMIR_FRONTIER_BIND_V1";
+
+export const DUAL_PROOF_MAGIC = "MIMIRCDP";
+export const DUAL_PROOF_VERSION_VALUE = 2;
+export const DUAL_PROOF_HEADER_LEN = 64;
+export const DUAL_PROOF_ROW_LEN = 84;
+export const DUAL_PROOF_CONVERTER_LEN = 56;
+export const DUAL_PROOF_MAGIC_AT = 0;
+export const DUAL_PROOF_VERSION = 8;
+export const DUAL_PROOF_LEN = 10;
+export const DUAL_PROOF_FLAGS = 12;
+export const DUAL_PROOF_REVISION = 16;
+export const DUAL_PROOF_SLOT = 24;
+export const DUAL_PROOF_COMMITMENT = 32;
+export const DUAL_CSP_DOMAIN = "MIMIR_DUAL_COMPOSITE_CSP_V2\0";
+
+// Consumer-readable identity (written only by CREATE_COMPOSITE). Row i of N at
+// ROWS_AT_FIXED + ROWS_AT_PER_COMPONENT * N + stride * i, stride = ROW_COMPACT_LEN or ROW_FULL_LEN
+// by header row_format; D_comp(N, row_format) = row N (CSP, owner, cfc, header, fees, N rows).
+export const ROW_COMPACT_BASE_DECIMALS = 406;
+export const ROW_COMPACT_QUOTE_DECIMALS = 407;
+export const ROW_FULL_BASE_DECIMALS = 518;
+export const ROW_FULL_QUOTE_DECIMALS = 519;

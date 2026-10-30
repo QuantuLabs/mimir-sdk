@@ -1,0 +1,174 @@
+{
+  "name": "@quantulabs/mimir-sdk",
+  "version": "0.9.0",
+  "description": "TypeScript SDK for Mimir, a Solana oracle: onchain token and index price feeds computed from DEX liquidity pools (Raydium, Orca, Meteora, PumpSwap).",
+  "type": "module",
+  "main": "dist/cjs/src/root.js",
+  "types": "dist/src/root.d.ts",
+  "typesVersions": {
+    "*": {
+      "advanced": [
+        "dist/src/publicApi.d.ts"
+      ],
+      "beta": [
+        "dist/src/beta/index.d.ts"
+      ],
+      "v1": [
+        "dist/src/v1/index.d.ts"
+      ],
+      "v1/refresh": [
+        "dist/src/v1/refresh.d.ts"
+      ],
+      "create": [
+        "dist/src/create/index.d.ts"
+      ]
+    }
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/src/root.d.ts",
+      "import": "./dist/src/root.js",
+      "require": "./dist/cjs/src/root.js"
+    },
+    "./advanced": {
+      "types": "./dist/src/publicApi.d.ts",
+      "import": "./dist/src/publicApi.js",
+      "require": "./dist/cjs/src/publicApi.js"
+    },
+    "./beta": {
+      "types": "./dist/src/beta/index.d.ts",
+      "browser": "./dist/browser/beta.js",
+      "import": "./dist/src/beta/index.js",
+      "require": "./dist/cjs/src/beta/index.js"
+    },
+    "./v1": {
+      "types": "./dist/src/v1/index.d.ts",
+      "import": "./dist/src/v1/index.js",
+      "require": "./dist/cjs/src/v1/index.js"
+    },
+    "./v1/refresh": {
+      "types": "./dist/src/v1/refresh.d.ts",
+      "import": "./dist/src/v1/refresh.js",
+      "require": "./dist/cjs/src/v1/refresh.js"
+    },
+    "./create": {
+      "types": "./dist/src/create/index.d.ts",
+      "import": "./dist/src/create/index.js",
+      "require": "./dist/cjs/src/create/index.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "dist/src",
+    "!dist/src/index.*",
+    "!dist/src/fixtures.*",
+    "dist/cjs/src",
+    "!dist/cjs/src/index.js",
+    "!dist/cjs/src/fixtures.js",
+    "dist/cjs/package.json",
+    "dist/browser",
+    "README.md",
+    "LICENSE",
+    "NOTICE",
+    "docs/QUICKSTART.md",
+    "docs/ADVANCED.md",
+    "AGENTS.md",
+    "llms.txt",
+    "CHANGELOG.md"
+  ],
+  "scripts": {
+    "clean": "rm -rf dist",
+    "build": "npm run clean && tsc -p tsconfig.json && tsc -p tsconfig.cjs.json && node ./scripts/write-cjs-package-type.mjs && node ./scripts/strip-dts-buffer.mjs && node ./scripts/build-beta-browser.mjs",
+    "test:v1": "node --import tsx tests/v1Builders.test.ts && node --import tsx tests/v1Decoders.test.ts && node --import tsx tests/betaAdminContext.test.ts && node --import tsx tests/v1Definition.test.ts && node --import tsx tests/v1DefinitionMainnetParity.test.ts && node --import tsx tests/v1DefinitionVectors.test.ts && node --import tsx tests/v1Refresh.test.ts && node --import tsx tests/v1NativeDrift.test.ts && node --import tsx tests/v1CompositeConverter.test.ts && node --import tsx tests/v1CreateReceiptBinding.test.ts && node --import tsx tests/v1CreateFirstPrice.test.ts && node --import tsx tests/v1Abi2Capability.test.ts && node --import tsx tests/v1Publication.test.ts && node --import tsx tests/v1Main9Publication.test.ts && node --import tsx tests/main9DegradedCsp.test.ts",
+    "test": "npm run test:v1 && node --import tsx tests/betaRent.test.ts && node --import tsx tests/orcaTickMath.test.ts && node --import tsx tests/raydiumTickMath.test.ts && node --import tsx tests/betaCodecs.test.ts && node --import tsx tests/betaOneChar.test.ts && node --import tsx tests/betaCurrentProgramAbi.test.ts && node --import tsx tests/betaTransactionV1.test.ts && node --import tsx tests/walletGuardAccounts.test.ts && node --import tsx tests/callerPrefix.test.ts && node --import tsx tests/betaClient.test.ts && node --import tsx tests/betaCreationStages.test.ts && node --import tsx tests/betaDiscovery.test.ts && node --import tsx tests/betaPreparationDrift.test.ts && node --import tsx tests/betaFusedIdentityPacket.test.ts && node --import tsx tests/betaIdentity8004.test.ts && node --import tsx tests/betaOwnership.test.ts && node --import tsx tests/betaPacketReview.test.ts && node --import tsx tests/betaCompositePointActivateReceipt.test.ts && node --import tsx tests/betaReconciliation.test.ts && node --import tsx tests/betaSharedCreationReconciliation.test.ts && node --import tsx tests/betaRenewalWitness.test.ts && node --import tsx tests/betaRefreshableReconciliation.test.ts && node --import tsx tests/cpmmSourceFloorProof.test.ts && node --import tsx tests/creationExecutionInventoryEnvelope.test.ts && node --import tsx tests/codec.test.ts && node --import tsx tests/errors.test.ts && node --import tsx tests/mintOracle.test.ts && node --import tsx tests/programAbiGolden.test.ts && node --import tsx tests/sizeAwareV0.test.ts && node --import tsx tests/collateralOutputV1.test.ts && node --import tsx tests/mutableExportAuthority.test.ts && node --import tsx tests/clockRebind.test.ts && node --import tsx tests/sampledTemporal.test.ts && node --import tsx tests/currentPoint.test.ts && node --import tsx tests/betaSampledModuleReview.test.ts && node --import tsx tests/sampledMixedParity.test.ts && node --import tsx tests/nativeLagEnvelope.test.ts && node --import tsx tests/livenessVectors.test.ts && node --import tsx tests/frontier.test.ts && node --import tsx tests/multiFeed.test.ts && node --import tsx tests/coherentClock.test.ts && node --import tsx tests/variantRecoveryAsync.test.ts && node --import tsx tests/economicConditions.test.ts && node --import tsx tests/decoderPartition.test.ts && node --import tsx tests/refreshPlanner.test.ts && node --import tsx tests/consumerVerifierParity.test.ts && node --import tsx tests/rawAccountBytes.test.ts && node --import tsx tests/mixedReaderAdmission.test.ts && node --import tsx tests/devnetCluster.test.ts && node --experimental-test-module-mocks --import tsx tests/compositeComponentSnapshots.test.ts && node --import tsx tests/compositeExecutionAbi1.test.ts && node --import tsx tests/compositeConverterTail.test.ts && node --import tsx tests/abi1Release.test.ts && node --import tsx tests/consumerAdmissionDomainsA2.test.ts && node --import tsx tests/classicConverterA2.test.ts && node --import tsx tests/classicExecutionA2.test.ts && node --import tsx tests/classicAttachA2.test.ts && node --import tsx tests/classicNativeCreationA2.test.ts && node --import tsx tests/classicIntervalRecipesA2.test.ts && node --experimental-test-module-mocks --import tsx tests/classicRefreshGroupA2.test.ts && node --import tsx tests/classicExistingFeedRows.test.ts && node --import tsx tests/sparseClmmResume.test.ts && node --import tsx tests/classicBelowFloorPublication.test.ts && node --import tsx tests/compositeBelowFloorPublication.test.ts && node --import tsx tests/compositePublicationBoundary.test.ts && node --import tsx tests/exportedRefreshFixtures.test.ts && node --import tsx tests/adminConfigUpgradeAuthority.test.ts && node --import tsx tests/minFreshConsumerAnchor.test.ts && node --import tsx tests/publishReuseWindow.test.ts && node --import tsx tests/converterActivityProof.test.ts && node --import tsx tests/alpenglowS12.test.ts && node --import tsx tests/compositePublishFit.test.ts && node --import tsx tests/compositeVisibleFit.test.ts && node --import tsx tests/classicDual.test.ts && node --import tsx tests/compositeDual.test.ts && node --import tsx tests/dlmmPoint.test.ts && node --import tsx tests/dlmmPointRingImage.test.ts && node --import tsx tests/dlmmDual.test.ts && node --import tsx tests/dualIdleCreation.test.ts && node --import tsx tests/sdkReviewFix081.test.ts && node --import tsx tests/creationReviewCustom46.test.ts && node --import tsx tests/autoParams.test.ts && node --import tsx tests/easy/price.test.ts && node --import tsx tests/easy/error-light.test.ts && node --experimental-test-module-mocks --import tsx tests/easy/retry.test.ts && node --import tsx tests/easy/feeds.test.ts && node --import tsx tests/easy/watch.test.ts && node --import tsx tests/easy/feedInfo.test.ts && node --import tsx tests/easy/marketFit.test.ts && node --import tsx tests/easy/marketRules.test.ts && node --import tsx tests/beta/planFit.test.ts && node --experimental-test-module-mocks --import tsx tests/easy/fresh.test.ts && node --experimental-test-module-mocks --import tsx tests/easy/live.test.ts && npm run test:mimir && npm run test:create",
+    "test:create": "node --import tsx tests/create/discovery-clock.test.ts && node --import tsx tests/create/confirm-signature.test.ts && node --import tsx tests/create/submit-expiry.test.ts && node --import tsx tests/create/presend-sim.test.ts && node --import tsx tests/create/resume-after.test.ts && node --import tsx tests/create/signature-status.test.ts && node --import tsx tests/create/collateral-funding.test.ts && node --import tsx tests/create/price-preview.test.ts && node --experimental-test-module-mocks --import tsx tests/create/v1-create-funding.test.ts && node --import tsx tests/create/v1-create-receipt-binding.test.ts && node --experimental-test-module-mocks --import tsx tests/create/v1-create.test.ts && node --experimental-test-module-mocks --import tsx tests/create/v1-create-refresh-fit.test.ts && node --experimental-test-module-mocks --import tsx tests/create/merge.test.ts && node --import tsx tests/create/facade.test.ts && node --experimental-test-module-mocks --import tsx tests/create/review-exact.test.ts && node --experimental-test-module-mocks --import tsx tests/create/facade-plan.test.ts && node --experimental-test-module-mocks --import tsx tests/create/facade-composite.test.ts && node --experimental-test-module-mocks --import tsx tests/create/facade-composite-children.test.ts && node --experimental-test-module-mocks --import tsx tests/create/converter-parity.test.ts && node --import tsx tests/create/txv1-fee.test.ts",
+    "smoke:create": "node --import tsx scripts/smoke-create.ts",
+    "test:browser": "node scripts/browser-smoke.mjs",
+    "test:package": "npm run build && node scripts/sampled-vector-browser-parity.mjs && node scripts/beta-runtime-graph-smoke.mjs && node --import tsx scripts/package-export-smoke.ts && node scripts/installed-package-export-smoke.mjs && node scripts/installed-beta-persona-smoke.mjs && node --import tsx tests/v1NativeDrift.test.ts --packed",
+    "prepack": "npm run build",
+    "check": "npm run build && npm run test && tsx scripts/package-export-smoke.ts",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "test:mimir": "node --import tsx tests/mimir/api-contract.test.ts && node --import tsx tests/mimir/wallet.test.ts && node --import tsx tests/mimir/candidates.test.ts && node --import tsx tests/mimir/token-ticker.test.ts && node --import tsx tests/mimir/recommend.test.ts && node --experimental-test-module-mocks --import tsx tests/mimir/create-auto.test.ts && node --experimental-test-module-mocks --import tsx tests/mimir/create-auto-default.test.ts && node --experimental-test-module-mocks --import tsx tests/mimir/admin-tariff.test.ts && node --experimental-test-module-mocks --import tsx tests/mimir/server-split.test.ts && node --import tsx tests/mimir/no-secrets.test.ts && node --import tsx tests/mimir/no-pool-index.test.ts",
+    "test:readme": "npm run build && node scripts/readme-typecheck.mjs",
+    "test:mainnet": "node --import tsx tests/mainnet/mimir-mainnet.test.ts"
+  },
+  "keywords": [
+    "solana",
+    "oracle",
+    "price-feed",
+    "price-oracle",
+    "onchain",
+    "defi",
+    "amm",
+    "liquidity-pools",
+    "raydium",
+    "orca",
+    "meteora",
+    "pumpswap",
+    "composite",
+    "index",
+    "tokenized-stocks",
+    "typescript",
+    "mimir",
+    "solana-oracle",
+    "price-feeds",
+    "token-price",
+    "dex",
+    "on-chain",
+    "rwa",
+    "xstocks",
+    "web3",
+    "sdk"
+  ],
+  "license": "Apache-2.0",
+  "homepage": "https://mimirfeeds.io/docs/",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/QuantuLabs/mimir-sdk.git"
+  },
+  "bugs": {
+    "url": "https://github.com/QuantuLabs/mimir-sdk/issues"
+  },
+  "sideEffects": false,
+  "peerDependencies": {
+    "@solana/web3.js": "^1.95.0",
+    "@types/node": ">=20"
+  },
+  "peerDependenciesMeta": {
+    "@types/node": {
+      "optional": true
+    }
+  },
+  "devDependencies": {
+    "@coral-xyz/anchor": "^0.32.1",
+    "@solana/web3.js": "^1.95.0",
+    "@sveltejs/adapter-static": "3.0.10",
+    "@sveltejs/kit": "2.70.3",
+    "@sveltejs/vite-plugin-svelte": "7.3.0",
+    "@types/node": "^20.10.6",
+    "esbuild": "0.28.0",
+    "playwright": "1.62.1",
+    "svelte": "5.57.0",
+    "tsx": "^4.7.0",
+    "typescript": "^5.9.3",
+    "vite": "8.2.2"
+  },
+  "engines": {
+    "node": ">=20.18.0"
+  },
+  "dependencies": {
+    "@metaplex-foundation/mpl-core": "1.10.0",
+    "@metaplex-foundation/umi": "1.5.1",
+    "@noble/hashes": "1.8.0",
+    "@solana/addresses": "7.0.0",
+    "@solana/instructions": "7.0.0",
+    "@solana/keys": "7.0.0",
+    "@solana/kit": "^5.5.1",
+    "@solana/rpc-types": "7.0.0",
+    "@solana/transaction-messages": "7.0.0",
+    "@solana/transactions": "7.0.0",
+    "bn.js": "^5.2.3",
+    "bs58": "^6.0.0",
+    "buffer": "^6.0.3"
+  }
+}

@@ -1,0 +1,1184 @@
+{
+ "schema": "mimir-beta-stage-receipt",
+ "version": 2,
+ "draftHash": "e5df91ae8241195e3b8fd1f2ead013acb27729d83c48c0f049088d33a4a65e85",
+ "stepId": "composite:activate",
+ "attempt": 1,
+ "stepIntentHash": "054069d4765a2349c6b0180599682710e499c6d32c4fd6e630a6d075f434ca5b",
+ "expectedWritesHash": "ac35639fce08d164bf97c3f615290dda6f759af2bfae1d976cb805d9aed67d00",
+ "reviewHash": "7a5b08132f9591fa606956e153e4b033fb9b8c48669edfb04f59b9871ac95594",
+ "messageHash": "ad52a987508adb24948ecba7204dd5c1eb7c00ad0aa67c6dfc11b06e8ebf8b53",
+ "messageBase64": "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",
+ "signature": "4v3NEtQ7TGeHWmWjUJkrgz3FSTEkc2RuEfWEnaXxDYjgosDwomaLsW32ocoKcqFds53PGKMoHwTfjX9K3A228osq",
+ "retryOfSignature": null,
+ "reviewedStep": {
+  "step": {
+   "stepId": "composite:activate",
+   "stage": "mimir-create",
+   "ordinal": 1,
+   "prerequisiteStepIds": [
+    "composite:configure"
+   ],
+   "requiredSigners": [
+    "9wi5wqzMauEA1qcbRFDuhgCQiKwXULGZShsUSUojJVn7"
+   ],
+   "expectedWrites": [
+    {
+     "address": "3mEyR7GPxdMNsfBcmEP9WyB7dQTSeVDcbBZkUdn5BjW8",
+     "effect": "write",
+     "ownerAfter": "TYo5SEVfHyFzpjsbFVzNFKTnmLdBvdYjLxmnv32iQ9r",
+     "dataLengthAfter": 544,
+     "discriminatorHex": "4d494d4952524e47",
+     "description": "refresh existing component source ring before Composite root",
+     "proof": {
+      "kind": "account",
+      "transition": "write",
+      "before": {
+       "exists": true,
+       "owner": "TYo5SEVfHyFzpjsbFVzNFKTnmLdBvdYjLxmnv32iQ9r",
+       "executable": false,
+       "lamports": "4677120",
+       "dataLength": 544,
+       "dataSha256": "25c8c6ca59c36e423d15c80503482ea67a834a0843ce56c250b8b3269f67fbd6"
+      },
+      "after": {
+       "exists": true,
+       "lamports": "4677120",
+       "owner": "TYo5SEVfHyFzpjsbFVzNFKTnmLdBvdYjLxmnv32iQ9r",
+       "executable": false,
+       "data": {
+        "kind": "sdk-codec",
+        "codec": "source-ring-v1",
+        "length": 544,
+        "semanticHash": "18fbb90a8613e370432c03d1dacbdc898d95ba12e8fdf1a95a85a3bcef8b8078"
+       }
+      }
+     }
+    },
+    {
+     "address": "4k9FHxupnwK2g5mFpnj3xbXrHwBnzjuDcXWibeh8U4ef",
+     "effect": "write",
+     "ownerAfter": "TYo5SEVfHyFzpjsbFVzNFKTnmLdBvdYjLxmnv32iQ9r",
+     "dataLengthAfter": 544,
+     "discriminatorHex": "4d494d4952524e47",
+     "description": "refresh existing component source ring before Composite root",
+     "proof": {
+      "kind": "account",
+      "transition": "write",
+      "before": {
+       "exists": true,
+       "owner": "TYo5SEVfHyFzpjsbFVzNFKTnmLdBvdYjLxmnv32iQ9r",
+       "executable": false,
+       "lamports": "4677120",
+       "dataLength": 544,
+       "dataSha256": "0953126879fc8fe549ff16141c1d7a512dd35c0419bb39066be7ef431bc21a2e"
+      },
+      "after": {
+       "exists": true,
+       "lamports": "4677120",
+       "owner": "TYo5SEVfHyFzpjsbFVzNFKTnmLdBvdYjLxmnv32iQ9r",
+       "executable": false,
+       "data": {
+        "kind": "sdk-codec",
+        "codec": "source-ring-v1",
+        "length": 544,
+        "semanticHash": "a0ce952b4f79bdb19872d861b425f6fc76a0627a1c1ae231e46388808f6a373a"
+       }
+      }
+     }
+    },
+    {
+     "address": "Eo4TcW9wY5kEuey3CYhiESP8MJaEsbTPeYD2JY34e7h6",
+     "effect": "write",
+     "ownerAfter": "TYo5SEVfHyFzpjsbFVzNFKTnmLdBvdYjLxmnv32iQ9r",
+     "dataLengthAfter": 544,
+     "discriminatorHex": "4d494d4952524e47",
+     "description": "refresh existing component source ring before Composite root",
+     "proof": {
+      "kind": "account",
+      "transition": "write",
+      "before": {
+       "exists": true,
+       "owner": "TYo5SEVfHyFzpjsbFVzNFKTnmLdBvdYjLxmnv32iQ9r",
+       "executable": false,
+       "lamports": "4677120",
+       "dataLength": 544,
+       "dataSha256": "38b93b9283d9cbfd83eed7ccc070b85643fef6b9605da78706e2674275adcacd"
+      },
+      "after": {
+       "exists": true,
+       "lamports": "4677120",
+       "owner": "TYo5SEVfHyFzpjsbFVzNFKTnmLdBvdYjLxmnv32iQ9r",
+       "executable": false,
+       "data": {
+        "kind": "sdk-codec",
+        "codec": "source-ring-v1",
+        "length": 544,
+        "semanticHash": "f33b4d538ea691b1f804a86f462aafbb5a8d25bada5997278bdba5a2245e4652"
+       }
+      }
+     }
+    },
+    {
+     "address": "3WDYs7TxH2QmHJmsxuYeQ8DBhZtawUN3npqr9PacbwXd",
+     "effect": "write",
+     "ownerAfter": "TYo5SEVfHyFzpjsbFVzNFKTnmLdBvdYjLxmnv32iQ9r",
+     "dataLengthAfter": 544,
+     "discriminatorHex": "4d494d4952524e47",
+     "description": "refresh existing component source ring before Composite root",
+     "proof": {
+      "kind": "account",
+      "transition": "write",
+      "before": {
+       "exists": true,
+       "owner": "TYo5SEVfHyFzpjsbFVzNFKTnmLdBvdYjLxmnv32iQ9r",
+       "executable": false,
+       "lamports": "4677120",
+       "dataLength": 544,
+       "dataSha256": "a59cd39e627fb17709c98fa1ecbfb2d0d72c7a45557eab12b7edf44f481fa058"
+      },
+      "after": {
+       "exists": true,
+       "lamports": "4677120",
+       "owner": "TYo5SEVfHyFzpjsbFVzNFKTnmLdBvdYjLxmnv32iQ9r",
+       "executable": false,
+       "data": {
+        "kind": "sdk-codec",
+        "codec": "source-ring-v1",
+        "length": 544,
+        "semanticHash": "ef5fe9b6035d6500df4c9957c24b5ec4fe3adb87442a9286ec0e89c56814f5dc"
+       }
+      }
+     }
+    },
+    {
+     "address": "86wbW4YXsadkK2EnvCGgR5T3FT5WsnGngjgtPCMtbamj",
+     "effect": "write",
+     "ownerAfter": "TYo5SEVfHyFzpjsbFVzNFKTnmLdBvdYjLxmnv32iQ9r",
+     "dataLengthAfter": 512,
+     "discriminatorHex": "4d494d4952534e50",
+     "description": "refresh existing component Atomic-Lite snapshot",
+     "proof": {
+      "kind": "account",
+      "transition": "write",
+      "before": {
+       "exists": true,
+       "owner": "TYo5SEVfHyFzpjsbFVzNFKTnmLdBvdYjLxmnv32iQ9r",
+       "executable": false,
+       "lamports": "4454400",
+       "dataLength": 512,
+       "dataSha256": "3e3053e174cc5ea8fc855504718375c9e04b758c3a435345330263fd86f2b53b"
+      },
+      "after": {
+       "exists": true,
+       "lamports": "4454400",
+       "owner": "TYo5SEVfHyFzpjsbFVzNFKTnmLdBvdYjLxmnv32iQ9r",
+       "executable": false,
+       "data": {
+        "kind": "sdk-codec",
+        "codec": "feed-snapshot-v0",
+        "length": 512,
+        "semanticHash": "1bf25783236ef4c409ea40fd8020e831cf8f22140101b1671f566fe86e5f617e"
+       }
+      }
+     }
+    },
+    {
+     "address": "4UnyfXR7PqSEqRpofNqHxEXUi7sMQq3YLJsY2oZ8tN4d",
+     "effect": "write",
+     "ownerAfter": "TYo5SEVfHyFzpjsbFVzNFKTnmLdBvdYjLxmnv32iQ9r",
+     "dataLengthAfter": 160,
+     "discriminatorHex": "4d494d4952464545",
+     "description": "credit configured composite fee vault",
+     "proof": {
+      "kind": "account",
+      "transition": "write",
+      "before": {
+       "exists": true,
+       "owner": "TYo5SEVfHyFzpjsbFVzNFKTnmLdBvdYjLxmnv32iQ9r",
+       "executable": false,
+       "lamports": "2004480",
+       "dataLength": 160,
+       "dataSha256": "dc6b070ead213f09f20d7a808c4184934113cd4694df34a044fa288d40328231"
+      },
+      "after": {
+       "exists": true,
+       "lamports": "2020480",
+       "owner": "TYo5SEVfHyFzpjsbFVzNFKTnmLdBvdYjLxmnv32iQ9r",
+       "executable": false,
+       "data": {
+        "kind": "exact",
+        "length": 160,
+        "sha256": "24dcd20c5f128f69fef11331612d696f50820de9f2dcdbf04899ec960f9b200a"
+       }
+      }
+     }
+    },
+    {
+     "address": "6zpnagurNwQcCxS3CAgbnGT3FrTdBZW2hfAMmQ2mcyng",
+     "effect": "create",
+     "ownerAfter": "TYo5SEVfHyFzpjsbFVzNFKTnmLdBvdYjLxmnv32iQ9r",
+     "dataLengthAfter": 720,
+     "discriminatorHex": "4d494d4952435350",
+     "description": "create ready Composite root snapshot",
+     "proof": {
+      "kind": "account",
+      "transition": "create",
+      "before": {
+       "exists": false,
+       "owner": null,
+       "executable": null,
+       "lamports": "0",
+       "dataLength": null,
+       "dataSha256": null
+      },
+      "after": {
+       "exists": true,
+       "lamports": "5902080",
+       "owner": "TYo5SEVfHyFzpjsbFVzNFKTnmLdBvdYjLxmnv32iQ9r",
+       "executable": false,
+       "data": {
+        "kind": "sdk-codec",
+        "codec": "composite-snapshot-v1",
+        "length": 720,
+        "semanticHash": "279d9168837e4cd45756cf17c149ef6fecace788a60b00c7522289b3ce8a61af"
+       }
+      }
+     }
+    },
+    {
+     "address": "DWTgYxG5pC7kohcpF64boTzo6JsjhT6uZv3MWKwG6CRN",
+     "effect": "write",
+     "ownerAfter": "TYo5SEVfHyFzpjsbFVzNFKTnmLdBvdYjLxmnv32iQ9r",
+     "dataLengthAfter": 1280,
+     "discriminatorHex": "4d54503404000005",
+     "description": "advance MTP4 current-point module",
+     "proof": {
+      "kind": "account",
+      "transition": "write",
+      "before": {
+       "exists": true,
+       "owner": "TYo5SEVfHyFzpjsbFVzNFKTnmLdBvdYjLxmnv32iQ9r",
+       "executable": false,
+       "lamports": "9799680",
+       "dataLength": 1280,
+       "dataSha256": "a5ef0e90d33d05a54fa9af979b71a09d8c664322e052bf2e55baec27e79b881d"
+      },
+      "after": {
+       "exists": true,
+       "lamports": "9799680",
+       "owner": "TYo5SEVfHyFzpjsbFVzNFKTnmLdBvdYjLxmnv32iQ9r",
+       "executable": false,
+       "data": {
+        "kind": "sdk-codec",
+        "codec": "sampled-temporal-v4",
+        "length": 1280,
+        "semanticHash": "c5114354c4e7761598f1414a3c02d77a841868039c5b6a5267b6b1d7a7a6994e",
+        "sampledTransition": {
+         "ring": "3mEyR7GPxdMNsfBcmEP9WyB7dQTSeVDcbBZkUdn5BjW8",
+         "preModuleHex": "4d545034040000055a95fc1a000000000a000500100101025650b37beb919569c4841b98576019cf56d89d1c579df51eab4abaa8381816139747c06a0000000020708d0be1a6ff73b55d60b9d50d75511a764b5bd06fe5f65af527eac8352dbf28b1284ee829cefc1714b6711ee77a5089b085c76f8dd5c1d098525c40dfcdb101000000000000005a95fc1a000000009747c06a000000005a95fc1a000000009747c06a00000000d79c1bbc674900000000000000000000d79c1bbc674900000000000000000000d89c1bbc6749000000000000000000000000000000000000f3fb09ffed036d788836babdf78a20a5925bda4b6c6f973d8a33f2ff2a28d8d25a95fc1a000000009747c06a00000000d79c1bbc6749000000000000000000002a62856c1a80518bb0a804fdd6e8e3df9af1f0f5713d12f8dc364a7a80a8f155000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+         "preRingHex": "4d494d4952524e470000200201000000b9c87309bc3c4f58a02395c9a74f4fae2a3bdd1816e85513712473e639bd034000000100060001002c010000000000005a95fc1a000000005a95fc1a000000000000000000000000d79c1bbc6749000000000000000000000100000000000000aa99c32a000000000000000000000000d813fbe6420000000000000000000000000000000000000000000000000000000000000000000000010000000000000001000000000000002a62856c1a80518bb0a804fdd6e8e3df9af1f0f5713d12f8dc364a7a80a8f15520708d0be1a6ff73b55d60b9d50d75511a764b5bd06fe5f65af527eac8352dbfd94ce9e0f1c077eab24fbd926d881e52ef255d46416def19d035ffa4921eb55828b1284ee829cefc1714b6711ee77a5089b085c76f8dd5c1d098525c40dfcdb1fe0000000000000000000000000000000000000000000000000000000000000000000000000000000429000000000000000010270000000002010000000000000100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000005a95fc1a000000000000000000000000d79c1bbc674900000000000000000000aa99c32a000000000000000000000000d813fbe64200000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+         "bandLimitBps": 100,
+         "closeLimitBps": 50,
+         "temporalMode": "current-point"
+        }
+       }
+      }
+     }
+    },
+    {
+     "address": "BH9PkhctZybf5oZpFXowS3DUiaQ3jdFNTzxxpQugr5QE",
+     "effect": "write",
+     "ownerAfter": "TYo5SEVfHyFzpjsbFVzNFKTnmLdBvdYjLxmnv32iQ9r",
+     "dataLengthAfter": 1280,
+     "discriminatorHex": "4d54503404000005",
+     "description": "advance MTP4 current-point module",
+     "proof": {
+      "kind": "account",
+      "transition": "write",
+      "before": {
+       "exists": true,
+       "owner": "TYo5SEVfHyFzpjsbFVzNFKTnmLdBvdYjLxmnv32iQ9r",
+       "executable": false,
+       "lamports": "9799680",
+       "dataLength": 1280,
+       "dataSha256": "4de383b8b25cfbbaf1ad2f79a73c305c49853f7f281c89ad22f1cb4308ecbdfe"
+      },
+      "after": {
+       "exists": true,
+       "lamports": "9799680",
+       "owner": "TYo5SEVfHyFzpjsbFVzNFKTnmLdBvdYjLxmnv32iQ9r",
+       "executable": false,
+       "data": {
+        "kind": "sdk-codec",
+        "codec": "sampled-temporal-v4",
+        "length": 1280,
+        "semanticHash": "5e198cb34c5953878fc6deeeb64fa61a65297d6b24cfe925c2260cf8c6b498ed",
+        "sampledTransition": {
+         "ring": "4k9FHxupnwK2g5mFpnj3xbXrHwBnzjuDcXWibeh8U4ef",
+         "preModuleHex": "4d545034040000055195fc1a000000000a00050010010102c3f0d847e10e662fa7a97f9961eae27940473df9679f9d4dded1dd78a7f1c6979347c06a0000000004ca62860403fc4b08f978ab56872b6105acff1a5558fe1df00b803c5c9df156119389684c9cc8851f5894d4ee0529c6132332e7e4ef9791ac70904e3a6400f401000000000000005195fc1a000000009347c06a000000005195fc1a000000009347c06a000000000e78f188831d000000000000000000000e78f188831d000000000000000000000f78f188831d0000000000000000000000000000000000002a8d347ff9425efd5a41c9d4b7c1fb76a6b9f30e66c4a49201c4ab710518a8095195fc1a000000009347c06a000000000e78f188831d00000000000000000000e318470e2030940cb9cde978e6de82f6947d5265926811091d72ab57310b37cd000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+         "preRingHex": "4d494d4952524e470000200201000000d79f60b013283f9fc89f28c74b5809bf242c3f4cffa6b5f9d15ea1559f4c92dc00000100060001002c010000000000005195fc1a000000005195fc1a0000000000000000000000000e78f188831d000000000000000000000100000000000000d52c3b19000000000000000000000000869d0f7927000000000000000000000000000000000000000000000000000000000000000000000001000000000000000100000000000000e318470e2030940cb9cde978e6de82f6947d5265926811091d72ab57310b37cd04ca62860403fc4b08f978ab56872b6105acff1a5558fe1df00b803c5c9df1562f544ab0b30b08c1c4468b4e9de88503f6a2ff341de2e783ab842a55355070c4119389684c9cc8851f5894d4ee0529c6132332e7e4ef9791ac70904e3a6400f4ff000000000000000000000000000000000000000000000000000000000000000000000000000000ec2c000000000000000010270000000002010000000000000100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000005195fc1a0000000000000000000000000e78f188831d00000000000000000000d52c3b19000000000000000000000000869d0f792700000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+         "bandLimitBps": 100,
+         "closeLimitBps": 50,
+         "temporalMode": "current-point"
+        }
+       }
+      }
+     }
+    },
+    {
+     "address": "761WAwLBaWC5WSNmp8HrpBsMAhc8B3E2ke3zFAUKbYRZ",
+     "effect": "lamports",
+     "ownerAfter": null,
+     "dataLengthAfter": null,
+     "discriminatorHex": null,
+     "description": "apply exact reviewed program lamport delta",
+     "proof": {
+      "kind": "lamports",
+      "programDeltaLamports": "4000"
+     }
+    },
+    {
+     "address": "9wi5wqzMauEA1qcbRFDuhgCQiKwXULGZShsUSUojJVn7",
+     "effect": "lamports",
+     "ownerAfter": null,
+     "dataLengthAfter": null,
+     "discriminatorHex": null,
+     "description": "apply fee-normalized exact payer program lamport delta",
+     "proof": {
+      "kind": "lamports",
+      "programDeltaLamports": "-5922080"
+     }
+    }
+   ]
+  },
+  "review": {
+   "schema": "mimir-beta-creation-review",
+   "version": 1,
+   "draftHash": "e5df91ae8241195e3b8fd1f2ead013acb27729d83c48c0f049088d33a4a65e85",
+   "stepId": "composite:activate",
+   "kind": "composite",
+   "cluster": "localnet",
+   "programId": "TYo5SEVfHyFzpjsbFVzNFKTnmLdBvdYjLxmnv32iQ9r",
+   "authority": "9wi5wqzMauEA1qcbRFDuhgCQiKwXULGZShsUSUojJVn7",
+   "feedId": "2GPSrXLzg75ZD9ww2asE2YBHTjd8npfgSSnWwP29DT4r",
+   "feed": "GgdEovfEk7WAE7LGgZg64HdQVzN7LMeA8ibxGyC2RYVh",
+   "identityAsset": "KdJBJcZAGDgAwvdVF9PM4LGec3B5FiwVnXXtwGnYMfi",
+   "displayName": "Sipa Hihi Index",
+   "ticker": "SHIDX",
+   "requiredSigners": [
+    "9wi5wqzMauEA1qcbRFDuhgCQiKwXULGZShsUSUojJVn7"
+   ],
+   "instructions": [
+    {
+     "programAddress": "TYo5SEVfHyFzpjsbFVzNFKTnmLdBvdYjLxmnv32iQ9r",
+     "accounts": [
+      {
+       "address": "9wi5wqzMauEA1qcbRFDuhgCQiKwXULGZShsUSUojJVn7",
+       "isSigner": true,
+       "isWritable": true
+      },
+      {
+       "address": "3mEyR7GPxdMNsfBcmEP9WyB7dQTSeVDcbBZkUdn5BjW8",
+       "isSigner": false,
+       "isWritable": true
+      },
+      {
+       "address": "3Bdb3ZvvDfjam58jc3wxA2Ki2YgPBm76bKWrvmrQF6FY",
+       "isSigner": false,
+       "isWritable": false
+      },
+      {
+       "address": "7DxLhgz1q1bZoDbmt1DesHbAQcGrbYjnmNvDGqSE9D6V",
+       "isSigner": false,
+       "isWritable": false
+      },
+      {
+       "address": "FHPaJxNYPzzJzvBinzvHbnogL8KqcDk16pWDQwUu9kj2",
+       "isSigner": false,
+       "isWritable": false
+      },
+      {
+       "address": "A3hb24pEiFUZPzKNNmrxwEFLyYcMMTeRvUjrAYmk8gP",
+       "isSigner": false,
+       "isWritable": false
+      },
+      {
+       "address": "6iAj2oywQMiD9NeyTcW1S7UtG7e3jSK7Ud5ZJDqJpump",
+       "isSigner": false,
+       "isWritable": false
+      },
+      {
+       "address": "So11111111111111111111111111111111111111112",
+       "isSigner": false,
+       "isWritable": false
+      },
+      {
+       "address": "64SWHsXcc438YtN6Z9NDsnf8dRwzt9y2oUf568gjkXn3",
+       "isSigner": false,
+       "isWritable": false
+      },
+      {
+       "address": "ETNc56cm9HHwjNePwcHUDNkhcSDCe9mdFAC6yq2DfvPQ",
+       "isSigner": false,
+       "isWritable": false
+      },
+      {
+       "address": "FdFVc4hkRieRp9kBKNJpq1FxJYZbqrSi8PRy21MQvR27",
+       "isSigner": false,
+       "isWritable": false
+      },
+      {
+       "address": "ADyA8hdefvWN2dbGGWFotbzWxrAvLW83WG6QCVXvJKqw",
+       "isSigner": false,
+       "isWritable": false
+      },
+      {
+       "address": "5PHirr8joyTMp9JMm6nW7hNDVyEYdkzDqazxPD7RaTjx",
+       "isSigner": false,
+       "isWritable": false
+      },
+      {
+       "address": "11111111111111111111111111111111",
+       "isSigner": false,
+       "isWritable": false
+      },
+      {
+       "address": "DWTgYxG5pC7kohcpF64boTzo6JsjhT6uZv3MWKwG6CRN",
+       "isSigner": false,
+       "isWritable": true
+      },
+      {
+       "address": "pAMMBay6oceH9fJKBRHGP5D4bD4sWpmSwMn52FMfXEA",
+       "isSigner": false,
+       "isWritable": false
+      },
+      {
+       "address": "6naEzKeUuFh1Jeeu51NXQgr5qkXgXtc9WKNct4xynVJc",
+       "isSigner": false,
+       "isWritable": false
+      }
+     ],
+     "dataBase64": "TbnIcwm8PE9YoCOVyadPT64qO90YFuhVE3Ekc+Y5vQNAAAEAAAABAAAAAAAAAAEAAAAAAAAAWpX8GgAAAAAosShO6CnO/BcUtnEe53pQibCFx2+N1cHQmFJcQN/NsdSL9uyw26LPpFx3j87hbtHFoVvLVBinZ7JgIrCtlOwcZYbAohxK1XznPdn9TIo6Ocj+PbbQi9TmIW5z2aZuG2rQNQVTg1MUv8622gHgJQw8bNU9qoONPz1kI6VN6sU1w3DnSxX6DD9AoGncRPlubXyjAC+SL22L9Z5tC4f2EldAh2KN5EtBeKlE7dNFRlMvADV9rR6ECL88YfRt2hqnvSw5CrPQ+KyfyK0c2WO+mfGWziSDelBjN/8bUwQ0eeivag==",
+     "dataSha256": "e84070a9b7c89ced707afe10c8e3a6bb80d886c1b7759e750a0824e0d63011d8"
+    },
+    {
+     "programAddress": "TYo5SEVfHyFzpjsbFVzNFKTnmLdBvdYjLxmnv32iQ9r",
+     "accounts": [
+      {
+       "address": "9wi5wqzMauEA1qcbRFDuhgCQiKwXULGZShsUSUojJVn7",
+       "isSigner": true,
+       "isWritable": true
+      },
+      {
+       "address": "4k9FHxupnwK2g5mFpnj3xbXrHwBnzjuDcXWibeh8U4ef",
+       "isSigner": false,
+       "isWritable": true
+      },
+      {
+       "address": "Khd1zcFkpdGG5XnZcGKb2Jk13DqSJ7UYjcqBDJBLGXw",
+       "isSigner": false,
+       "isWritable": false
+      },
+      {
+       "address": "GCwxc7faWpzZLhABdNqg2hDhwSKKvztzAzQPavMDrADR",
+       "isSigner": false,
+       "isWritable": false
+      },
+      {
+       "address": "EouxSpnt9aH5GBUFS8Me7KvmjJquaeYTep9sHxmekDrb",
+       "isSigner": false,
+       "isWritable": false
+      },
+      {
+       "address": "A3hb24pEiFUZPzKNNmrxwEFLyYcMMTeRvUjrAYmk8gP",
+       "isSigner": false,
+       "isWritable": false
+      },
+      {
+       "address": "EFtMJryTCBdDcc7MS1wnsW41wD6edXcvLkUvH3v1pump",
+       "isSigner": false,
+       "isWritable": false
+      },
+      {
+       "address": "So11111111111111111111111111111111111111112",
+       "isSigner": false,
+       "isWritable": false
+      },
+      {
+       "address": "5EqHCbRB44F8mNekMP7fHiw7j6DXe9igCFEguPHb8wzM",
+       "isSigner": false,
+       "isWritable": false
+      },
+      {
+       "address": "H3U9NueTpe1sUzdWiWMyM3hZQ2zkpJDMjyugb8chiErd",
+       "isSigner": false,
+       "isWritable": false
+      },
+      {
+       "address": "4BkiAwwFf5Qqjm3ALL9dkLVsoWZsB1i8RamL6eJaiG91",
+       "isSigner": false,
+       "isWritable": false
+      },
+      {
+       "address": "ADyA8hdefvWN2dbGGWFotbzWxrAvLW83WG6QCVXvJKqw",
+       "isSigner": false,
+       "isWritable": false
+      },
+      {
+       "address": "5PHirr8joyTMp9JMm6nW7hNDVyEYdkzDqazxPD7RaTjx",
+       "isSigner": false,
+       "isWritable": false
+      },
+      {
+       "address": "11111111111111111111111111111111",
+       "isSigner": false,
+       "isWritable": false
+      },
+      {
+       "address": "BH9PkhctZybf5oZpFXowS3DUiaQ3jdFNTzxxpQugr5QE",
+       "isSigner": false,
+       "isWritable": true
+      },
+      {
+       "address": "pAMMBay6oceH9fJKBRHGP5D4bD4sWpmSwMn52FMfXEA",
+       "isSigner": false,
+       "isWritable": false
+      },
+      {
+       "address": "6naEzKeUuFh1Jeeu51NXQgr5qkXgXtc9WKNct4xynVJc",
+       "isSigner": false,
+       "isWritable": false
+      }
+     ],
+     "dataBase64": "TdefYLATKD+fyJ8ox0tYCb8kLD9M/6a1+dFeoVWfTJLcAAEAAAABAAAAAAAAAAEAAAAAAAAAUZX8GgAAAAARk4loTJzIhR9YlNTuBSnGEyMy5+Tvl5GscJBOOmQA9FlSEXYocgppqwr1vXhtuMXScfj86KoK2746g+Yq3tURnVle3otm0yTTxl+/QCDicAEj7v1rWh5kW3HwlE08Kqf48Ri/524SE3kC/csPde97ouEwihxLEV4rPrYOOXBNLgtwUMlwdY2tmTOctvTQC9Jb2feMeLTiejQV3l1cHi4plrmCz1hrNDeb00WqpAG6Ab1I4uuJZQolayb6fEsMezTpRf/VXFtvdc78UlbFNSlJ87Ik7GxxmeBdmy8jj2463Q==",
+     "dataSha256": "ea9fa7c3c4dd32554b2bdc88c84b1e0fee900ccb5e0fe53017f151d5f9877f74"
+    },
+    {
+     "programAddress": "TYo5SEVfHyFzpjsbFVzNFKTnmLdBvdYjLxmnv32iQ9r",
+     "accounts": [
+      {
+       "address": "9wi5wqzMauEA1qcbRFDuhgCQiKwXULGZShsUSUojJVn7",
+       "isSigner": true,
+       "isWritable": true
+      },
+      {
+       "address": "Eo4TcW9wY5kEuey3CYhiESP8MJaEsbTPeYD2JY34e7h6",
+       "isSigner": false,
+       "isWritable": true
+      },
+      {
+       "address": "2ykGvNNjSUPpUu8PxEnGkvAPsDKMiJiD5ok7J3oMGvxr",
+       "isSigner": false,
+       "isWritable": false
+      },
+      {
+       "address": "FAhazcjichgkk5yjBLM45dzNaKLaNqay2Y529EnmdVj4",
+       "isSigner": false,
+       "isWritable": false
+      },
+      {
+       "address": "FppbVmLSFCEoaqtDQR6EZxjQzvBiXaAXgmzMxR3qZTHE",
+       "isSigner": false,
+       "isWritable": false
+      },
+      {
+       "address": "A3hb24pEiFUZPzKNNmrxwEFLyYcMMTeRvUjrAYmk8gP",
+       "isSigner": false,
+       "isWritable": false
+      },
+      {
+       "address": "4ct7br2vTPzfdmY3S5HLtTxcGSBfn6pnw98hsS6v359A",
+       "isSigner": false,
+       "isWritable": false
+      },
+      {
+       "address": "5it83u57VRrVgc51oNV19TTmAJuffPx5GtGwQr7gQNUo",
+       "isSigner": false,
+       "isWritable": false
+      },
+      {
+       "address": "3ucNos4NbumPLZNWztqGHNFFgkHeRMBQAVemeeomsUxv",
+       "isSigner": false,
+       "isWritable": false
+      },
+      {
+       "address": "3h2e43PunVA5K34vwKCLHWhZF4aZpyaC9RmxvshGAQpL",
+       "isSigner": false,
+       "isWritable": false
+      },
+      {
+       "address": "6nBrPvVJHKjCqHuBPckNrEGo5VThvmBQEEnXGrWUawcf",
+       "isSigner": false,
+       "isWritable": false
+      },
+      {
+       "address": "BMThUfz3xUqFNHS2wVFNTYs7hpu4G4skg1aeSQaF7nkt",
+       "isSigner": false,
+       "isWritable": false
+      },
+      {
+       "address": "7VLiqX99wA5SKT2bZNJoUn9Sdiz1mw7HoWEfDpDeBDCX",
+       "isSigner": false,
+       "isWritable": false
+      },
+      {
+       "address": "11111111111111111111111111111111",
+       "isSigner": false,
+       "isWritable": false
+      }
+     ],
+     "dataBase64": "TROdBFkhGdicLm0PdpPprQCtp4Mo4kN+wyQLuK+J2ZPdAAEAAQABAAAAAAAAAAEAAAAAAAAAW8D8GgAAAAAu/Q73mnfsF09NUXPoTNF/UC/ubMjpu82foKdtCzEOUNDDUSkEyekXbnIiZyLeC1FkztrRh/URiFW6JwyWoJtaD5qtIYiomz7BDehpjnRCdPsq5FElQauhdxBQlE0mLktPQuQrQpyAg5d7aSK0wmP76P6a6YH7IuTP6Cydg/uLb66xOvwmboBYnT50c6LHVt48alaZyRuBWitGnFZabLk8D9enpHNGlflP6ii/Pg4HiepodxdsxUP0yNGtrBILJc2XpkSA/6A+aKewbVcrSYUkyAuzFL061z1Pl513iJcW+g==",
+     "dataSha256": "014bc5487d63cdf18750ca5b693053ad6b151f032cd7931f71f77016228f38bf"
+    },
+    {
+     "programAddress": "TYo5SEVfHyFzpjsbFVzNFKTnmLdBvdYjLxmnv32iQ9r",
+     "accounts": [
+      {
+       "address": "9wi5wqzMauEA1qcbRFDuhgCQiKwXULGZShsUSUojJVn7",
+       "isSigner": true,
+       "isWritable": true
+      },
+      {
+       "address": "3WDYs7TxH2QmHJmsxuYeQ8DBhZtawUN3npqr9PacbwXd",
+       "isSigner": false,
+       "isWritable": true
+      },
+      {
+       "address": "wBP2Gau2FiH47yaDBqvgdbDt6iCeXkehFU95d4YzUop",
+       "isSigner": false,
+       "isWritable": false
+      },
+      {
+       "address": "FAhazcjichgkk5yjBLM45dzNaKLaNqay2Y529EnmdVj4",
+       "isSigner": false,
+       "isWritable": false
+      },
+      {
+       "address": "FppbVmLSFCEoaqtDQR6EZxjQzvBiXaAXgmzMxR3qZTHE",
+       "isSigner": false,
+       "isWritable": false
+      },
+      {
+       "address": "A3hb24pEiFUZPzKNNmrxwEFLyYcMMTeRvUjrAYmk8gP",
+       "isSigner": false,
+       "isWritable": false
+      },
+      {
+       "address": "7VLUXrnSSDo9BfCa4NWaQs68g7ddDY1sdXBKW6Xswj9Y",
+       "isSigner": false,
+       "isWritable": false
+      },
+      {
+       "address": "3rzbbW5Q8MA7sCaowf28hNgACNPecdS2zceWy7Ptzua9",
+       "isSigner": false,
+       "isWritable": false
+      },
+      {
+       "address": "7JuwJuNU88gurFnyWeiyGKbFmExMWcmRZntn9imEzdny",
+       "isSigner": false,
+       "isWritable": false
+      },
+      {
+       "address": "D4FPEruKEHrG5TenZ2mpDGEfu1iUvTiqBxvpU8HLBvC2",
+       "isSigner": false,
+       "isWritable": false
+      },
+      {
+       "address": "11111111111111111111111111111111",
+       "isSigner": false,
+       "isWritable": false
+      }
+     ],
+     "dataBase64": "TROdBFkhGdicLm0PdpPprQCtp4Mo4kN+wyQLuK+J2ZPdAQEAAQABAAAAAAAAAAEAAAAAAAAAarH8GgAAAAAu/Q73mnfsF09NUXPoTNF/UC/ubMjpu82foKdtCzEOUID8/597u/cHZ2kIxwnhHs/iVlIFKk5gMwILJE8gbD6VD5qtIYiomz7BDehpjnRCdPsq5FElQauhdxBQlE0mLktPQuQrQpyAg5d7aSK0wmP76P6a6YH7IuTP6Cydg/uLb0x8CXE/jaxdkfD8v8axHFZtb9lWsAowfHtTelo2/Nl3D9enpHNGlflP6ii/Pg4HiepodxdsxUP0yNGtrBILJc2XpkSA/6A+aKewbVcrSYUkyAuzFL061z1Pl513iJcW+g==",
+     "dataSha256": "47c09b2f76912fab71eaa23ec90d37ca42e51cdcef633345e4393dfa842c1889"
+    },
+    {
+     "programAddress": "TYo5SEVfHyFzpjsbFVzNFKTnmLdBvdYjLxmnv32iQ9r",
+     "accounts": [
+      {
+       "address": "86wbW4YXsadkK2EnvCGgR5T3FT5WsnGngjgtPCMtbamj",
+       "isSigner": false,
+       "isWritable": true
+      },
+      {
+       "address": "FAhazcjichgkk5yjBLM45dzNaKLaNqay2Y529EnmdVj4",
+       "isSigner": false,
+       "isWritable": false
+      },
+      {
+       "address": "A3hb24pEiFUZPzKNNmrxwEFLyYcMMTeRvUjrAYmk8gP",
+       "isSigner": false,
+       "isWritable": false
+      },
+      {
+       "address": "FppbVmLSFCEoaqtDQR6EZxjQzvBiXaAXgmzMxR3qZTHE",
+       "isSigner": false,
+       "isWritable": false
+      },
+      {
+       "address": "2ykGvNNjSUPpUu8PxEnGkvAPsDKMiJiD5ok7J3oMGvxr",
+       "isSigner": false,
+       "isWritable": false
+      },
+      {
+       "address": "Eo4TcW9wY5kEuey3CYhiESP8MJaEsbTPeYD2JY34e7h6",
+       "isSigner": false,
+       "isWritable": false
+      },
+      {
+       "address": "wBP2Gau2FiH47yaDBqvgdbDt6iCeXkehFU95d4YzUop",
+       "isSigner": false,
+       "isWritable": false
+      },
+      {
+       "address": "3WDYs7TxH2QmHJmsxuYeQ8DBhZtawUN3npqr9PacbwXd",
+       "isSigner": false,
+       "isWritable": false
+      }
+     ],
+     "dataBase64": "UhOdBFkhGdicLm0PdpPprQCtp4Mo4kN+wyQLuK+J2ZPdlgABAAAAAAAAAAIAAAAAAAAAAgEAAAAAAAAALv0O95p37BdPTVFz6EzRf1Av7mzI6bvNn6CnbQsxDlA=",
+     "dataSha256": "745ab1edd7553758fe85fe7bca403d7acb156be8deabf66bb8bf555fc1a75567"
+    },
+    {
+     "programAddress": "TYo5SEVfHyFzpjsbFVzNFKTnmLdBvdYjLxmnv32iQ9r",
+     "accounts": [
+      {
+       "address": "9wi5wqzMauEA1qcbRFDuhgCQiKwXULGZShsUSUojJVn7",
+       "isSigner": true,
+       "isWritable": true
+      },
+      {
+       "address": "6zpnagurNwQcCxS3CAgbnGT3FrTdBZW2hfAMmQ2mcyng",
+       "isSigner": false,
+       "isWritable": true
+      },
+      {
+       "address": "GgdEovfEk7WAE7LGgZg64HdQVzN7LMeA8ibxGyC2RYVh",
+       "isSigner": false,
+       "isWritable": false
+      },
+      {
+       "address": "A3hb24pEiFUZPzKNNmrxwEFLyYcMMTeRvUjrAYmk8gP",
+       "isSigner": false,
+       "isWritable": false
+      },
+      {
+       "address": "7QWf3KDAmsyUrmQYPHwT8MMZgMvM3GRMNxnG1Db1abkA",
+       "isSigner": false,
+       "isWritable": false
+      },
+      {
+       "address": "4UnyfXR7PqSEqRpofNqHxEXUi7sMQq3YLJsY2oZ8tN4d",
+       "isSigner": false,
+       "isWritable": true
+      },
+      {
+       "address": "761WAwLBaWC5WSNmp8HrpBsMAhc8B3E2ke3zFAUKbYRZ",
+       "isSigner": false,
+       "isWritable": true
+      },
+      {
+       "address": "11111111111111111111111111111111",
+       "isSigner": false,
+       "isWritable": false
+      },
+      {
+       "address": "3mEyR7GPxdMNsfBcmEP9WyB7dQTSeVDcbBZkUdn5BjW8",
+       "isSigner": false,
+       "isWritable": false
+      },
+      {
+       "address": "3Bdb3ZvvDfjam58jc3wxA2Ki2YgPBm76bKWrvmrQF6FY",
+       "isSigner": false,
+       "isWritable": false
+      },
+      {
+       "address": "4k9FHxupnwK2g5mFpnj3xbXrHwBnzjuDcXWibeh8U4ef",
+       "isSigner": false,
+       "isWritable": false
+      },
+      {
+       "address": "Khd1zcFkpdGG5XnZcGKb2Jk13DqSJ7UYjcqBDJBLGXw",
+       "isSigner": false,
+       "isWritable": false
+      },
+      {
+       "address": "2ykGvNNjSUPpUu8PxEnGkvAPsDKMiJiD5ok7J3oMGvxr",
+       "isSigner": false,
+       "isWritable": false
+      },
+      {
+       "address": "86wbW4YXsadkK2EnvCGgR5T3FT5WsnGngjgtPCMtbamj",
+       "isSigner": false,
+       "isWritable": false
+      },
+      {
+       "address": "Sysvar1nstructions1111111111111111111111111",
+       "isSigner": false,
+       "isWritable": false
+      }
+     ],
+     "dataBase64": "QRLMx0+wO93FZHmlCxTLluY41wosc2X3NhBOTD9PQvoHAQAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAgEAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgTgAAAAAAAA==",
+     "dataSha256": "26a95bdc7f38139349c3aeb85024ea3065cbf78159bb15b1b60527d06993e5fb"
+    }
+   ],
+   "expectedWrites": [
+    {
+     "address": "3mEyR7GPxdMNsfBcmEP9WyB7dQTSeVDcbBZkUdn5BjW8",
+     "effect": "write",
+     "ownerAfter": "TYo5SEVfHyFzpjsbFVzNFKTnmLdBvdYjLxmnv32iQ9r",
+     "dataLengthAfter": 544,
+     "discriminatorHex": "4d494d4952524e47",
+     "description": "refresh existing component source ring before Composite root",
+     "proof": {
+      "kind": "account",
+      "transition": "write",
+      "before": {
+       "exists": true,
+       "owner": "TYo5SEVfHyFzpjsbFVzNFKTnmLdBvdYjLxmnv32iQ9r",
+       "executable": false,
+       "lamports": "4677120",
+       "dataLength": 544,
+       "dataSha256": "25c8c6ca59c36e423d15c80503482ea67a834a0843ce56c250b8b3269f67fbd6"
+      },
+      "after": {
+       "exists": true,
+       "lamports": "4677120",
+       "owner": "TYo5SEVfHyFzpjsbFVzNFKTnmLdBvdYjLxmnv32iQ9r",
+       "executable": false,
+       "data": {
+        "kind": "sdk-codec",
+        "codec": "source-ring-v1",
+        "length": 544,
+        "semanticHash": "18fbb90a8613e370432c03d1dacbdc898d95ba12e8fdf1a95a85a3bcef8b8078"
+       }
+      }
+     }
+    },
+    {
+     "address": "4k9FHxupnwK2g5mFpnj3xbXrHwBnzjuDcXWibeh8U4ef",
+     "effect": "write",
+     "ownerAfter": "TYo5SEVfHyFzpjsbFVzNFKTnmLdBvdYjLxmnv32iQ9r",
+     "dataLengthAfter": 544,
+     "discriminatorHex": "4d494d4952524e47",
+     "description": "refresh existing component source ring before Composite root",
+     "proof": {
+      "kind": "account",
+      "transition": "write",
+      "before": {
+       "exists": true,
+       "owner": "TYo5SEVfHyFzpjsbFVzNFKTnmLdBvdYjLxmnv32iQ9r",
+       "executable": false,
+       "lamports": "4677120",
+       "dataLength": 544,
+       "dataSha256": "0953126879fc8fe549ff16141c1d7a512dd35c0419bb39066be7ef431bc21a2e"
+      },
+      "after": {
+       "exists": true,
+       "lamports": "4677120",
+       "owner": "TYo5SEVfHyFzpjsbFVzNFKTnmLdBvdYjLxmnv32iQ9r",
+       "executable": false,
+       "data": {
+        "kind": "sdk-codec",
+        "codec": "source-ring-v1",
+        "length": 544,
+        "semanticHash": "a0ce952b4f79bdb19872d861b425f6fc76a0627a1c1ae231e46388808f6a373a"
+       }
+      }
+     }
+    },
+    {
+     "address": "Eo4TcW9wY5kEuey3CYhiESP8MJaEsbTPeYD2JY34e7h6",
+     "effect": "write",
+     "ownerAfter": "TYo5SEVfHyFzpjsbFVzNFKTnmLdBvdYjLxmnv32iQ9r",
+     "dataLengthAfter": 544,
+     "discriminatorHex": "4d494d4952524e47",
+     "description": "refresh existing component source ring before Composite root",
+     "proof": {
+      "kind": "account",
+      "transition": "write",
+      "before": {
+       "exists": true,
+       "owner": "TYo5SEVfHyFzpjsbFVzNFKTnmLdBvdYjLxmnv32iQ9r",
+       "executable": false,
+       "lamports": "4677120",
+       "dataLength": 544,
+       "dataSha256": "38b93b9283d9cbfd83eed7ccc070b85643fef6b9605da78706e2674275adcacd"
+      },
+      "after": {
+       "exists": true,
+       "lamports": "4677120",
+       "owner": "TYo5SEVfHyFzpjsbFVzNFKTnmLdBvdYjLxmnv32iQ9r",
+       "executable": false,
+       "data": {
+        "kind": "sdk-codec",
+        "codec": "source-ring-v1",
+        "length": 544,
+        "semanticHash": "f33b4d538ea691b1f804a86f462aafbb5a8d25bada5997278bdba5a2245e4652"
+       }
+      }
+     }
+    },
+    {
+     "address": "3WDYs7TxH2QmHJmsxuYeQ8DBhZtawUN3npqr9PacbwXd",
+     "effect": "write",
+     "ownerAfter": "TYo5SEVfHyFzpjsbFVzNFKTnmLdBvdYjLxmnv32iQ9r",
+     "dataLengthAfter": 544,
+     "discriminatorHex": "4d494d4952524e47",
+     "description": "refresh existing component source ring before Composite root",
+     "proof": {
+      "kind": "account",
+      "transition": "write",
+      "before": {
+       "exists": true,
+       "owner": "TYo5SEVfHyFzpjsbFVzNFKTnmLdBvdYjLxmnv32iQ9r",
+       "executable": false,
+       "lamports": "4677120",
+       "dataLength": 544,
+       "dataSha256": "a59cd39e627fb17709c98fa1ecbfb2d0d72c7a45557eab12b7edf44f481fa058"
+      },
+      "after": {
+       "exists": true,
+       "lamports": "4677120",
+       "owner": "TYo5SEVfHyFzpjsbFVzNFKTnmLdBvdYjLxmnv32iQ9r",
+       "executable": false,
+       "data": {
+        "kind": "sdk-codec",
+        "codec": "source-ring-v1",
+        "length": 544,
+        "semanticHash": "ef5fe9b6035d6500df4c9957c24b5ec4fe3adb87442a9286ec0e89c56814f5dc"
+       }
+      }
+     }
+    },
+    {
+     "address": "86wbW4YXsadkK2EnvCGgR5T3FT5WsnGngjgtPCMtbamj",
+     "effect": "write",
+     "ownerAfter": "TYo5SEVfHyFzpjsbFVzNFKTnmLdBvdYjLxmnv32iQ9r",
+     "dataLengthAfter": 512,
+     "discriminatorHex": "4d494d4952534e50",
+     "description": "refresh existing component Atomic-Lite snapshot",
+     "proof": {
+      "kind": "account",
+      "transition": "write",
+      "before": {
+       "exists": true,
+       "owner": "TYo5SEVfHyFzpjsbFVzNFKTnmLdBvdYjLxmnv32iQ9r",
+       "executable": false,
+       "lamports": "4454400",
+       "dataLength": 512,
+       "dataSha256": "3e3053e174cc5ea8fc855504718375c9e04b758c3a435345330263fd86f2b53b"
+      },
+      "after": {
+       "exists": true,
+       "lamports": "4454400",
+       "owner": "TYo5SEVfHyFzpjsbFVzNFKTnmLdBvdYjLxmnv32iQ9r",
+       "executable": false,
+       "data": {
+        "kind": "sdk-codec",
+        "codec": "feed-snapshot-v0",
+        "length": 512,
+        "semanticHash": "1bf25783236ef4c409ea40fd8020e831cf8f22140101b1671f566fe86e5f617e"
+       }
+      }
+     }
+    },
+    {
+     "address": "4UnyfXR7PqSEqRpofNqHxEXUi7sMQq3YLJsY2oZ8tN4d",
+     "effect": "write",
+     "ownerAfter": "TYo5SEVfHyFzpjsbFVzNFKTnmLdBvdYjLxmnv32iQ9r",
+     "dataLengthAfter": 160,
+     "discriminatorHex": "4d494d4952464545",
+     "description": "credit configured composite fee vault",
+     "proof": {
+      "kind": "account",
+      "transition": "write",
+      "before": {
+       "exists": true,
+       "owner": "TYo5SEVfHyFzpjsbFVzNFKTnmLdBvdYjLxmnv32iQ9r",
+       "executable": false,
+       "lamports": "2004480",
+       "dataLength": 160,
+       "dataSha256": "dc6b070ead213f09f20d7a808c4184934113cd4694df34a044fa288d40328231"
+      },
+      "after": {
+       "exists": true,
+       "lamports": "2020480",
+       "owner": "TYo5SEVfHyFzpjsbFVzNFKTnmLdBvdYjLxmnv32iQ9r",
+       "executable": false,
+       "data": {
+        "kind": "exact",
+        "length": 160,
+        "sha256": "24dcd20c5f128f69fef11331612d696f50820de9f2dcdbf04899ec960f9b200a"
+       }
+      }
+     }
+    },
+    {
+     "address": "6zpnagurNwQcCxS3CAgbnGT3FrTdBZW2hfAMmQ2mcyng",
+     "effect": "create",
+     "ownerAfter": "TYo5SEVfHyFzpjsbFVzNFKTnmLdBvdYjLxmnv32iQ9r",
+     "dataLengthAfter": 720,
+     "discriminatorHex": "4d494d4952435350",
+     "description": "create ready Composite root snapshot",
+     "proof": {
+      "kind": "account",
+      "transition": "create",
+      "before": {
+       "exists": false,
+       "owner": null,
+       "executable": null,
+       "lamports": "0",
+       "dataLength": null,
+       "dataSha256": null
+      },
+      "after": {
+       "exists": true,
+       "lamports": "5902080",
+       "owner": "TYo5SEVfHyFzpjsbFVzNFKTnmLdBvdYjLxmnv32iQ9r",
+       "executable": false,
+       "data": {
+        "kind": "sdk-codec",
+        "codec": "composite-snapshot-v1",
+        "length": 720,
+        "semanticHash": "279d9168837e4cd45756cf17c149ef6fecace788a60b00c7522289b3ce8a61af"
+       }
+      }
+     }
+    },
+    {
+     "address": "DWTgYxG5pC7kohcpF64boTzo6JsjhT6uZv3MWKwG6CRN",
+     "effect": "write",
+     "ownerAfter": "TYo5SEVfHyFzpjsbFVzNFKTnmLdBvdYjLxmnv32iQ9r",
+     "dataLengthAfter": 1280,
+     "discriminatorHex": "4d54503404000005",
+     "description": "advance MTP4 current-point module",
+     "proof": {
+      "kind": "account",
+      "transition": "write",
+      "before": {
+       "exists": true,
+       "owner": "TYo5SEVfHyFzpjsbFVzNFKTnmLdBvdYjLxmnv32iQ9r",
+       "executable": false,
+       "lamports": "9799680",
+       "dataLength": 1280,
+       "dataSha256": "a5ef0e90d33d05a54fa9af979b71a09d8c664322e052bf2e55baec27e79b881d"
+      },
+      "after": {
+       "exists": true,
+       "lamports": "9799680",
+       "owner": "TYo5SEVfHyFzpjsbFVzNFKTnmLdBvdYjLxmnv32iQ9r",
+       "executable": false,
+       "data": {
+        "kind": "sdk-codec",
+        "codec": "sampled-temporal-v4",
+        "length": 1280,
+        "semanticHash": "c5114354c4e7761598f1414a3c02d77a841868039c5b6a5267b6b1d7a7a6994e",
+        "sampledTransition": {
+         "ring": "3mEyR7GPxdMNsfBcmEP9WyB7dQTSeVDcbBZkUdn5BjW8",
+         "preModuleHex": "4d545034040000055a95fc1a000000000a000500100101025650b37beb919569c4841b98576019cf56d89d1c579df51eab4abaa8381816139747c06a0000000020708d0be1a6ff73b55d60b9d50d75511a764b5bd06fe5f65af527eac8352dbf28b1284ee829cefc1714b6711ee77a5089b085c76f8dd5c1d098525c40dfcdb101000000000000005a95fc1a000000009747c06a000000005a95fc1a000000009747c06a00000000d79c1bbc674900000000000000000000d79c1bbc674900000000000000000000d89c1bbc6749000000000000000000000000000000000000f3fb09ffed036d788836babdf78a20a5925bda4b6c6f973d8a33f2ff2a28d8d25a95fc1a000000009747c06a00000000d79c1bbc6749000000000000000000002a62856c1a80518bb0a804fdd6e8e3df9af1f0f5713d12f8dc364a7a80a8f155000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+         "preRingHex": "4d494d4952524e470000200201000000b9c87309bc3c4f58a02395c9a74f4fae2a3bdd1816e85513712473e639bd034000000100060001002c010000000000005a95fc1a000000005a95fc1a000000000000000000000000d79c1bbc6749000000000000000000000100000000000000aa99c32a000000000000000000000000d813fbe6420000000000000000000000000000000000000000000000000000000000000000000000010000000000000001000000000000002a62856c1a80518bb0a804fdd6e8e3df9af1f0f5713d12f8dc364a7a80a8f15520708d0be1a6ff73b55d60b9d50d75511a764b5bd06fe5f65af527eac8352dbfd94ce9e0f1c077eab24fbd926d881e52ef255d46416def19d035ffa4921eb55828b1284ee829cefc1714b6711ee77a5089b085c76f8dd5c1d098525c40dfcdb1fe0000000000000000000000000000000000000000000000000000000000000000000000000000000429000000000000000010270000000002010000000000000100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000005a95fc1a000000000000000000000000d79c1bbc674900000000000000000000aa99c32a000000000000000000000000d813fbe64200000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+         "bandLimitBps": 100,
+         "closeLimitBps": 50,
+         "temporalMode": "current-point"
+        }
+       }
+      }
+     }
+    },
+    {
+     "address": "BH9PkhctZybf5oZpFXowS3DUiaQ3jdFNTzxxpQugr5QE",
+     "effect": "write",
+     "ownerAfter": "TYo5SEVfHyFzpjsbFVzNFKTnmLdBvdYjLxmnv32iQ9r",
+     "dataLengthAfter": 1280,
+     "discriminatorHex": "4d54503404000005",
+     "description": "advance MTP4 current-point module",
+     "proof": {
+      "kind": "account",
+      "transition": "write",
+      "before": {
+       "exists": true,
+       "owner": "TYo5SEVfHyFzpjsbFVzNFKTnmLdBvdYjLxmnv32iQ9r",
+       "executable": false,
+       "lamports": "9799680",
+       "dataLength": 1280,
+       "dataSha256": "4de383b8b25cfbbaf1ad2f79a73c305c49853f7f281c89ad22f1cb4308ecbdfe"
+      },
+      "after": {
+       "exists": true,
+       "lamports": "9799680",
+       "owner": "TYo5SEVfHyFzpjsbFVzNFKTnmLdBvdYjLxmnv32iQ9r",
+       "executable": false,
+       "data": {
+        "kind": "sdk-codec",
+        "codec": "sampled-temporal-v4",
+        "length": 1280,
+        "semanticHash": "5e198cb34c5953878fc6deeeb64fa61a65297d6b24cfe925c2260cf8c6b498ed",
+        "sampledTransition": {
+         "ring": "4k9FHxupnwK2g5mFpnj3xbXrHwBnzjuDcXWibeh8U4ef",
+         "preModuleHex": "4d545034040000055195fc1a000000000a00050010010102c3f0d847e10e662fa7a97f9961eae27940473df9679f9d4dded1dd78a7f1c6979347c06a0000000004ca62860403fc4b08f978ab56872b6105acff1a5558fe1df00b803c5c9df156119389684c9cc8851f5894d4ee0529c6132332e7e4ef9791ac70904e3a6400f401000000000000005195fc1a000000009347c06a000000005195fc1a000000009347c06a000000000e78f188831d000000000000000000000e78f188831d000000000000000000000f78f188831d0000000000000000000000000000000000002a8d347ff9425efd5a41c9d4b7c1fb76a6b9f30e66c4a49201c4ab710518a8095195fc1a000000009347c06a000000000e78f188831d00000000000000000000e318470e2030940cb9cde978e6de82f6947d5265926811091d72ab57310b37cd000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+         "preRingHex": "4d494d4952524e470000200201000000d79f60b013283f9fc89f28c74b5809bf242c3f4cffa6b5f9d15ea1559f4c92dc00000100060001002c010000000000005195fc1a000000005195fc1a0000000000000000000000000e78f188831d000000000000000000000100000000000000d52c3b19000000000000000000000000869d0f7927000000000000000000000000000000000000000000000000000000000000000000000001000000000000000100000000000000e318470e2030940cb9cde978e6de82f6947d5265926811091d72ab57310b37cd04ca62860403fc4b08f978ab56872b6105acff1a5558fe1df00b803c5c9df1562f544ab0b30b08c1c4468b4e9de88503f6a2ff341de2e783ab842a55355070c4119389684c9cc8851f5894d4ee0529c6132332e7e4ef9791ac70904e3a6400f4ff000000000000000000000000000000000000000000000000000000000000000000000000000000ec2c000000000000000010270000000002010000000000000100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000005195fc1a0000000000000000000000000e78f188831d00000000000000000000d52c3b19000000000000000000000000869d0f792700000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+         "bandLimitBps": 100,
+         "closeLimitBps": 50,
+         "temporalMode": "current-point"
+        }
+       }
+      }
+     }
+    },
+    {
+     "address": "761WAwLBaWC5WSNmp8HrpBsMAhc8B3E2ke3zFAUKbYRZ",
+     "effect": "lamports",
+     "ownerAfter": null,
+     "dataLengthAfter": null,
+     "discriminatorHex": null,
+     "description": "apply exact reviewed program lamport delta",
+     "proof": {
+      "kind": "lamports",
+      "programDeltaLamports": "4000"
+     }
+    },
+    {
+     "address": "9wi5wqzMauEA1qcbRFDuhgCQiKwXULGZShsUSUojJVn7",
+     "effect": "lamports",
+     "ownerAfter": null,
+     "dataLengthAfter": null,
+     "discriminatorHex": null,
+     "description": "apply fee-normalized exact payer program lamport delta",
+     "proof": {
+      "kind": "lamports",
+      "programDeltaLamports": "-5922080"
+     }
+    }
+   ],
+   "messageHash": "ad52a987508adb24948ecba7204dd5c1eb7c00ad0aa67c6dfc11b06e8ebf8b53",
+   "stepIntentHash": "054069d4765a2349c6b0180599682710e499c6d32c4fd6e630a6d075f434ca5b",
+   "expectedWritesHash": "ac35639fce08d164bf97c3f615290dda6f759af2bfae1d976cb805d9aed67d00",
+   "packet": {
+    "packetLimitBytes": 4096,
+    "serializedMessageBytes": 3130,
+    "serializedTransactionBytes": 3194,
+    "accountCount": 51,
+    "instructionCount": 6,
+    "signatureCount": 1,
+    "config": {
+     "computeUnitLimit": 1400000,
+     "loadedAccountsDataSizeLimit": 67108864
+    },
+    "fitsPacketLimit": true
+   },
+   "simulation": {
+    "status": "succeeded",
+    "contextSlot": "452800189",
+    "unitsConsumed": "630391",
+    "logsHash": "047490595dd4ddb01351c092f2bba990a0ef0956ba55d607118498559f2ad9b1",
+    "returnDataHash": null,
+    "error": null
+   },
+   "warnings": []
+  },
+  "canonicalReviewJson": "{\"authority\":\"9wi5wqzMauEA1qcbRFDuhgCQiKwXULGZShsUSUojJVn7\",\"cluster\":\"localnet\",\"displayName\":\"Sipa Hihi Index\",\"draftHash\":\"e5df91ae8241195e3b8fd1f2ead013acb27729d83c48c0f049088d33a4a65e85\",\"expectedWrites\":[{\"address\":\"3mEyR7GPxdMNsfBcmEP9WyB7dQTSeVDcbBZkUdn5BjW8\",\"dataLengthAfter\":\"544\",\"description\":\"refresh existing component source ring before Composite root\",\"discriminatorHex\":\"4d494d4952524e47\",\"effect\":\"write\",\"ownerAfter\":\"TYo5SEVfHyFzpjsbFVzNFKTnmLdBvdYjLxmnv32iQ9r\",\"proof\":{\"after\":{\"data\":{\"codec\":\"source-ring-v1\",\"kind\":\"sdk-codec\",\"length\":\"544\",\"semanticHash\":\"18fbb90a8613e370432c03d1dacbdc898d95ba12e8fdf1a95a85a3bcef8b8078\"},\"executable\":false,\"exists\":true,\"lamports\":\"4677120\",\"owner\":\"TYo5SEVfHyFzpjsbFVzNFKTnmLdBvdYjLxmnv32iQ9r\"},\"before\":{\"dataLength\":\"544\",\"dataSha256\":\"25c8c6ca59c36e423d15c80503482ea67a834a0843ce56c250b8b3269f67fbd6\",\"executable\":false,\"exists\":true,\"lamports\":\"4677120\",\"owner\":\"TYo5SEVfHyFzpjsbFVzNFKTnmLdBvdYjLxmnv32iQ9r\"},\"kind\":\"account\",\"transition\":\"write\"}},{\"address\":\"4k9FHxupnwK2g5mFpnj3xbXrHwBnzjuDcXWibeh8U4ef\",\"dataLengthAfter\":\"544\",\"description\":\"refresh existing component source ring before Composite root\",\"discriminatorHex\":\"4d494d4952524e47\",\"effect\":\"write\",\"ownerAfter\":\"TYo5SEVfHyFzpjsbFVzNFKTnmLdBvdYjLxmnv32iQ9r\",\"proof\":{\"after\":{\"data\":{\"codec\":\"source-ring-v1\",\"kind\":\"sdk-codec\",\"length\":\"544\",\"semanticHash\":\"a0ce952b4f79bdb19872d861b425f6fc76a0627a1c1ae231e46388808f6a373a\"},\"executable\":false,\"exists\":true,\"lamports\":\"4677120\",\"owner\":\"TYo5SEVfHyFzpjsbFVzNFKTnmLdBvdYjLxmnv32iQ9r\"},\"before\":{\"dataLength\":\"544\",\"dataSha256\":\"0953126879fc8fe549ff16141c1d7a512dd35c0419bb39066be7ef431bc21a2e\",\"executable\":false,\"exists\":true,\"lamports\":\"4677120\",\"owner\":\"TYo5SEVfHyFzpjsbFVzNFKTnmLdBvdYjLxmnv32iQ9r\"},\"kind\":\"account\",\"transition\":\"write\"}},{\"address\":\"Eo4TcW9wY5kEuey3CYhiESP8MJaEsbTPeYD2JY34e7h6\",\"dataLengthAfter\":\"544\",\"description\":\"refresh existing component source ring before Composite root\",\"discriminatorHex\":\"4d494d4952524e47\",\"effect\":\"write\",\"ownerAfter\":\"TYo5SEVfHyFzpjsbFVzNFKTnmLdBvdYjLxmnv32iQ9r\",\"proof\":{\"after\":{\"data\":{\"codec\":\"source-ring-v1\",\"kind\":\"sdk-codec\",\"length\":\"544\",\"semanticHash\":\"f33b4d538ea691b1f804a86f462aafbb5a8d25bada5997278bdba5a2245e4652\"},\"executable\":false,\"exists\":true,\"lamports\":\"4677120\",\"owner\":\"TYo5SEVfHyFzpjsbFVzNFKTnmLdBvdYjLxmnv32iQ9r\"},\"before\":{\"dataLength\":\"544\",\"dataSha256\":\"38b93b9283d9cbfd83eed7ccc070b85643fef6b9605da78706e2674275adcacd\",\"executable\":false,\"exists\":true,\"lamports\":\"4677120\",\"owner\":\"TYo5SEVfHyFzpjsbFVzNFKTnmLdBvdYjLxmnv32iQ9r\"},\"kind\":\"account\",\"transition\":\"write\"}},{\"address\":\"3WDYs7TxH2QmHJmsxuYeQ8DBhZtawUN3npqr9PacbwXd\",\"dataLengthAfter\":\"544\",\"description\":\"refresh existing component source ring before Composite root\",\"discriminatorHex\":\"4d494d4952524e47\",\"effect\":\"write\",\"ownerAfter\":\"TYo5SEVfHyFzpjsbFVzNFKTnmLdBvdYjLxmnv32iQ9r\",\"proof\":{\"after\":{\"data\":{\"codec\":\"source-ring-v1\",\"kind\":\"sdk-codec\",\"length\":\"544\",\"semanticHash\":\"ef5fe9b6035d6500df4c9957c24b5ec4fe3adb87442a9286ec0e89c56814f5dc\"},\"executable\":false,\"exists\":true,\"lamports\":\"4677120\",\"owner\":\"TYo5SEVfHyFzpjsbFVzNFKTnmLdBvdYjLxmnv32iQ9r\"},\"before\":{\"dataLength\":\"544\",\"dataSha256\":\"a59cd39e627fb17709c98fa1ecbfb2d0d72c7a45557eab12b7edf44f481fa058\",\"executable\":false,\"exists\":true,\"lamports\":\"4677120\",\"owner\":\"TYo5SEVfHyFzpjsbFVzNFKTnmLdBvdYjLxmnv32iQ9r\"},\"kind\":\"account\",\"transition\":\"write\"}},{\"address\":\"86wbW4YXsadkK2EnvCGgR5T3FT5WsnGngjgtPCMtbamj\",\"dataLengthAfter\":\"512\",\"description\":\"refresh existing component Atomic-Lite snapshot\",\"discriminatorHex\":\"4d494d4952534e50\",\"effect\":\"write\",\"ownerAfter\":\"TYo5SEVfHyFzpjsbFVzNFKTnmLdBvdYjLxmnv32iQ9r\",\"proof\":{\"after\":{\"data\":{\"codec\":\"feed-snapshot-v0\",\"kind\":\"sdk-codec\",\"length\":\"512\",\"semanticHash\":\"1bf25783236ef4c409ea40fd8020e831cf8f22140101b1671f566fe86e5f617e\"},\"executable\":false,\"exists\":true,\"lamports\":\"4454400\",\"owner\":\"TYo5SEVfHyFzpjsbFVzNFKTnmLdBvdYjLxmnv32iQ9r\"},\"before\":{\"dataLength\":\"512\",\"dataSha256\":\"3e3053e174cc5ea8fc855504718375c9e04b758c3a435345330263fd86f2b53b\",\"executable\":false,\"exists\":true,\"lamports\":\"4454400\",\"owner\":\"TYo5SEVfHyFzpjsbFVzNFKTnmLdBvdYjLxmnv32iQ9r\"},\"kind\":\"account\",\"transition\":\"write\"}},{\"address\":\"4UnyfXR7PqSEqRpofNqHxEXUi7sMQq3YLJsY2oZ8tN4d\",\"dataLengthAfter\":\"160\",\"description\":\"credit configured composite fee vault\",\"discriminatorHex\":\"4d494d4952464545\",\"effect\":\"write\",\"ownerAfter\":\"TYo5SEVfHyFzpjsbFVzNFKTnmLdBvdYjLxmnv32iQ9r\",\"proof\":{\"after\":{\"data\":{\"kind\":\"exact\",\"length\":\"160\",\"sha256\":\"24dcd20c5f128f69fef11331612d696f50820de9f2dcdbf04899ec960f9b200a\"},\"executable\":false,\"exists\":true,\"lamports\":\"2020480\",\"owner\":\"TYo5SEVfHyFzpjsbFVzNFKTnmLdBvdYjLxmnv32iQ9r\"},\"before\":{\"dataLength\":\"160\",\"dataSha256\":\"dc6b070ead213f09f20d7a808c4184934113cd4694df34a044fa288d40328231\",\"executable\":false,\"exists\":true,\"lamports\":\"2004480\",\"owner\":\"TYo5SEVfHyFzpjsbFVzNFKTnmLdBvdYjLxmnv32iQ9r\"},\"kind\":\"account\",\"transition\":\"write\"}},{\"address\":\"6zpnagurNwQcCxS3CAgbnGT3FrTdBZW2hfAMmQ2mcyng\",\"dataLengthAfter\":\"720\",\"description\":\"create ready Composite root snapshot\",\"discriminatorHex\":\"4d494d4952435350\",\"effect\":\"create\",\"ownerAfter\":\"TYo5SEVfHyFzpjsbFVzNFKTnmLdBvdYjLxmnv32iQ9r\",\"proof\":{\"after\":{\"data\":{\"codec\":\"composite-snapshot-v1\",\"kind\":\"sdk-codec\",\"length\":\"720\",\"semanticHash\":\"279d9168837e4cd45756cf17c149ef6fecace788a60b00c7522289b3ce8a61af\"},\"executable\":false,\"exists\":true,\"lamports\":\"5902080\",\"owner\":\"TYo5SEVfHyFzpjsbFVzNFKTnmLdBvdYjLxmnv32iQ9r\"},\"before\":{\"dataLength\":null,\"dataSha256\":null,\"executable\":null,\"exists\":false,\"lamports\":\"0\",\"owner\":null},\"kind\":\"account\",\"transition\":\"create\"}},{\"address\":\"DWTgYxG5pC7kohcpF64boTzo6JsjhT6uZv3MWKwG6CRN\",\"dataLengthAfter\":\"1280\",\"description\":\"advance MTP4 current-point module\",\"discriminatorHex\":\"4d54503404000005\",\"effect\":\"write\",\"ownerAfter\":\"TYo5SEVfHyFzpjsbFVzNFKTnmLdBvdYjLxmnv32iQ9r\",\"proof\":{\"after\":{\"data\":{\"codec\":\"sampled-temporal-v4\",\"kind\":\"sdk-codec\",\"length\":\"1280\",\"sampledTransition\":{\"bandLimitBps\":\"100\",\"closeLimitBps\":\"50\",\"preModuleHex\":\"4d545034040000055a95fc1a000000000a000500100101025650b37beb919569c4841b98576019cf56d89d1c579df51eab4abaa8381816139747c06a0000000020708d0be1a6ff73b55d60b9d50d75511a764b5bd06fe5f65af527eac8352dbf28b1284ee829cefc1714b6711ee77a5089b085c76f8dd5c1d098525c40dfcdb101000000000000005a95fc1a000000009747c06a000000005a95fc1a000000009747c06a00000000d79c1bbc674900000000000000000000d79c1bbc674900000000000000000000d89c1bbc6749000000000000000000000000000000000000f3fb09ffed036d788836babdf78a20a5925bda4b6c6f973d8a33f2ff2a28d8d25a95fc1a000000009747c06a00000000d79c1bbc6749000000000000000000002a62856c1a80518bb0a804fdd6e8e3df9af1f0f5713d12f8dc364a7a80a8f155000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000\",\"preRingHex\":\"4d494d4952524e470000200201000000b9c87309bc3c4f58a02395c9a74f4fae2a3bdd1816e85513712473e639bd034000000100060001002c010000000000005a95fc1a000000005a95fc1a000000000000000000000000d79c1bbc6749000000000000000000000100000000000000aa99c32a000000000000000000000000d813fbe6420000000000000000000000000000000000000000000000000000000000000000000000010000000000000001000000000000002a62856c1a80518bb0a804fdd6e8e3df9af1f0f5713d12f8dc364a7a80a8f15520708d0be1a6ff73b55d60b9d50d75511a764b5bd06fe5f65af527eac8352dbfd94ce9e0f1c077eab24fbd926d881e52ef255d46416def19d035ffa4921eb55828b1284ee829cefc1714b6711ee77a5089b085c76f8dd5c1d098525c40dfcdb1fe0000000000000000000000000000000000000000000000000000000000000000000000000000000429000000000000000010270000000002010000000000000100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000005a95fc1a000000000000000000000000d79c1bbc674900000000000000000000aa99c32a000000000000000000000000d813fbe64200000000000000000000000000000000000000000000000000000000000000000000000000000000000000\",\"ring\":\"3mEyR7GPxdMNsfBcmEP9WyB7dQTSeVDcbBZkUdn5BjW8\",\"temporalMode\":\"current-point\"},\"semanticHash\":\"c5114354c4e7761598f1414a3c02d77a841868039c5b6a5267b6b1d7a7a6994e\"},\"executable\":false,\"exists\":true,\"lamports\":\"9799680\",\"owner\":\"TYo5SEVfHyFzpjsbFVzNFKTnmLdBvdYjLxmnv32iQ9r\"},\"before\":{\"dataLength\":\"1280\",\"dataSha256\":\"a5ef0e90d33d05a54fa9af979b71a09d8c664322e052bf2e55baec27e79b881d\",\"executable\":false,\"exists\":true,\"lamports\":\"9799680\",\"owner\":\"TYo5SEVfHyFzpjsbFVzNFKTnmLdBvdYjLxmnv32iQ9r\"},\"kind\":\"account\",\"transition\":\"write\"}},{\"address\":\"BH9PkhctZybf5oZpFXowS3DUiaQ3jdFNTzxxpQugr5QE\",\"dataLengthAfter\":\"1280\",\"description\":\"advance MTP4 current-point module\",\"discriminatorHex\":\"4d54503404000005\",\"effect\":\"write\",\"ownerAfter\":\"TYo5SEVfHyFzpjsbFVzNFKTnmLdBvdYjLxmnv32iQ9r\",\"proof\":{\"after\":{\"data\":{\"codec\":\"sampled-temporal-v4\",\"kind\":\"sdk-codec\",\"length\":\"1280\",\"sampledTransition\":{\"bandLimitBps\":\"100\",\"closeLimitBps\":\"50\",\"preModuleHex\":\"4d545034040000055195fc1a000000000a00050010010102c3f0d847e10e662fa7a97f9961eae27940473df9679f9d4dded1dd78a7f1c6979347c06a0000000004ca62860403fc4b08f978ab56872b6105acff1a5558fe1df00b803c5c9df156119389684c9cc8851f5894d4ee0529c6132332e7e4ef9791ac70904e3a6400f401000000000000005195fc1a000000009347c06a000000005195fc1a000000009347c06a000000000e78f188831d000000000000000000000e78f188831d000000000000000000000f78f188831d0000000000000000000000000000000000002a8d347ff9425efd5a41c9d4b7c1fb76a6b9f30e66c4a49201c4ab710518a8095195fc1a000000009347c06a000000000e78f188831d00000000000000000000e318470e2030940cb9cde978e6de82f6947d5265926811091d72ab57310b37cd000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000\",\"preRingHex\":\"4d494d4952524e470000200201000000d79f60b013283f9fc89f28c74b5809bf242c3f4cffa6b5f9d15ea1559f4c92dc00000100060001002c010000000000005195fc1a000000005195fc1a0000000000000000000000000e78f188831d000000000000000000000100000000000000d52c3b19000000000000000000000000869d0f7927000000000000000000000000000000000000000000000000000000000000000000000001000000000000000100000000000000e318470e2030940cb9cde978e6de82f6947d5265926811091d72ab57310b37cd04ca62860403fc4b08f978ab56872b6105acff1a5558fe1df00b803c5c9df1562f544ab0b30b08c1c4468b4e9de88503f6a2ff341de2e783ab842a55355070c4119389684c9cc8851f5894d4ee0529c6132332e7e4ef9791ac70904e3a6400f4ff000000000000000000000000000000000000000000000000000000000000000000000000000000ec2c000000000000000010270000000002010000000000000100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000005195fc1a0000000000000000000000000e78f188831d00000000000000000000d52c3b19000000000000000000000000869d0f792700000000000000000000000000000000000000000000000000000000000000000000000000000000000000\",\"ring\":\"4k9FHxupnwK2g5mFpnj3xbXrHwBnzjuDcXWibeh8U4ef\",\"temporalMode\":\"current-point\"},\"semanticHash\":\"5e198cb34c5953878fc6deeeb64fa61a65297d6b24cfe925c2260cf8c6b498ed\"},\"executable\":false,\"exists\":true,\"lamports\":\"9799680\",\"owner\":\"TYo5SEVfHyFzpjsbFVzNFKTnmLdBvdYjLxmnv32iQ9r\"},\"before\":{\"dataLength\":\"1280\",\"dataSha256\":\"4de383b8b25cfbbaf1ad2f79a73c305c49853f7f281c89ad22f1cb4308ecbdfe\",\"executable\":false,\"exists\":true,\"lamports\":\"9799680\",\"owner\":\"TYo5SEVfHyFzpjsbFVzNFKTnmLdBvdYjLxmnv32iQ9r\"},\"kind\":\"account\",\"transition\":\"write\"}},{\"address\":\"761WAwLBaWC5WSNmp8HrpBsMAhc8B3E2ke3zFAUKbYRZ\",\"dataLengthAfter\":null,\"description\":\"apply exact reviewed program lamport delta\",\"discriminatorHex\":null,\"effect\":\"lamports\",\"ownerAfter\":null,\"proof\":{\"kind\":\"lamports\",\"programDeltaLamports\":\"4000\"}},{\"address\":\"9wi5wqzMauEA1qcbRFDuhgCQiKwXULGZShsUSUojJVn7\",\"dataLengthAfter\":null,\"description\":\"apply fee-normalized exact payer program lamport delta\",\"discriminatorHex\":null,\"effect\":\"lamports\",\"ownerAfter\":null,\"proof\":{\"kind\":\"lamports\",\"programDeltaLamports\":\"-5922080\"}}],\"expectedWritesHash\":\"ac35639fce08d164bf97c3f615290dda6f759af2bfae1d976cb805d9aed67d00\",\"feed\":\"GgdEovfEk7WAE7LGgZg64HdQVzN7LMeA8ibxGyC2RYVh\",\"feedId\":\"2GPSrXLzg75ZD9ww2asE2YBHTjd8npfgSSnWwP29DT4r\",\"identityAsset\":\"KdJBJcZAGDgAwvdVF9PM4LGec3B5FiwVnXXtwGnYMfi\",\"instructions\":[{\"accounts\":[{\"address\":\"9wi5wqzMauEA1qcbRFDuhgCQiKwXULGZShsUSUojJVn7\",\"isSigner\":true,\"isWritable\":true},{\"address\":\"3mEyR7GPxdMNsfBcmEP9WyB7dQTSeVDcbBZkUdn5BjW8\",\"isSigner\":false,\"isWritable\":true},{\"address\":\"3Bdb3ZvvDfjam58jc3wxA2Ki2YgPBm76bKWrvmrQF6FY\",\"isSigner\":false,\"isWritable\":false},{\"address\":\"7DxLhgz1q1bZoDbmt1DesHbAQcGrbYjnmNvDGqSE9D6V\",\"isSigner\":false,\"isWritable\":false},{\"address\":\"FHPaJxNYPzzJzvBinzvHbnogL8KqcDk16pWDQwUu9kj2\",\"isSigner\":false,\"isWritable\":false},{\"address\":\"A3hb24pEiFUZPzKNNmrxwEFLyYcMMTeRvUjrAYmk8gP\",\"isSigner\":false,\"isWritable\":false},{\"address\":\"6iAj2oywQMiD9NeyTcW1S7UtG7e3jSK7Ud5ZJDqJpump\",\"isSigner\":false,\"isWritable\":false},{\"address\":\"So11111111111111111111111111111111111111112\",\"isSigner\":false,\"isWritable\":false},{\"address\":\"64SWHsXcc438YtN6Z9NDsnf8dRwzt9y2oUf568gjkXn3\",\"isSigner\":false,\"isWritable\":false},{\"address\":\"ETNc56cm9HHwjNePwcHUDNkhcSDCe9mdFAC6yq2DfvPQ\",\"isSigner\":false,\"isWritable\":false},{\"address\":\"FdFVc4hkRieRp9kBKNJpq1FxJYZbqrSi8PRy21MQvR27\",\"isSigner\":false,\"isWritable\":false},{\"address\":\"ADyA8hdefvWN2dbGGWFotbzWxrAvLW83WG6QCVXvJKqw\",\"isSigner\":false,\"isWritable\":false},{\"address\":\"5PHirr8joyTMp9JMm6nW7hNDVyEYdkzDqazxPD7RaTjx\",\"isSigner\":false,\"isWritable\":false},{\"address\":\"11111111111111111111111111111111\",\"isSigner\":false,\"isWritable\":false},{\"address\":\"DWTgYxG5pC7kohcpF64boTzo6JsjhT6uZv3MWKwG6CRN\",\"isSigner\":false,\"isWritable\":true},{\"address\":\"pAMMBay6oceH9fJKBRHGP5D4bD4sWpmSwMn52FMfXEA\",\"isSigner\":false,\"isWritable\":false},{\"address\":\"6naEzKeUuFh1Jeeu51NXQgr5qkXgXtc9WKNct4xynVJc\",\"isSigner\":false,\"isWritable\":false}],\"dataBase64\":\"TbnIcwm8PE9YoCOVyadPT64qO90YFuhVE3Ekc+Y5vQNAAAEAAAABAAAAAAAAAAEAAAAAAAAAWpX8GgAAAAAosShO6CnO/BcUtnEe53pQibCFx2+N1cHQmFJcQN/NsdSL9uyw26LPpFx3j87hbtHFoVvLVBinZ7JgIrCtlOwcZYbAohxK1XznPdn9TIo6Ocj+PbbQi9TmIW5z2aZuG2rQNQVTg1MUv8622gHgJQw8bNU9qoONPz1kI6VN6sU1w3DnSxX6DD9AoGncRPlubXyjAC+SL22L9Z5tC4f2EldAh2KN5EtBeKlE7dNFRlMvADV9rR6ECL88YfRt2hqnvSw5CrPQ+KyfyK0c2WO+mfGWziSDelBjN/8bUwQ0eeivag==\",\"dataSha256\":\"e84070a9b7c89ced707afe10c8e3a6bb80d886c1b7759e750a0824e0d63011d8\",\"programAddress\":\"TYo5SEVfHyFzpjsbFVzNFKTnmLdBvdYjLxmnv32iQ9r\"},{\"accounts\":[{\"address\":\"9wi5wqzMauEA1qcbRFDuhgCQiKwXULGZShsUSUojJVn7\",\"isSigner\":true,\"isWritable\":true},{\"address\":\"4k9FHxupnwK2g5mFpnj3xbXrHwBnzjuDcXWibeh8U4ef\",\"isSigner\":false,\"isWritable\":true},{\"address\":\"Khd1zcFkpdGG5XnZcGKb2Jk13DqSJ7UYjcqBDJBLGXw\",\"isSigner\":false,\"isWritable\":false},{\"address\":\"GCwxc7faWpzZLhABdNqg2hDhwSKKvztzAzQPavMDrADR\",\"isSigner\":false,\"isWritable\":false},{\"address\":\"EouxSpnt9aH5GBUFS8Me7KvmjJquaeYTep9sHxmekDrb\",\"isSigner\":false,\"isWritable\":false},{\"address\":\"A3hb24pEiFUZPzKNNmrxwEFLyYcMMTeRvUjrAYmk8gP\",\"isSigner\":false,\"isWritable\":false},{\"address\":\"EFtMJryTCBdDcc7MS1wnsW41wD6edXcvLkUvH3v1pump\",\"isSigner\":false,\"isWritable\":false},{\"address\":\"So11111111111111111111111111111111111111112\",\"isSigner\":false,\"isWritable\":false},{\"address\":\"5EqHCbRB44F8mNekMP7fHiw7j6DXe9igCFEguPHb8wzM\",\"isSigner\":false,\"isWritable\":false},{\"address\":\"H3U9NueTpe1sUzdWiWMyM3hZQ2zkpJDMjyugb8chiErd\",\"isSigner\":false,\"isWritable\":false},{\"address\":\"4BkiAwwFf5Qqjm3ALL9dkLVsoWZsB1i8RamL6eJaiG91\",\"isSigner\":false,\"isWritable\":false},{\"address\":\"ADyA8hdefvWN2dbGGWFotbzWxrAvLW83WG6QCVXvJKqw\",\"isSigner\":false,\"isWritable\":false},{\"address\":\"5PHirr8joyTMp9JMm6nW7hNDVyEYdkzDqazxPD7RaTjx\",\"isSigner\":false,\"isWritable\":false},{\"address\":\"11111111111111111111111111111111\",\"isSigner\":false,\"isWritable\":false},{\"address\":\"BH9PkhctZybf5oZpFXowS3DUiaQ3jdFNTzxxpQugr5QE\",\"isSigner\":false,\"isWritable\":true},{\"address\":\"pAMMBay6oceH9fJKBRHGP5D4bD4sWpmSwMn52FMfXEA\",\"isSigner\":false,\"isWritable\":false},{\"address\":\"6naEzKeUuFh1Jeeu51NXQgr5qkXgXtc9WKNct4xynVJc\",\"isSigner\":false,\"isWritable\":false}],\"dataBase64\":\"TdefYLATKD+fyJ8ox0tYCb8kLD9M/6a1+dFeoVWfTJLcAAEAAAABAAAAAAAAAAEAAAAAAAAAUZX8GgAAAAARk4loTJzIhR9YlNTuBSnGEyMy5+Tvl5GscJBOOmQA9FlSEXYocgppqwr1vXhtuMXScfj86KoK2746g+Yq3tURnVle3otm0yTTxl+/QCDicAEj7v1rWh5kW3HwlE08Kqf48Ri/524SE3kC/csPde97ouEwihxLEV4rPrYOOXBNLgtwUMlwdY2tmTOctvTQC9Jb2feMeLTiejQV3l1cHi4plrmCz1hrNDeb00WqpAG6Ab1I4uuJZQolayb6fEsMezTpRf/VXFtvdc78UlbFNSlJ87Ik7GxxmeBdmy8jj2463Q==\",\"dataSha256\":\"ea9fa7c3c4dd32554b2bdc88c84b1e0fee900ccb5e0fe53017f151d5f9877f74\",\"programAddress\":\"TYo5SEVfHyFzpjsbFVzNFKTnmLdBvdYjLxmnv32iQ9r\"},{\"accounts\":[{\"address\":\"9wi5wqzMauEA1qcbRFDuhgCQiKwXULGZShsUSUojJVn7\",\"isSigner\":true,\"isWritable\":true},{\"address\":\"Eo4TcW9wY5kEuey3CYhiESP8MJaEsbTPeYD2JY34e7h6\",\"isSigner\":false,\"isWritable\":true},{\"address\":\"2ykGvNNjSUPpUu8PxEnGkvAPsDKMiJiD5ok7J3oMGvxr\",\"isSigner\":false,\"isWritable\":false},{\"address\":\"FAhazcjichgkk5yjBLM45dzNaKLaNqay2Y529EnmdVj4\",\"isSigner\":false,\"isWritable\":false},{\"address\":\"FppbVmLSFCEoaqtDQR6EZxjQzvBiXaAXgmzMxR3qZTHE\",\"isSigner\":false,\"isWritable\":false},{\"address\":\"A3hb24pEiFUZPzKNNmrxwEFLyYcMMTeRvUjrAYmk8gP\",\"isSigner\":false,\"isWritable\":false},{\"address\":\"4ct7br2vTPzfdmY3S5HLtTxcGSBfn6pnw98hsS6v359A\",\"isSigner\":false,\"isWritable\":false},{\"address\":\"5it83u57VRrVgc51oNV19TTmAJuffPx5GtGwQr7gQNUo\",\"isSigner\":false,\"isWritable\":false},{\"address\":\"3ucNos4NbumPLZNWztqGHNFFgkHeRMBQAVemeeomsUxv\",\"isSigner\":false,\"isWritable\":false},{\"address\":\"3h2e43PunVA5K34vwKCLHWhZF4aZpyaC9RmxvshGAQpL\",\"isSigner\":false,\"isWritable\":false},{\"address\":\"6nBrPvVJHKjCqHuBPckNrEGo5VThvmBQEEnXGrWUawcf\",\"isSigner\":false,\"isWritable\":false},{\"address\":\"BMThUfz3xUqFNHS2wVFNTYs7hpu4G4skg1aeSQaF7nkt\",\"isSigner\":false,\"isWritable\":false},{\"address\":\"7VLiqX99wA5SKT2bZNJoUn9Sdiz1mw7HoWEfDpDeBDCX\",\"isSigner\":false,\"isWritable\":false},{\"address\":\"11111111111111111111111111111111\",\"isSigner\":false,\"isWritable\":false}],\"dataBase64\":\"TROdBFkhGdicLm0PdpPprQCtp4Mo4kN+wyQLuK+J2ZPdAAEAAQABAAAAAAAAAAEAAAAAAAAAW8D8GgAAAAAu/Q73mnfsF09NUXPoTNF/UC/ubMjpu82foKdtCzEOUNDDUSkEyekXbnIiZyLeC1FkztrRh/URiFW6JwyWoJtaD5qtIYiomz7BDehpjnRCdPsq5FElQauhdxBQlE0mLktPQuQrQpyAg5d7aSK0wmP76P6a6YH7IuTP6Cydg/uLb66xOvwmboBYnT50c6LHVt48alaZyRuBWitGnFZabLk8D9enpHNGlflP6ii/Pg4HiepodxdsxUP0yNGtrBILJc2XpkSA/6A+aKewbVcrSYUkyAuzFL061z1Pl513iJcW+g==\",\"dataSha256\":\"014bc5487d63cdf18750ca5b693053ad6b151f032cd7931f71f77016228f38bf\",\"programAddress\":\"TYo5SEVfHyFzpjsbFVzNFKTnmLdBvdYjLxmnv32iQ9r\"},{\"accounts\":[{\"address\":\"9wi5wqzMauEA1qcbRFDuhgCQiKwXULGZShsUSUojJVn7\",\"isSigner\":true,\"isWritable\":true},{\"address\":\"3WDYs7TxH2QmHJmsxuYeQ8DBhZtawUN3npqr9PacbwXd\",\"isSigner\":false,\"isWritable\":true},{\"address\":\"wBP2Gau2FiH47yaDBqvgdbDt6iCeXkehFU95d4YzUop\",\"isSigner\":false,\"isWritable\":false},{\"address\":\"FAhazcjichgkk5yjBLM45dzNaKLaNqay2Y529EnmdVj4\",\"isSigner\":false,\"isWritable\":false},{\"address\":\"FppbVmLSFCEoaqtDQR6EZxjQzvBiXaAXgmzMxR3qZTHE\",\"isSigner\":false,\"isWritable\":false},{\"address\":\"A3hb24pEiFUZPzKNNmrxwEFLyYcMMTeRvUjrAYmk8gP\",\"isSigner\":false,\"isWritable\":false},{\"address\":\"7VLUXrnSSDo9BfCa4NWaQs68g7ddDY1sdXBKW6Xswj9Y\",\"isSigner\":false,\"isWritable\":false},{\"address\":\"3rzbbW5Q8MA7sCaowf28hNgACNPecdS2zceWy7Ptzua9\",\"isSigner\":false,\"isWritable\":false},{\"address\":\"7JuwJuNU88gurFnyWeiyGKbFmExMWcmRZntn9imEzdny\",\"isSigner\":false,\"isWritable\":false},{\"address\":\"D4FPEruKEHrG5TenZ2mpDGEfu1iUvTiqBxvpU8HLBvC2\",\"isSigner\":false,\"isWritable\":false},{\"address\":\"11111111111111111111111111111111\",\"isSigner\":false,\"isWritable\":false}],\"dataBase64\":\"TROdBFkhGdicLm0PdpPprQCtp4Mo4kN+wyQLuK+J2ZPdAQEAAQABAAAAAAAAAAEAAAAAAAAAarH8GgAAAAAu/Q73mnfsF09NUXPoTNF/UC/ubMjpu82foKdtCzEOUID8/597u/cHZ2kIxwnhHs/iVlIFKk5gMwILJE8gbD6VD5qtIYiomz7BDehpjnRCdPsq5FElQauhdxBQlE0mLktPQuQrQpyAg5d7aSK0wmP76P6a6YH7IuTP6Cydg/uLb0x8CXE/jaxdkfD8v8axHFZtb9lWsAowfHtTelo2/Nl3D9enpHNGlflP6ii/Pg4HiepodxdsxUP0yNGtrBILJc2XpkSA/6A+aKewbVcrSYUkyAuzFL061z1Pl513iJcW+g==\",\"dataSha256\":\"47c09b2f76912fab71eaa23ec90d37ca42e51cdcef633345e4393dfa842c1889\",\"programAddress\":\"TYo5SEVfHyFzpjsbFVzNFKTnmLdBvdYjLxmnv32iQ9r\"},{\"accounts\":[{\"address\":\"86wbW4YXsadkK2EnvCGgR5T3FT5WsnGngjgtPCMtbamj\",\"isSigner\":false,\"isWritable\":true},{\"address\":\"FAhazcjichgkk5yjBLM45dzNaKLaNqay2Y529EnmdVj4\",\"isSigner\":false,\"isWritable\":false},{\"address\":\"A3hb24pEiFUZPzKNNmrxwEFLyYcMMTeRvUjrAYmk8gP\",\"isSigner\":false,\"isWritable\":false},{\"address\":\"FppbVmLSFCEoaqtDQR6EZxjQzvBiXaAXgmzMxR3qZTHE\",\"isSigner\":false,\"isWritable\":false},{\"address\":\"2ykGvNNjSUPpUu8PxEnGkvAPsDKMiJiD5ok7J3oMGvxr\",\"isSigner\":false,\"isWritable\":false},{\"address\":\"Eo4TcW9wY5kEuey3CYhiESP8MJaEsbTPeYD2JY34e7h6\",\"isSigner\":false,\"isWritable\":false},{\"address\":\"wBP2Gau2FiH47yaDBqvgdbDt6iCeXkehFU95d4YzUop\",\"isSigner\":false,\"isWritable\":false},{\"address\":\"3WDYs7TxH2QmHJmsxuYeQ8DBhZtawUN3npqr9PacbwXd\",\"isSigner\":false,\"isWritable\":false}],\"dataBase64\":\"UhOdBFkhGdicLm0PdpPprQCtp4Mo4kN+wyQLuK+J2ZPdlgABAAAAAAAAAAIAAAAAAAAAAgEAAAAAAAAALv0O95p37BdPTVFz6EzRf1Av7mzI6bvNn6CnbQsxDlA=\",\"dataSha256\":\"745ab1edd7553758fe85fe7bca403d7acb156be8deabf66bb8bf555fc1a75567\",\"programAddress\":\"TYo5SEVfHyFzpjsbFVzNFKTnmLdBvdYjLxmnv32iQ9r\"},{\"accounts\":[{\"address\":\"9wi5wqzMauEA1qcbRFDuhgCQiKwXULGZShsUSUojJVn7\",\"isSigner\":true,\"isWritable\":true},{\"address\":\"6zpnagurNwQcCxS3CAgbnGT3FrTdBZW2hfAMmQ2mcyng\",\"isSigner\":false,\"isWritable\":true},{\"address\":\"GgdEovfEk7WAE7LGgZg64HdQVzN7LMeA8ibxGyC2RYVh\",\"isSigner\":false,\"isWritable\":false},{\"address\":\"A3hb24pEiFUZPzKNNmrxwEFLyYcMMTeRvUjrAYmk8gP\",\"isSigner\":false,\"isWritable\":false},{\"address\":\"7QWf3KDAmsyUrmQYPHwT8MMZgMvM3GRMNxnG1Db1abkA\",\"isSigner\":false,\"isWritable\":false},{\"address\":\"4UnyfXR7PqSEqRpofNqHxEXUi7sMQq3YLJsY2oZ8tN4d\",\"isSigner\":false,\"isWritable\":true},{\"address\":\"761WAwLBaWC5WSNmp8HrpBsMAhc8B3E2ke3zFAUKbYRZ\",\"isSigner\":false,\"isWritable\":true},{\"address\":\"11111111111111111111111111111111\",\"isSigner\":false,\"isWritable\":false},{\"address\":\"3mEyR7GPxdMNsfBcmEP9WyB7dQTSeVDcbBZkUdn5BjW8\",\"isSigner\":false,\"isWritable\":false},{\"address\":\"3Bdb3ZvvDfjam58jc3wxA2Ki2YgPBm76bKWrvmrQF6FY\",\"isSigner\":false,\"isWritable\":false},{\"address\":\"4k9FHxupnwK2g5mFpnj3xbXrHwBnzjuDcXWibeh8U4ef\",\"isSigner\":false,\"isWritable\":false},{\"address\":\"Khd1zcFkpdGG5XnZcGKb2Jk13DqSJ7UYjcqBDJBLGXw\",\"isSigner\":false,\"isWritable\":false},{\"address\":\"2ykGvNNjSUPpUu8PxEnGkvAPsDKMiJiD5ok7J3oMGvxr\",\"isSigner\":false,\"isWritable\":false},{\"address\":\"86wbW4YXsadkK2EnvCGgR5T3FT5WsnGngjgtPCMtbamj\",\"isSigner\":false,\"isWritable\":false},{\"address\":\"Sysvar1nstructions1111111111111111111111111\",\"isSigner\":false,\"isWritable\":false}],\"dataBase64\":\"QRLMx0+wO93FZHmlCxTLluY41wosc2X3NhBOTD9PQvoHAQAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAgEAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgTgAAAAAAAA==\",\"dataSha256\":\"26a95bdc7f38139349c3aeb85024ea3065cbf78159bb15b1b60527d06993e5fb\",\"programAddress\":\"TYo5SEVfHyFzpjsbFVzNFKTnmLdBvdYjLxmnv32iQ9r\"}],\"kind\":\"composite\",\"messageHash\":\"ad52a987508adb24948ecba7204dd5c1eb7c00ad0aa67c6dfc11b06e8ebf8b53\",\"packet\":{\"accountCount\":\"51\",\"config\":{\"computeUnitLimit\":\"1400000\",\"loadedAccountsDataSizeLimit\":\"67108864\"},\"fitsPacketLimit\":true,\"instructionCount\":\"6\",\"packetLimitBytes\":\"4096\",\"serializedMessageBytes\":\"3130\",\"serializedTransactionBytes\":\"3194\",\"signatureCount\":\"1\"},\"programId\":\"TYo5SEVfHyFzpjsbFVzNFKTnmLdBvdYjLxmnv32iQ9r\",\"requiredSigners\":[\"9wi5wqzMauEA1qcbRFDuhgCQiKwXULGZShsUSUojJVn7\"],\"schema\":\"mimir-beta-creation-review\",\"simulation\":{\"contextSlot\":\"452800189\",\"error\":null,\"logsHash\":\"047490595dd4ddb01351c092f2bba990a0ef0956ba55d607118498559f2ad9b1\",\"returnDataHash\":null,\"status\":\"succeeded\",\"unitsConsumed\":\"630391\"},\"stepId\":\"composite:activate\",\"stepIntentHash\":\"054069d4765a2349c6b0180599682710e499c6d32c4fd6e630a6d075f434ca5b\",\"ticker\":\"SHIDX\",\"version\":\"1\",\"warnings\":[]}",
+  "reviewHash": "7a5b08132f9591fa606956e153e4b033fb9b8c48669edfb04f59b9871ac95594"
+ }
+}
