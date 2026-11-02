@@ -1,0 +1,14 @@
+{
+  "$schema": "https://context7.com/schema/context7.json",
+  "projectTitle": "Mimir SDK",
+  "description": "TypeScript SDK for Mimir, a Solana oracle that computes token and index prices on chain from DEX liquidity pools: read and watch prices, use a fresh price inside your own transaction, create feeds and indexes.",
+  "excludeFolders": ["src", "tests", "scripts", "skills"],
+  "excludeFiles": ["CHANGELOG.md"],
+  "rules": [
+    "Pass your own Solana RPC with new Mimir({ rpc }) to read on chain and to send transactions; without it, transactions go to Solana's rate-limited public RPC.",
+    "price is in USDC and is null with a reason when a feed cannot be priced; never treat it as zero.",
+    "To use a price in a Solana program, put the Mimir refresh just before your instruction in the same transaction (sendWithFreshPrice or withFreshPrice), with nothing in between.",
+    "Run createFeed({ mint, dryRun: true }) and show the cost before asking the wallet to approve a feed creation.",
+    "Pass a token mint address to createFeed, never a symbol."
+  ]
+}

@@ -206,4 +206,5 @@ Every error is a `MimirError` with `code`, `retry` and `hint`. `retry` is `"now"
 | Program id (mainnet) | `hBYrGHXVCQsnduDERkVnViCXNYawpHCvN5y3GsMiMiR` |
 | Docs, API, App | https://mimirfeeds.io/docs/ · https://api.mimirfeeds.io · https://app.mimirfeeds.io |
 | Cookbook (consumer programs) | https://github.com/QuantuLabs/mimir-cookbook |
+| Agent skill (Claude Code and other coding agents) | [skills/mimir-oracle](./skills/mimir-oracle/SKILL.md) |
 | License | Apache-2.0 |
